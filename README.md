@@ -70,7 +70,7 @@ python src/app.py
 http://localhost:5000
 ```
 
-3. Tải lên file schema và dữ liệu mẫu (nếu cần)
+3. Schema và dữ liệu mẫu đã được dump sẵn vào DB Grocery.db thông qua setup_db.py.
 
 4. Nhập câu hỏi tiếng Việt vào ô input
 
