@@ -1,0 +1,121 @@
+{
+  "tables": [
+    {
+      "name": "grocery_sales",
+      "description": "Sales transactions data for a grocery store chain",
+      "columns": [
+        {
+          "name": "transaction_id",
+          "type": "INTEGER",
+          "description": "Unique identifier for each transaction",
+          "is_primary_key": true
+        },
+        {
+          "name": "transaction_date",
+          "type": "DATE",
+          "description": "Date when the transaction occurred"
+        },
+        {
+          "name": "transaction_time",
+          "type": "TIME",
+          "description": "Time when the transaction occurred"
+        },
+        {
+          "name": "product_id",
+          "type": "INTEGER",
+          "description": "Unique identifier for the product"
+        },
+        {
+          "name": "product_name",
+          "type": "TEXT",
+          "description": "Name of the product"
+        },
+        {
+          "name": "product_category",
+          "type": "TEXT",
+          "description": "Category of the product"
+        },
+        {
+          "name": "unit_price",
+          "type": "REAL",
+          "description": "Price per unit of the product after discount"
+        },
+        {
+          "name": "quantity_sold",
+          "type": "INTEGER",
+          "description": "Number of units initially sold"
+        },
+        {
+          "name": "quantity_returned",
+          "type": "INTEGER",
+          "description": "Number of units returned by the customer"
+        },
+        {
+          "name": "final_quantity",
+          "type": "INTEGER",
+          "description": "Final quantity after returns (quantity_sold - quantity_returned)"
+        },
+        {
+          "name": "discount_percentage",
+          "type": "REAL",
+          "description": "Discount percentage applied to the product"
+        },
+        {
+          "name": "revenue",
+          "type": "REAL",
+          "description": "Total revenue from the product (unit_price * final_quantity)"
+        },
+        {
+          "name": "branch_id",
+          "type": "INTEGER",
+          "description": "Unique identifier for the branch"
+        },
+        {
+          "name": "branch_name",
+          "type": "TEXT",
+          "description": "Name of the branch"
+        },
+        {
+          "name": "branch_city",
+          "type": "TEXT",
+          "description": "City where the branch is located"
+        },
+        {
+          "name": "branch_region",
+          "type": "TEXT",
+          "description": "Region where the branch is located"
+        },
+        {
+          "name": "employee_id",
+          "type": "INTEGER",
+          "description": "Unique identifier for the employee who processed the transaction"
+        },
+        {
+          "name": "employee_name",
+          "type": "TEXT",
+          "description": "Name of the employee"
+        },
+        {
+          "name": "employee_position",
+          "type": "TEXT",
+          "description": "Position of the employee"
+        },
+        {
+          "name": "payment_method",
+          "type": "TEXT",
+          "description": "Method of payment used for the transaction"
+        },
+        {
+          "name": "customer_id",
+          "type": "INTEGER",
+          "description": "Unique identifier for the customer (NULL for non-member customers)"
+        },
+        {
+          "name": "customer_name",
+          "type": "TEXT",
+          "description": "Name of the customer (NULL for non-member customers)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "questions": [
+    {
+      "id": "FAQ001",
+      "patterns": [
+        "Chi nhánh nào đang bán tốt nhất tính theo tiêu chí quantity_sold",
+        "Chi nhánh có số lượng bán cao nhất",
+        "Top chi nhánh theo số lượng bán"
+      ],
+      "intent": "Tìm chi nhánh có số lượng sản phẩm bán ra cao nhất",
+      "sql": "SELECT branch_id, branch_name, SUM(quantity_sold) as total_quantity FROM sales GROUP BY branch_id, branch_name ORDER BY total_quantity DESC LIMIT 1;",
+      "explanation": "Truy vấn này tính tổng số lượng sản phẩm bán ra cho mỗi chi nhánh, sắp xếp theo số lượng giảm dần và lấy chi nhánh có số lượng cao nhất",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-12"
+    },
+    {
+      "id": "FAQ002",
+      "patterns": ["Tìm 5 sản phẩm có giá cao nhất", "Hiển thị top 5 sản phẩm đắt nhất", "Sản phẩm giá cao nhất"],
+      "intent": "Truy xuất danh sách sản phẩm có giá cao nhất với giới hạn số lượng",
+      "sql": "SELECT product_name, price FROM products ORDER BY price DESC LIMIT 5;",
+      "explanation": "Truy vấn này chọn tên sản phẩm và giá từ bảng products, sắp xếp theo giá giảm dần và giới hạn kết quả ở 5 sản phẩm đầu tiên",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-02"
+    },
+    {
+      "id": "FAQ003",
+      "patterns": ["Tổng doanh thu theo tháng năm 2024", "Doanh thu hàng tháng trong năm 2024", "Báo cáo doanh thu theo tháng 2024"],
+      "intent": "Tính tổng doanh thu theo tháng trong một năm cụ thể",
+      "sql": "SELECT strftime('%m', order_date) as month, SUM(total_amount) as total_revenue FROM orders WHERE strftime('%Y', order_date) = '2024' GROUP BY month ORDER BY month;",
+      "explanation": "Truy vấn này tính tổng doanh thu (total_amount) từ bảng orders, nhóm theo tháng trong năm 2024, và sắp xếp kết quả theo tháng",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-03"
+    },
+    {
+      "id": "FAQ004",
+      "patterns": ["Khách hàng ở Hà Nội", "Tìm khách hàng tại Hà Nội", "Danh sách khách hàng Hà Nội"],
+      "intent": "Tìm kiếm khách hàng theo thành phố cụ thể",
+      "sql": "SELECT * FROM customers WHERE city = 'Hanoi';",
+      "explanation": "Truy vấn này chọn tất cả các cột từ bảng customers và lọc theo điều kiện city = 'Hanoi'",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-01"
+    },
+    {
+      "id": "FAQ005",
+      "patterns": ["Top 3 khách hàng có tổng giá trị đơn hàng cao nhất", "Khách hàng mua nhiều nhất", "Khách hàng có doanh thu cao nhất"],
+      "intent": "Tìm khách hàng có tổng giá trị đơn hàng cao nhất",
+      "sql": "SELECT c.customer_id, c.name, SUM(o.total_amount) as total_spent FROM customers c JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.name ORDER BY total_spent DESC LIMIT 3;",
+      "explanation": "Truy vấn này tính tổng giá trị đơn hàng cho mỗi khách hàng bằng cách join bảng customers và orders, nhóm theo khách hàng, sắp xếp theo tổng giá trị giảm dần và giới hạn kết quả ở 3 khách hàng đầu tiên",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-02"
+    },
+    {
+      "id": "FAQ006",
+      "patterns": ["Sản phẩm chưa từng được đặt hàng", "Tìm sản phẩm không có đơn hàng", "Sản phẩm không bán được"],
+      "intent": "Tìm các sản phẩm chưa từng được đặt hàng",
+      "sql": "SELECT p.product_id, p.product_name FROM products p WHERE NOT EXISTS (SELECT 1 FROM order_details od WHERE od.product_id = p.product_id);",
+      "explanation": "Truy vấn này sử dụng NOT EXISTS để tìm các sản phẩm không có trong bảng order_details, tức là chưa từng được đặt hàng",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-03"
+    },
+    {
+      "id": "FAQ007",
+      "patterns": ["Đếm số đơn hàng theo trạng thái", "Thống kê đơn hàng theo trạng thái", "Số lượng đơn hàng mỗi trạng thái"],
+      "intent": "Đếm số lượng đơn hàng theo từng trạng thái",
+      "sql": "SELECT status, COUNT(*) as order_count FROM orders GROUP BY status;",
+      "explanation": "Truy vấn này đếm số lượng đơn hàng cho mỗi trạng thái bằng cách nhóm theo cột status trong bảng orders",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-04"
+    },
+    {
+      "id": "FAQ008",
+      "patterns": ["Sản phẩm bán chạy nhất tháng này", "Top sản phẩm bán chạy tháng hiện tại", "Sản phẩm có số lượng bán cao nhất tháng này"],
+      "intent": "Tìm sản phẩm có số lượng bán cao nhất trong tháng hiện tại",
+      "sql": "SELECT p.product_id, p.product_name, SUM(od.quantity) as total_sold FROM products p JOIN order_details od ON p.product_id = od.product_id JOIN orders o ON od.order_id = o.order_id WHERE strftime('%Y-%m', o.order_date) = strftime('%Y-%m', 'now') GROUP BY p.product_id, p.product_name ORDER BY total_sold DESC;",
+      "explanation": "Truy vấn này tính tổng số lượng bán ra cho mỗi sản phẩm trong tháng hiện tại bằng cách join bảng products, order_details và orders, lọc theo tháng hiện tại, nhóm theo sản phẩm và sắp xếp theo số lượng bán giảm dần",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-04"
+    },
+    {
+      "id": "FAQ009",
+      "patterns": ["Khách hàng không hoạt động", "Tìm khách hàng không active", "Danh sách khách hàng inactive"],
+      "intent": "Tìm khách hàng không còn hoạt động",
+      "sql": "SELECT * FROM customers WHERE active = 0;",
+      "explanation": "Truy vấn này chọn tất cả các cột từ bảng customers và lọc theo điều kiện active = 0, tức là khách hàng không hoạt động",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-05"
+    },
+    {
+      "id": "FAQ010",
+      "patterns": ["Tổng doanh thu theo danh mục sản phẩm", "Doanh thu từng danh mục", "Thống kê doanh thu theo category"],
+      "intent": "Tính tổng doanh thu theo từng danh mục sản phẩm",
+      "sql": "SELECT p.category, SUM(od.quantity * od.unit_price) as category_revenue FROM products p JOIN order_details od ON p.product_id = od.product_id GROUP BY p.category ORDER BY category_revenue DESC;",
+      "explanation": "Truy vấn này tính tổng doanh thu cho mỗi danh mục sản phẩm bằng cách join bảng products và order_details, nhân số lượng với đơn giá, nhóm theo danh mục và sắp xếp theo doanh thu giảm dần",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-05"
+    },
+    {
+      "id": "FAQ011",
+      "patterns": ["Đơn hàng trong tuần này", "Liệt kê đơn hàng tuần hiện tại", "Đơn hàng 7 ngày qua"],
+      "intent": "Tìm các đơn hàng được tạo trong tuần hiện tại",
+      "sql": "SELECT * FROM orders WHERE order_date >= date('now', '-7 days');",
+      "explanation": "Truy vấn này chọn tất cả các cột từ bảng orders và lọc theo điều kiện order_date lớn hơn hoặc bằng ngày hiện tại trừ đi 7 ngày",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-06"
+    },
+    {
+      "id": "FAQ012",
+      "patterns": ["Sản phẩm hết hàng", "Tìm sản phẩm có stock = 0", "Danh sách sản phẩm cần nhập thêm"],
+      "intent": "Tìm các sản phẩm đã hết hàng trong kho",
+      "sql": "SELECT product_id, product_name, category FROM products WHERE stock = 0;",
+      "explanation": "Truy vấn này chọn id, tên và danh mục sản phẩm từ bảng products và lọc theo điều kiện stock = 0, tức là sản phẩm đã hết hàng",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-06"
+    },
+    {
+      "id": "FAQ013",
+      "patterns": ["Khách hàng chưa từng mua hàng", "Tìm khách hàng không có đơn hàng", "Khách hàng chưa phát sinh giao dịch"],
+      "intent": "Tìm khách hàng chưa từng đặt đơn hàng nào",
+      "sql": "SELECT c.* FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.order_id IS NULL;",
+      "explanation": "Truy vấn này sử dụng LEFT JOIN để tìm các khách hàng không có đơn hàng tương ứng trong bảng orders",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-07"
+    },
+    {
+      "id": "FAQ014",
+      "patterns": ["Giá trung bình sản phẩm theo danh mục", "Trung bình giá từng category", "Average price theo danh mục"],
+      "intent": "Tính giá trung bình của sản phẩm theo từng danh mục",
+      "sql": "SELECT category, AVG(price) as average_price FROM products GROUP BY category;",
+      "explanation": "Truy vấn này tính giá trung bình của sản phẩm cho mỗi danh mục bằng cách sử dụng hàm AVG và nhóm theo cột category",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-07"
+    },
+    {
+      "id": "FAQ015",
+      "patterns": ["Đơn hàng có giá trị lớn nhất", "Tìm đơn hàng giá trị cao nhất", "Đơn hàng có total_amount lớn nhất"],
+      "intent": "Tìm đơn hàng có tổng giá trị cao nhất",
+      "sql": "SELECT o.*, c.name as customer_name FROM orders o JOIN customers c ON o.customer_id = c.customer_id ORDER BY o.total_amount DESC LIMIT 1;",
+      "explanation": "Truy vấn này chọn thông tin đơn hàng và tên khách hàng bằng cách join bảng orders và customers, sắp xếp theo total_amount giảm dần và giới hạn kết quả ở 1 đơn hàng đầu tiên",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-08"
+    },
+    {
+      "id": "FAQ016",
+      "patterns": ["Tỷ lệ chuyển đổi đơn hàng", "Tỷ lệ khách hàng có đơn hàng", "Phần trăm khách hàng đã mua hàng"],
+      "intent": "Tính tỷ lệ khách hàng đã từng đặt đơn hàng",
+      "sql": "SELECT (COUNT(DISTINCT o.customer_id) * 100.0 / COUNT(DISTINCT c.customer_id)) as conversion_rate FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id;",
+      "explanation": "Truy vấn này tính tỷ lệ phần trăm của số khách hàng đã đặt đơn hàng so với tổng số khách hàng bằng cách đếm số lượng customer_id duy nhất trong bảng orders và chia cho số lượng customer_id duy nhất trong bảng customers",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-08"
+    },
+    {
+      "id": "FAQ017",
+      "patterns": ["Chi tiết đơn hàng theo mã", "Xem chi tiết đơn hàng số", "Thông tin đơn hàng cụ thể"],
+      "intent": "Xem chi tiết một đơn hàng cụ thể theo mã đơn hàng",
+      "sql": "SELECT o.order_id, o.order_date, c.name as customer_name, p.product_name, od.quantity, od.unit_price, (od.quantity * od.unit_price) as line_total FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN order_details od ON o.order_id = od.order_id JOIN products p ON od.product_id = p.product_id WHERE o.order_id = :order_id;",
+      "explanation": "Truy vấn này lấy thông tin chi tiết của một đơn hàng cụ thể, bao gồm thông tin đơn hàng, khách hàng, sản phẩm, số lượng, đơn giá và thành tiền bằng cách join các bảng orders, customers, order_details và products, lọc theo order_id được cung cấp",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-09"
+    },
+    {
+      "id": "FAQ018",
+      "patterns": ["Tổng số lượng sản phẩm đã bán", "Đếm tổng sản phẩm bán ra", "Số lượng sản phẩm đã bán"],
+      "intent": "Tính tổng số lượng sản phẩm đã bán ra",
+      "sql": "SELECT SUM(quantity) as total_sold FROM order_details;",
+      "explanation": "Truy vấn này tính tổng số lượng sản phẩm đã bán ra bằng cách sử dụng hàm SUM trên cột quantity trong bảng order_details",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-09"
+    },
+    {
+      "id": "FAQ019",
+      "patterns": ["Khách hàng mua nhiều sản phẩm nhất", "Top khách hàng theo số lượng sản phẩm", "Khách hàng mua số lượng lớn nhất"],
+      "intent": "Tìm khách hàng mua nhiều sản phẩm nhất theo số lượng",
+      "sql": "SELECT c.customer_id, c.name, SUM(od.quantity) as total_quantity FROM customers c JOIN orders o ON c.customer_id = o.customer_id JOIN order_details od ON o.order_id = od.order_id GROUP BY c.customer_id, c.name ORDER BY total_quantity DESC LIMIT 5;",
+      "explanation": "Truy vấn này tính tổng số lượng sản phẩm đã mua cho mỗi khách hàng bằng cách join các bảng customers, orders và order_details, nhóm theo khách hàng, sắp xếp theo tổng số lượng giảm dần và giới hạn kết quả ở 5 khách hàng đầu tiên",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-10"
+    },
+    {
+      "id": "FAQ020",
+      "patterns": ["So sánh doanh thu năm nay và năm trước", "Doanh thu năm nay vs năm trước", "Tăng trưởng doanh thu so với năm trước"],
+      "intent": "So sánh doanh thu giữa năm hiện tại và năm trước",
+      "sql": "SELECT strftime('%Y', order_date) as year, SUM(total_amount) as yearly_revenue FROM orders WHERE order_date >= date('now', '-1 year', 'start of year') AND order_date <= date('now') GROUP BY year ORDER BY year;",
+      "explanation": "Truy vấn này tính tổng doanh thu cho năm hiện tại và năm trước bằng cách lọc các đơn hàng từ đầu năm trước đến hiện tại, nhóm theo năm và sắp xếp theo năm",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-10"
+    },
+    {
+      "id": "FAQ021",
+      "patterns": ["Cập nhật giá sản phẩm", "Thay đổi giá sản phẩm", "Điều chỉnh giá sản phẩm"],
+      "intent": "Cập nhật giá cho một sản phẩm cụ thể",
+      "sql": "UPDATE products SET price = :new_price WHERE product_id = :product_id;",
+      "explanation": "Truy vấn này cập nhật giá mới cho một sản phẩm cụ thể dựa trên product_id được cung cấp",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-11"
+    },
+    {
+      "id": "FAQ022",
+      "patterns": ["Thêm sản phẩm mới", "Tạo sản phẩm", "Insert sản phẩm"],
+      "intent": "Thêm một sản phẩm mới vào hệ thống",
+      "sql": "INSERT INTO products (product_name, category, price, stock) VALUES (:product_name, :category, :price, :stock);",
+      "explanation": "Truy vấn này thêm một sản phẩm mới vào bảng products với các thông tin được cung cấp",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-11"
+    },
+    {
+      "id": "FAQ023",
+      "patterns": ["Hiển thị tất cả khách hàng", "Liệt kê danh sách khách hàng", "Xem thông tin khách hàng"],
+      "intent": "Truy xuất toàn bộ thông tin khách hàng không có điều kiện lọc",
+      "sql": "SELECT * FROM customers;",
+      "explanation": "Truy vấn này chọn tất cả các cột từ bảng customers, trả về thông tin của tất cả khách hàng",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-01"
+
+    },
+    {
+      "id": "FAQ024",
+      "patterns": ["Cập nhật trạng thái đơn hàng", "Thay đổi status đơn hàng", "Chuyển trạng thái đơn"],
+      "intent": "Cập nhật trạng thái cho một đơn hàng cụ thể",
+      "sql": "UPDATE orders SET status = :new_status WHERE order_id = :order_id;",
+      "explanation": "Truy vấn này cập nhật trạng thái mới cho một đơn hàng cụ thể dựa trên order_id được cung cấp",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-12"
+    },
+    {
+      "id": "FAQ025",
+      "patterns": ["Tìm sản phẩm theo tên", "Tìm kiếm sản phẩm", "Search sản phẩm theo tên"],
+      "intent": "Tìm kiếm sản phẩm theo tên hoặc một phần của tên",
+      "sql": "SELECT * FROM products WHERE product_name LIKE '%' || :search_term || '%';",
+      "explanation": "Truy vấn này tìm kiếm các sản phẩm có tên chứa chuỗi tìm kiếm được cung cấp, sử dụng toán tử LIKE với wildcard % ở cả hai đầu để tìm kiếm một phần của tên",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-13"
+    },
+    {
+      "id": "FAQ026",
+      "patterns": ["Tổng số đơn hàng theo khách hàng", "Đếm đơn hàng mỗi khách", "Số lượng đơn hàng theo khách"],
+      "intent": "Đếm số lượng đơn hàng cho mỗi khách hàng",
+      "sql": "SELECT c.customer_id, c.name, COUNT(o.order_id) as order_count FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.name ORDER BY order_count DESC;",
+      "explanation": "Truy vấn này đếm số lượng đơn hàng cho mỗi khách hàng bằng cách sử dụng LEFT JOIN giữa bảng customers và orders, nhóm theo khách hàng và sắp xếp theo số lượng đơn hàng giảm dần",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-13"
+    },
+    {
+      "id": "FAQ027",
+      "patterns": ["Doanh thu theo quý", "Thống kê doanh thu theo quý", "Tổng doanh thu từng quý"],
+      "intent": "Tính tổng doanh thu theo từng quý trong năm",
+      "sql": "SELECT strftime('%Y', order_date) as year, CASE WHEN strftime('%m', order_date) IN ('01','02','03') THEN 'Q1' WHEN strftime('%m', order_date) IN ('04','05','06') THEN 'Q2' WHEN strftime('%m', order_date) IN ('07','08','09') THEN 'Q3' ELSE 'Q4' END as quarter, SUM(total_amount) as quarterly_revenue FROM orders GROUP BY year, quarter ORDER BY year, quarter;",
+      "explanation": "Truy vấn này tính tổng doanh thu cho mỗi quý trong mỗi năm bằng cách sử dụng CASE WHEN để xác định quý dựa trên tháng, nhóm theo năm và quý, và sắp xếp theo năm và quý",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-14"
+    },
+    {
+      "id": "FAQ028",
+      "patterns": ["Sản phẩm và số lượng đã bán", "Thống kê số lượng bán từng sản phẩm", "Số lượng bán ra theo sản phẩm"],
+      "intent": "Thống kê số lượng đã bán cho từng sản phẩm",
+      "sql": "SELECT p.product_id, p.product_name, COALESCE(SUM(od.quantity), 0) as total_sold FROM products p LEFT JOIN order_details od ON p.product_id = od.product_id GROUP BY p.product_id, p.product_name ORDER BY total_sold DESC;",
+      "explanation": "Truy vấn này tính tổng số lượng đã bán cho mỗi sản phẩm bằng cách sử dụng LEFT JOIN giữa bảng products và order_details, nhóm theo sản phẩm và sắp xếp theo số lượng bán giảm dần. Hàm COALESCE được sử dụng để trả về 0 nếu sản phẩm chưa từng được bán",
+      "validated_by": "Nguyễn Văn A",
+      "validation_date": "2025-06-14"
+    },
+    {
+      "id": "FAQ029",
+      "patterns": ["Khách hàng mới trong tháng này", "Tìm khách hàng mới tháng hiện tại", "Danh sách khách hàng mới tháng này"],
+      "intent": "Tìm khách hàng mới được thêm vào trong tháng hiện tại",
+      "sql": "SELECT * FROM customers WHERE strftime('%Y-%m', last_activity_date) = strftime('%Y-%m', 'now') ORDER BY last_activity_date DESC;",
+      "explanation": "Truy vấn này tìm các khách hàng có last_activity_date trong tháng hiện tại, giả định rằng last_activity_date là ngày khách hàng được thêm vào hệ thống, và sắp xếp theo ngày giảm dần",
+      "validated_by": "Trần Thị B",
+      "validation_date": "2025-06-15"
+    },
+    {
+      "id": "FAQ030",
+      "patterns": ["Tỷ lệ hoàn thành đơn hàng", "Phần trăm đơn hàng hoàn thành", "Tỷ lệ đơn hàng Completed"],
+      "intent": "Tính tỷ lệ phần trăm đơn hàng đã hoàn thành",
+      "sql": "SELECT (COUNT(CASE WHEN status = 'Completed' THEN 1 END) * 100.0 / COUNT(*)) as completion_rate FROM orders;",
+      "explanation": "Truy vấn này tính tỷ lệ phần trăm của số đơn hàng có trạng thái 'Completed' so với tổng số đơn hàng bằng cách sử dụng CASE WHEN để đếm các đơn hàng hoàn thành và chia cho tổng số đơn hàng",
+      "validated_by": "Lê Văn C",
+      "validation_date": "2025-06-15"
+    }
+  ]
+}

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-SQL Demo with TruLens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        .card-header {
+            background-color: #f1f3f5;
+            border-bottom: none;
+            font-weight: 600;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+        .form-control {
+            border-radius: 8px;
+        }
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .progress-bar {
+            border-radius: 5px;
+        }
+        .threshold-marker {
+            position: absolute;
+            height: 10px;
+            border-left: 2px dashed #212529;
+            z-index: 1;
+        }
+        .progress-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .score-label {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .score-value {
+            font-weight: 600;
+            float: right;
+        }
+        .alert-api {
+            border-left: 4px solid #dc3545;
+        }
+        .evaluation-badge {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .sql-result {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .query-result {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .tab-content {
+            padding: 20px 0;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+            color: #495057;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            background-color: transparent;
+        }
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .file-upload input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: pointer;
+            display: block;
+        }
+        .preview-container {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+        .clarification-question {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .option-btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .evaluation-framework {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .faq-item {
+            margin-bottom: 0.5rem;
+        }
+        .faq-pattern {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 0.5rem;
+        }
+        .faq-pattern i {
+            color: #0d6efd;
+        }
+        .faq-sql {
+            background-color: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 0.5rem 0;
+        }
+        .faq-explanation {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .faq-meta {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+        .faq-search-highlight {
+            background-color: #fff3cd;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Text-to-SQL with Clear requirement & Evaluation module (TruLens)</h1>
+            <p class="mb-0">Chuyển đổi yêu cầu từ ngôn ngữ tự nhiên thành SQL với  tính năng làm rõ yêu cầu kèm đánh giá tính chính xác</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Data Upload Section -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Dữ liệu mẫu</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Dữ liệu từ database</label>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button" id="loadDataBtn">Load Dữ liệu</button>
+                                </div>
+                                <div id="dataPreviewContainer" class="preview-container d-none">
+                                    <h6>Data Preview:</h6>
+                                    <div id="dataPreview"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Schema mẫu</label>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button" id="loadSchemaBtn">Load Schema</button>
+                                </div>
+                                <div id="schemaPreviewContainer" class="preview-container d-none">
+                                    <h6>Schema Preview:</h6>
+                                    <div id="schemaPreview"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-info mt-3" id="uploadStatus">
+                            Load dữ liệu và schema để bắt đầu.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Status Section -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">API Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="me-2">Gemini API:</span>
+                                    <span id="geminiStatus" class="badge bg-success">Available</span>
+                                </div>
+                                <small class="text-muted">Used for Text-to-SQL conversion</small>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="me-2">TruLens:</span>
+                                    <span id="trulensStatus" class="badge bg-danger">Not Available</span>
+                                </div>
+                                <small class="text-muted" id="trulensMessage">OpenAI API key not set or TruLens not installed</small>
+                                <div class="alert alert-api mt-2 p-2 d-none" id="trulensAlert">
+                                    <small>
+                                        <strong>Tip:</strong> To enable TruLens metrics, set the OPENAI_API_KEY environment variable before starting the application.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Query Section -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Câu Hỏi</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="queryInput" class="form-label">Nhập câu hỏi bằng ngôn ngữ tự nhiên</label>
+                            <textarea class="form-control" id="queryInput" rows="3" placeholder="Ví dụ: Hiển thị tổng doanh thu theo từng chi nhánh"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="submitQueryBtn">Chuyển đổi thành SQL</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clarification Section (Hidden by default) -->
+            <div class="col-md-12 mb-4 d-none" id="clarificationSection">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Làm rõ câu hỏi</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Câu hỏi của bạn có thể hiểu theo nhiều cách khác nhau. Vui lòng làm rõ:
+                        </div>
+                        <div id="clarificationQuestions">
+                            <!-- Clarification questions will be inserted here -->
+                        </div>
+                        <button class="btn btn-primary" id="submitClarificationBtn">Xác nhận và tiếp tục</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Section (Hidden by default) -->
+            <div class="col-md-12 mb-4 d-none" id="resultSection">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Kết Quả</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="resultTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="sql-tab" data-bs-toggle="tab" data-bs-target="#sql" type="button" role="tab" aria-controls="sql" aria-selected="true">SQL</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="explanation-tab" data-bs-toggle="tab" data-bs-target="#explanation" type="button" role="tab" aria-controls="explanation" aria-selected="false">Giải thích</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="evaluation-tab" data-bs-toggle="tab" data-bs-target="#evaluation" type="button" role="tab" aria-controls="evaluation" aria-selected="false">Đánh giá</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="query-result-tab" data-bs-toggle="tab" data-bs-target="#query-result" type="button" role="tab" aria-controls="query-result" aria-selected="false">Kết quả truy vấn</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="resultTabsContent">
+                            <div class="tab-pane fade show active" id="sql" role="tabpanel" aria-labelledby="sql-tab">
+                                <div class="sql-result" id="sqlResult">-- SQL sẽ hiển thị ở đây --</div>
+                                <button class="btn btn-primary" id="executeBtn">Thực thi SQL</button>
+                                <button class="btn btn-outline-secondary" id="copySqlBtn">Sao chép SQL</button>
+                            </div>
+                            <div class="tab-pane fade" id="explanation" role="tabpanel" aria-labelledby="explanation-tab">
+                                <div class="explanation" id="sqlExplanation">-- Giải thích sẽ hiển thị ở đây --</div>
+                            </div>
+                            <div class="tab-pane fade" id="evaluation" role="tabpanel" aria-labelledby="evaluation-tab">
+                                <div id="evaluationResults">
+                                    <div class="alert alert-info mb-4">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <i class="bi bi-info-circle me-2"></i>
+                                                <span id="evaluationSummary">Đánh giá SQL...</span>
+                                            </div>
+                                            <div class="ms-auto">
+                                                <span id="evaluationBadge" class="badge bg-secondary">Đang đánh giá</span>
+                                            </div>
+                                        </div>
+                                        <div class="evaluation-framework" id="evaluationFramework">Framework: TruLens</div>
+                                    </div>
+                                    
+                                    <h6>Chỉ số đánh giá:</h6>
+                                    
+                                    <!-- Relevancy Score -->
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Độ liên quan (Relevancy)</span>
+                                            <span class="score-value" id="relevancyScore">0.0</span>
+                                        </div>
+                                        <div class="progress-container">
+                                            <div class="threshold-marker" id="relevancyThreshold" style="left: 70%"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" id="relevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <small class="score-label">Đánh giá mức độ liên quan của SQL với câu hỏi</small>
+                                    </div>
+                                    
+                                    <!-- Hallucination Score -->
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Ảo giác (Hallucination)</span>
+                                            <span class="score-value" id="hallucinationScore">0.0</span>
+                                        </div>
+                                        <div class="progress-container">
+                                            <div class="threshold-marker" id="hallucinationThreshold" style="left: 30%"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" id="hallucinationBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <small class="score-label">Đánh giá mức độ ảo giác trong SQL (thấp hơn là tốt hơn)</small>
+                                    </div>
+                                    
+                                    <!-- Contextual Relevancy Score -->
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Độ liên quan ngữ cảnh (Contextual Relevancy)</span>
+                                            <span class="score-value" id="contextualRelevancyScore">0.0</span>
+                                        </div>
+                                        <div class="progress-container">
+                                            <div class="threshold-marker" id="contextualRelevancyThreshold" style="left: 70%"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" id="contextualRelevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <small class="score-label">Đánh giá mức độ liên quan của SQL với schema</small>
+                                    </div>
+                                    
+                                    <!-- Correctness Score -->
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Tính chính xác (Correctness)</span>
+                                            <span class="score-value" id="correctnessScore">0.0</span>
+                                        </div>
+                                        <div class="progress-container">
+                                            <div class="threshold-marker" id="correctnessThreshold" style="left: 60%"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" id="correctnessBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <small class="score-label">Đánh giá tính chính xác của SQL</small>
+                                    </div>
+                                    
+                                    <!-- Syntax Score (New) -->
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Cú pháp SQL (Syntax)</span>
+                                            <span class="score-value" id="syntaxScore">0.0</span>
+                                        </div>
+                                        <div class="progress-container">
+                                            <div class="threshold-marker" id="syntaxThreshold" style="left: 80%"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" id="syntaxBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <small class="score-label">Đánh giá tính đúng đắn về cú pháp của SQL</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="query-result" role="tabpanel" aria-labelledby="query-result-tab">
+                                <div id="queryResultContainer">
+                                    <div class="alert alert-info">
+                                        Thực thi SQL để xem kết quả.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Khai báo biến để theo dõi trạng thái load dữ liệu
+            let dataFile = false;
+            let schemaFile = false;
+            let schemaContent = null;
+            let originalQuery = '';
+            let clarificationResponses = {};
+            
+            // API status check
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    // Update Gemini status
+                    const geminiStatus = document.getElementById('geminiStatus');
+                    if (data.gemini_available) {
+                        geminiStatus.className = 'badge bg-success';
+                        geminiStatus.textContent = 'Available';
+                    } else {
+                        geminiStatus.className = 'badge bg-danger';
+                        geminiStatus.textContent = 'Not Available';
+                    }
+                    
+                    // Update TruLens status
+                    const trulensStatus = document.getElementById('trulensStatus');
+                    const trulensMessage = document.getElementById('trulensMessage');
+                    const trulensAlert = document.getElementById('trulensAlert');
+                    
+                    if (data.trulens_available) {
+                        trulensStatus.className = 'badge bg-success';
+                        trulensStatus.textContent = 'Available';
+                        trulensMessage.textContent = 'Using TruLens for SQL evaluation';
+                        trulensAlert.classList.add('d-none');
+                    } else {
+                        trulensStatus.className = 'badge bg-danger';
+                        trulensStatus.textContent = 'Not Available';
+                        trulensMessage.textContent = data.trulens_message || 'OpenAI API key not set or TruLens not installed';
+                        trulensAlert.classList.remove('d-none');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking API status:', error);
+                });
+            
+            // Load data from database
+            document.getElementById('loadDataBtn').addEventListener('click', function() {
+                console.log('Loading data from database...');
+                
+                fetch('/api/load/data', {
+                    method: 'GET'
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Received data:', data);
+                    
+                    if (data.success) {
+                        const previewContainer = document.getElementById('dataPreviewContainer');
+                        const preview = document.getElementById('dataPreview');
+                        
+                        // Format preview data for better display
+                        const formattedPreview = data.preview.map(row => {
+                            const formattedRow = {};
+                            for (const [key, value] of Object.entries(row)) {
+                                // Format numbers to 2 decimal places if they are floats
+                                formattedRow[key] = typeof value === 'number' && !Number.isInteger(value) 
+                                    ? value.toFixed(2) 
+                                    : value;
+                            }
+                            return formattedRow;
+                        });
+                        
+                        previewContainer.classList.remove('d-none');
+                        preview.innerHTML = `<pre>${JSON.stringify(formattedPreview, null, 2)}</pre>`;
+                        
+                        dataFile = true;
+                        updateUploadStatus();
+                        
+                        console.log('Data loaded and displayed successfully');
+                    } else {
+                        console.error('Error in response:', data.error);
+                        alert('Error loading data: ' + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading data:', error);
+                    alert('Error loading data: ' + error.message);
+                });
+            });
+            
+            // Load schema
+            document.getElementById('loadSchemaBtn').addEventListener('click', function() {
+                fetch('/api/load/schema', {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const previewContainer = document.getElementById('schemaPreviewContainer');
+                        const preview = document.getElementById('schemaPreview');
+                        
+                        previewContainer.classList.remove('d-none');
+                        preview.innerHTML = `<pre>${JSON.stringify(data.preview, null, 2)}</pre>`;
+                        schemaContent = data.preview;
+                        
+                        schemaFile = true; // Đánh dấu đã load schema
+                        updateUploadStatus();
+                    } else {
+                        alert('Error loading schema: ' + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading schema:', error);
+                    alert('Error loading schema. See console for details.');
+                });
+            });
+            
+            // Update status message
+            function updateUploadStatus() {
+                const statusElement = document.getElementById('uploadStatus');
+                
+                if (dataFile && schemaFile) {
+                    statusElement.className = 'alert alert-success mt-3';
+                    statusElement.innerHTML = `
+                        <i class="bi bi-check-circle me-2"></i>
+                        Dữ liệu và schema đã được load thành công. Bạn có thể bắt đầu đặt câu hỏi.
+                    `;
+                } else if (dataFile) {
+                    statusElement.className = 'alert alert-warning mt-3';
+                    statusElement.innerHTML = `
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Dữ liệu đã được load. Vui lòng load schema.
+                    `;
+                } else if (schemaFile) {
+                    statusElement.className = 'alert alert-warning mt-3';
+                    statusElement.innerHTML = `
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Schema đã được load. Vui lòng load dữ liệu.
+                    `;
+                } else {
+                    statusElement.className = 'alert alert-info mt-3';
+                    statusElement.innerHTML = `
+                        Load dữ liệu và schema để bắt đầu.
+                    `;
+                }
+            }
+            
+            // Submit query
+            document.getElementById('submitQueryBtn').addEventListener('click', function() {
+                const query = document.getElementById('queryInput').value.trim();
+                
+                if (!query) {
+                    alert('Please enter a query.');
+                    return;
+                }
+                
+                if (!dataFile || !schemaFile) {
+                    alert('Please load both data and schema first.');
+                    return;
+                }
+                
+                // Reset UI
+                document.getElementById('clarificationSection').classList.add('d-none');
+                document.getElementById('resultSection').classList.add('d-none');
+                
+                // Store original query
+                originalQuery = query;
+                
+                // Process query
+                fetch('/api/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.clarification_needed) {
+                        // Show clarification section
+                        showClarificationQuestions(data);
+                    } else {
+                        // Show results
+                        showResults(data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error processing query:', error);
+                    alert('Error processing query. See console for details.');
+                });
+            });
+            
+            // Show clarification questions
+            function showClarificationQuestions(data) {
+                const clarificationSection = document.getElementById('clarificationSection');
+                const questionsContainer = document.getElementById('clarificationQuestions');
+                
+                // Clear previous questions
+                questionsContainer.innerHTML = '';
+                clarificationResponses = {};
+                
+                // Parse and display questions
+                const questions = data.clarification_questions.split('\n');
+                let currentQuestion = null;
+                let questionHtml = '';
+                
+                for (const line of questions) {
+                    if (line.trim() === '') continue;
+                    
+                    if (line.match(/^\d+\./)) {
+                        // New question
+                        if (currentQuestion) {
+                            // Add previous question
+                            questionHtml += '</div>';
+                            questionsContainer.innerHTML += questionHtml;
+                            questionHtml = '';
+                        }
+                        
+                        currentQuestion = line.trim();
+                        questionHtml = `
+                            <div class="clarification-question">
+                                <p><strong>${currentQuestion}</strong></p>
+                                <div class="options">
+                        `;
+                    } else if (line.trim().startsWith('-') && currentQuestion) {
+                        // Option for current question
+                        const option = line.trim().substring(1).trim();
+                        const optionId = `option_${Math.random().toString(36).substring(2, 9)}`;
+                        
+                        questionHtml += `
+                            <button class="btn btn-outline-primary option-btn" 
+                                    data-question="${currentQuestion}" 
+                                    data-option="${option}" 
+                                    id="${optionId}">
+                                ${option}
+                            </button>
+                        `;
+                    }
+                }
+                
+                // Add last question
+                if (currentQuestion && questionHtml) {
+                    questionHtml += '</div></div>';
+                    questionsContainer.innerHTML += questionHtml;
+                }
+                
+                // Add event listeners to option buttons
+                const optionButtons = document.querySelectorAll('.option-btn');
+                optionButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const question = this.getAttribute('data-question');
+                        const option = this.getAttribute('data-option');
+                        
+                        // Deselect other options in the same question
+                        const questionContainer = this.closest('.clarification-question');
+                        const otherOptions = questionContainer.querySelectorAll('.option-btn');
+                        otherOptions.forEach(btn => {
+                            btn.classList.remove('btn-primary');
+                            btn.classList.add('btn-outline-primary');
+                        });
+                        
+                        // Select this option
+                        this.classList.remove('btn-outline-primary');
+                        this.classList.add('btn-primary');
+                        
+                        // Store response
+                        clarificationResponses[question] = option;
+                    });
+                });
+                
+                // Show clarification section
+                clarificationSection.classList.remove('d-none');
+            }
+            
+            // Submit clarification
+            document.getElementById('submitClarificationBtn').addEventListener('click', function() {
+                if (Object.keys(clarificationResponses).length === 0) {
+                    alert('Please select at least one option.');
+                    return;
+                }
+                
+                fetch('/api/clarify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        original_query: originalQuery,
+                        clarification_responses: clarificationResponses
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Hide clarification section
+                    document.getElementById('clarificationSection').classList.add('d-none');
+                    
+                    // Show results
+                    showResults(data);
+                })
+                .catch(error => {
+                    console.error('Error processing clarification:', error);
+                    alert('Error processing clarification. See console for details.');
+                });
+            });
+            
+            // Show results
+            function showResults(data) {
+                // Update SQL
+                document.getElementById('sqlResult').textContent = data.sql || '-- No SQL generated --';
+                
+                // Update explanation
+                document.getElementById('sqlExplanation').textContent = data.explanation || '-- No explanation available --';
+                
+                // Update evaluation
+                updateEvaluation(data.evaluation);
+                
+                // Show result section
+                document.getElementById('resultSection').classList.remove('d-none');
+                
+                // Activate SQL tab
+                const sqlTab = document.getElementById('sql-tab');
+                const tabTrigger = new bootstrap.Tab(sqlTab);
+                tabTrigger.show();
+            }
+            
+            // Update evaluation
+            function updateEvaluation(evaluation) {
+                if (!evaluation || !evaluation.metrics_available) {
+                    // Handle case when metrics are not available
+                    document.getElementById('evaluationSummary').textContent = 'Metrics not available';
+                    document.getElementById('evaluationBadge').className = 'badge bg-secondary';
+                    document.getElementById('evaluationBadge').textContent = 'N/A';
+                    document.getElementById('evaluationFramework').textContent = 'Framework: ' + (evaluation?.evaluation_framework || 'Unknown');
+                    
+                    // Reset all scores
+                    updateScore('relevancy', 0, 0.7);
+                    updateScore('hallucination', 0, 0.3, true);
+                    updateScore('contextualRelevancy', 0, 0.7);
+                    updateScore('correctness', 0, 0.6);
+                    updateScore('syntax', 0, 0.8);
+                    
+                    return;
+                }
+                
+                // Update evaluation summary
+                const allPassed = evaluation.all_passed;
+                const evaluationSummary = document.getElementById('evaluationSummary');
+                const evaluationBadge = document.getElementById('evaluationBadge');
+                const evaluationFramework = document.getElementById('evaluationFramework');
+                
+                if (allPassed) {
+                    evaluationSummary.textContent = 'SQL đạt tất cả các tiêu chí đánh giá';
+                    evaluationBadge.className = 'badge bg-success';
+                    evaluationBadge.textContent = 'Passed';
+                } else {
+                    evaluationSummary.textContent = 'SQL chưa đạt một số tiêu chí đánh giá';
+                    evaluationBadge.className = 'badge bg-warning';
+                    evaluationBadge.textContent = 'Needs Improvement';
+                }
+                
+                evaluationFramework.textContent = 'Framework: ' + (evaluation.evaluation_framework || 'TruLens');
+                
+                // Update scores
+                updateScore('relevancy', evaluation.relevancy_score, 0.7);
+                updateScore('hallucination', evaluation.hallucination_score, 0.3, true);
+                updateScore('contextualRelevancy', evaluation.contextual_relevancy_score, 0.7);
+                updateScore('correctness', evaluation.correctness_score, 0.6);
+                updateScore('syntax', evaluation.syntax_score, 0.8);
+            }
+            
+            // Update score display
+            function updateScore(name, score, threshold, isInverse = false) {
+                const scoreElement = document.getElementById(`${name}Score`);
+                const barElement = document.getElementById(`${name}Bar`);
+                const thresholdElement = document.getElementById(`${name}Threshold`);
+                
+                // Set score value
+                scoreElement.textContent = score ? score.toFixed(2) : '0.00';
+                
+                // Set threshold position
+                thresholdElement.style.left = `${threshold * 100}%`;
+                
+                // Set bar width
+                const width = score * 100;
+                barElement.style.width = `${width}%`;
+                
+                // Set bar color based on threshold
+                if (isInverse) {
+                    // For inverse metrics (like hallucination), lower is better
+                    if (score <= threshold) {
+                        barElement.className = 'progress-bar bg-success';
+                    } else {
+                        barElement.className = 'progress-bar bg-danger';
+                    }
+                } else {
+                    // For normal metrics, higher is better
+                    if (score >= threshold) {
+                        barElement.className = 'progress-bar bg-success';
+                    } else {
+                        barElement.className = 'progress-bar bg-danger';
+                    }
+                }
+            }
+            
+            // Execute SQL
+            document.getElementById('executeBtn').addEventListener('click', function() {
+                const sql = document.getElementById('sqlResult').textContent;
+                
+                if (!sql || sql === '-- No SQL generated --') {
+                    alert('No SQL to execute.');
+                    return;
+                }
+                
+                fetch('/api/execute', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ sql })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const resultContainer = document.getElementById('queryResultContainer');
+                    
+                    if (data.success) {
+                        // Create table from results
+                        let tableHtml = '<table class="table table-striped table-hover">';
+                        
+                        // Table header
+                        if (data.results.length > 0) {
+                            tableHtml += '<thead><tr>';
+                            for (const key of Object.keys(data.results[0])) {
+                                tableHtml += `<th>${key}</th>`;
+                            }
+                            tableHtml += '</tr></thead>';
+                        }
+                        
+                        // Table body
+                        tableHtml += '<tbody>';
+                        for (const row of data.results) {
+                            tableHtml += '<tr>';
+                            for (const key of Object.keys(row)) {
+                                tableHtml += `<td>${row[key]}</td>`;
+                            }
+                            tableHtml += '</tr>';
+                        }
+                        tableHtml += '</tbody></table>';
+                        
+                        resultContainer.innerHTML = tableHtml;
+                        
+                        // Switch to query result tab
+                        const resultTab = document.getElementById('query-result-tab');
+                        const tabTrigger = new bootstrap.Tab(resultTab);
+                        tabTrigger.show();
+                    } else {
+                        resultContainer.innerHTML = `
+                            <div class="alert alert-danger">
+                                <i class="bi bi-exclamation-triangle me-2"></i>
+                                Error: ${data.error}
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error executing SQL:', error);
+                    alert('Error executing SQL. See console for details.');
+                });
+            });
+            
+            // Copy SQL
+            document.getElementById('copySqlBtn').addEventListener('click', function() {
+                const sql = document.getElementById('sqlResult').textContent;
+                
+                if (!sql || sql === '-- No SQL generated --') {
+                    alert('No SQL to copy.');
+                    return;
+                }
+                
+                navigator.clipboard.writeText(sql)
+                    .then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Error copying SQL:', err);
+                        alert('Error copying SQL. See console for details.');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

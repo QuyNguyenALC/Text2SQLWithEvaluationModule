@@ -1,0 +1,1001 @@
+transaction_id,transaction_date,transaction_time,product_id,product_name,product_category,unit_price,quantity_sold,quantity_returned,final_quantity,discount_percentage,revenue,branch_id,branch_name,branch_city,branch_region,employee_id,employee_name,employee_position,payment_method,customer_id,customer_name
+1,2024-03-02,00:00:00,40,Chips,Snacks,26.86,10,0,10,0.02,268.6,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,,
+2,2024-05-20,00:00:00,17,Lettuce,Produce,2.7,3,0,3,0.17,8.1,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,,
+3,2024-04-05,00:00:00,26,Salmon,Seafood,24.72,8,0,8,0.09,197.76,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Credit Card,174.0,Kevin Hurst
+4,2024-02-28,00:00:00,3,Yogurt,Dairy,29.57,10,0,10,0.01,295.7,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Cash,464.0,Daniel Bright
+5,2024-05-11,00:00:00,5,Cream,Dairy,31.69,4,0,4,0.1,126.76,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Gift Card,479.0,Ann Williams
+6,2024-04-14,00:00:00,61,Soap,Household,36.75,4,0,4,0.13,147.0,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Debit Card,240.0,Mark Conner
+7,2024-04-13,00:00:00,7,Bread,Bakery,46.94,6,0,6,0.02,281.64,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Credit Card,230.0,Arthur James
+8,2024-03-12,00:00:00,18,Potatoes,Produce,31.88,8,0,8,0.18,255.04,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Mobile Payment,,
+9,2024-01-04,00:00:00,13,Apples,Produce,4.03,2,0,2,0.17,8.06,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Credit Card,247.0,Kendra Maddox DVM
+10,2024-02-12,00:00:00,28,Shrimp,Seafood,13.52,7,4,3,0.05,40.56,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Mobile Payment,357.0,Nathan Maldonado
+11,2024-03-16,00:00:00,63,Shampoo,Personal Care,17.0,4,0,4,0.12,68.0,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Gift Card,161.0,Debra Davidson
+12,2024-05-02,00:00:00,8,Bagels,Bakery,5.35,9,0,9,0.11,48.15,1,Downtown,New York,East,19,Matthew Foster,Cashier,Cash,,
+13,2024-01-18,00:00:00,11,Cake,Bakery,29.78,4,0,4,0.19,119.12,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Gift Card,305.0,Jeffrey Chavez
+14,2024-04-17,00:00:00,6,Eggs,Dairy,13.74,10,0,10,0.06,137.4,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Debit Card,367.0,Sherri Baker
+15,2024-04-11,00:00:00,41,Pretzels,Snacks,20.67,3,0,3,0.06,62.01,2,Westside,Los Angeles,West,9,Valerie Gray,Cashier,Debit Card,,
+16,2024-05-24,00:00:00,10,Cookies,Bakery,29.36,2,0,2,0.04,58.72,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Debit Card,179.0,Cassandra Gaines
+17,2024-03-13,00:00:00,9,Muffins,Bakery,5.11,3,0,3,0.11,15.33,2,Westside,Los Angeles,West,12,David Garcia,Cashier,Debit Card,414.0,Elizabeth Fowler
+18,2024-01-27,00:00:00,2,Cheese,Dairy,17.68,3,0,3,0.18,53.04,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Gift Card,145.0,Brittany Farmer
+19,2024-03-08,00:00:00,27,Tuna,Seafood,7.39,9,0,9,0.18,66.51,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Cash,217.0,Paula Moreno
+20,2024-03-26,00:00:00,36,Tea,Beverages,10.85,3,0,3,0.05,32.55,1,Downtown,New York,East,1,Allison Hill,Cashier,Mobile Payment,219.0,Fred Smith
+21,2024-02-08,00:00:00,2,Cheese,Dairy,18.97,9,6,3,0.12,56.91,1,Downtown,New York,East,3,Allen Robinson,Manager,Credit Card,22.0,Sherry Decker
+22,2024-04-01,00:00:00,40,Chips,Snacks,23.85,4,0,4,0.13,95.4,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Debit Card,,
+23,2024-03-01,00:00:00,53,Pizza,Frozen Foods,28.9,3,0,3,0.16,86.7,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Mobile Payment,378.0,Anthony Humphrey
+24,2024-03-09,00:00:00,43,Nuts,Snacks,48.87,3,0,3,0.02,146.61,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Cash,,
+25,2024-03-30,00:00:00,29,Cod,Seafood,9.76,5,0,5,0.17,48.8,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Credit Card,99.0,Angelica Tucker
+26,2024-01-18,00:00:00,52,Fruit,Canned Goods,30.9,5,0,5,0.1,154.5,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Gift Card,15.0,Philip Cannon
+27,2024-05-28,00:00:00,15,Oranges,Produce,40.39,5,5,0,0.09,0.0,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Debit Card,262.0,John Pierce
+28,2024-02-18,00:00:00,15,Oranges,Produce,44.39,5,4,1,0.0,44.39,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Gift Card,482.0,Shane Henderson
+29,2024-01-18,00:00:00,26,Salmon,Seafood,23.64,6,0,6,0.13,141.84,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Cash,,
+30,2024-04-14,00:00:00,39,Wine,Beverages,12.3,6,0,6,0.06,73.8,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Credit Card,341.0,Joshua Blair
+31,2024-05-25,00:00:00,49,Tuna,Canned Goods,16.35,5,0,5,0.17,81.75,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Debit Card,221.0,Eric Carney
+32,2024-04-23,00:00:00,42,Popcorn,Snacks,17.28,4,0,4,0.16,69.12,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Credit Card,146.0,Jessica Holmes
+33,2024-01-24,00:00:00,66,Lotion,Personal Care,16.2,4,0,4,0.04,64.8,5,Eastville,Miami,Southeast,11,Amber Perez,Assistant Manager,Credit Card,24.0,Danny Morgan
+34,2024-01-19,00:00:00,32,Water,Beverages,35.19,8,0,8,0.13,281.52,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Credit Card,,
+35,2024-03-03,00:00:00,50,Corn,Canned Goods,26.93,3,0,3,0.0,80.79,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Cash,,
+36,2024-04-28,00:00:00,29,Cod,Seafood,9.64,1,0,1,0.18,9.64,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Cash,411.0,Crystal Robinson
+37,2024-03-22,00:00:00,60,Detergent,Household,37.55,8,0,8,0.14,300.4,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Gift Card,465.0,Mark Perez
+38,2024-04-25,00:00:00,58,Paper Towels,Household,40.35,5,0,5,0.17,201.75,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Debit Card,,
+39,2024-03-11,00:00:00,67,Razors,Personal Care,6.09,8,0,8,0.06,48.72,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Debit Card,458.0,Shannon Jones
+40,2024-02-29,00:00:00,11,Cake,Bakery,31.61,7,0,7,0.14,221.27,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Cash,170.0,Michael Lewis
+41,2024-02-22,00:00:00,60,Detergent,Household,37.11,7,0,7,0.15,259.77,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Cash,,
+42,2024-03-31,00:00:00,49,Tuna,Canned Goods,16.35,5,0,5,0.17,81.75,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Mobile Payment,377.0,Timothy Duncan
+43,2024-03-10,00:00:00,29,Cod,Seafood,10.82,7,0,7,0.08,75.74,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Mobile Payment,,
+44,2024-05-16,00:00:00,60,Detergent,Household,38.42,1,0,1,0.12,38.42,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Cash,220.0,Richard Aguirre
+45,2024-01-13,00:00:00,18,Potatoes,Produce,37.32,5,0,5,0.04,186.6,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Debit Card,451.0,Brent Jordan
+46,2024-03-05,00:00:00,49,Tuna,Canned Goods,16.74,2,0,2,0.15,33.48,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Cash,,
+47,2024-01-11,00:00:00,45,Chocolate,Snacks,36.51,1,0,1,0.04,36.51,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Cash,123.0,John Daniel
+48,2024-05-24,00:00:00,17,Lettuce,Produce,3.09,4,0,4,0.05,12.36,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Debit Card,311.0,Victoria Garcia
+49,2024-01-28,00:00:00,15,Oranges,Produce,39.06,10,5,5,0.12,195.3,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Mobile Payment,367.0,Gerald Hensley
+50,2024-03-03,00:00:00,26,Salmon,Seafood,25.54,2,0,2,0.06,51.08,1,Downtown,New York,East,19,Matthew Foster,Cashier,Gift Card,,
+51,2024-04-19,00:00:00,6,Eggs,Dairy,12.72,6,0,6,0.13,76.32,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Cash,,
+52,2024-04-02,00:00:00,63,Shampoo,Personal Care,17.58,8,0,8,0.09,140.64,1,Downtown,New York,East,14,Timothy Wong,Cashier,Gift Card,,
+53,2024-05-03,00:00:00,35,Coffee,Beverages,37.35,8,0,8,0.15,298.8,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,126.0,Connor West
+54,2024-03-03,00:00:00,12,Pastries,Bakery,6.19,8,0,8,0.13,49.52,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,436.0,Donald Wright
+55,2024-02-24,00:00:00,42,Popcorn,Snacks,19.13,6,0,6,0.07,114.78,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Gift Card,,
+56,2024-05-12,00:00:00,36,Tea,Beverages,9.82,4,0,4,0.14,39.28,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Mobile Payment,124.0,Jessica Callahan
+57,2024-01-05,00:00:00,61,Soap,Household,38.86,2,0,2,0.08,77.72,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Credit Card,298.0,Amber Kidd
+58,2024-05-15,00:00:00,48,Beans,Canned Goods,25.69,6,0,6,0.15,154.14,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Debit Card,233.0,Tracy House
+59,2024-02-29,00:00:00,35,Coffee,Beverages,41.3,2,0,2,0.06,82.6,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Gift Card,,
+60,2024-05-03,00:00:00,24,Lamb,Meat,28.31,5,0,5,0.2,141.55,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Gift Card,52.0,Carol Tucker
+61,2024-04-02,00:00:00,25,Sausages,Meat,26.53,3,0,3,0.14,79.59,3,Northgate,Chicago,Midwest,8,Lindsey Roman,Stocker,Credit Card,499.0,James Brown
+62,2024-02-02,00:00:00,7,Bread,Bakery,47.9,8,0,8,0.0,383.2,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Debit Card,226.0,William Baker
+63,2024-03-05,00:00:00,44,Crackers,Snacks,25.71,8,0,8,0.01,205.68,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,323.0,Jordan Henderson
+64,2024-05-24,00:00:00,7,Bread,Bakery,45.5,5,0,5,0.05,227.5,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Gift Card,,
+65,2024-04-25,00:00:00,29,Cod,Seafood,10.35,8,0,8,0.12,82.8,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Mobile Payment,318.0,Whitney Peters
+66,2024-02-23,00:00:00,8,Bagels,Bakery,5.89,4,0,4,0.02,23.56,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Credit Card,39.0,Brittney Phillips
+67,2024-04-25,00:00:00,21,Beef,Meat,31.83,10,0,10,0.01,318.3,1,Downtown,New York,East,14,Timothy Wong,Cashier,Debit Card,,
+68,2024-03-08,00:00:00,59,Toilet Paper,Household,20.96,10,0,10,0.19,209.6,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Mobile Payment,116.0,Lauren Daniels
+69,2024-01-19,00:00:00,20,Chicken,Meat,18.45,1,0,1,0.06,18.45,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Gift Card,,
+70,2024-03-18,00:00:00,57,Desserts,Frozen Foods,42.97,7,0,7,0.1,300.79,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Mobile Payment,307.0,Amy Silva
+71,2024-03-05,00:00:00,6,Eggs,Dairy,11.84,1,0,1,0.19,11.84,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Gift Card,11.0,Sarah Moore
+72,2024-02-14,00:00:00,35,Coffee,Beverages,39.99,8,0,8,0.09,319.92,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Debit Card,300.0,Angela Lopez
+73,2024-04-30,00:00:00,56,Meals,Frozen Foods,8.22,6,0,6,0.06,49.32,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Cash,,
+74,2024-03-14,00:00:00,43,Nuts,Snacks,44.38,7,0,7,0.11,310.66,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,130.0,Megan Young
+75,2024-05-11,00:00:00,42,Popcorn,Snacks,18.31,1,0,1,0.11,18.31,1,Downtown,New York,East,13,Holly Wood,Cashier,Mobile Payment,266.0,Steve Sanchez
+76,2024-04-23,00:00:00,47,Soup,Canned Goods,35.43,1,0,1,0.11,35.43,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Debit Card,358.0,Lisa Barnes
+77,2024-03-02,00:00:00,63,Shampoo,Personal Care,19.32,3,0,3,0.0,57.96,1,Downtown,New York,East,1,Allison Hill,Cashier,Mobile Payment,431.0,Kelly Donovan
+78,2024-02-09,00:00:00,15,Oranges,Produce,41.73,8,0,8,0.06,333.84,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Debit Card,248.0,Mike Allen
+79,2024-05-21,00:00:00,61,Soap,Household,34.64,3,0,3,0.18,103.92,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Gift Card,,
+80,2024-04-16,00:00:00,18,Potatoes,Produce,34.99,6,0,6,0.1,209.94,1,Downtown,New York,East,9,Valerie Gray,Cashier,Cash,153.0,Michael Evans
+81,2024-05-17,00:00:00,63,Shampoo,Personal Care,17.19,8,0,8,0.11,137.52,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Gift Card,478.0,Paul Jones
+82,2024-05-26,00:00:00,42,Popcorn,Snacks,17.28,7,0,7,0.16,120.96,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Cash,243.0,Zachary Ferrell
+83,2024-05-06,00:00:00,49,Tuna,Canned Goods,15.96,1,0,1,0.19,15.96,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Debit Card,,
+84,2024-04-26,00:00:00,57,Desserts,Frozen Foods,43.92,1,0,1,0.08,43.92,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Credit Card,401.0,Daniel Baker
+85,2024-04-11,00:00:00,34,Juice,Beverages,37.96,2,0,2,0.17,75.92,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Gift Card,163.0,Shirley Suarez
+86,2024-01-18,00:00:00,63,Shampoo,Personal Care,15.84,4,0,4,0.18,63.36,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Credit Card,,
+87,2024-04-23,00:00:00,56,Meals,Frozen Foods,7.18,3,0,3,0.18,21.54,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Cash,29.0,Christopher Bass
+88,2024-04-20,00:00:00,38,Beer,Beverages,7.36,3,0,3,0.08,22.08,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Credit Card,41.0,Lisa Archer
+89,2024-05-07,00:00:00,49,Tuna,Canned Goods,17.93,10,0,10,0.09,179.3,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Debit Card,342.0,Aimee Montoya
+90,2024-05-19,00:00:00,2,Cheese,Dairy,17.46,3,0,3,0.19,52.38,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Gift Card,493.0,Matthew Mcmillan
+91,2024-03-18,00:00:00,55,Vegetables,Frozen Foods,5.37,4,0,4,0.17,21.48,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Cash,293.0,Brian Rodriguez
+92,2024-03-16,00:00:00,46,Candy,Snacks,7.39,1,0,1,0.13,7.39,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Debit Card,443.0,Denise Jacobs
+93,2024-03-14,00:00:00,7,Bread,Bakery,44.55,4,0,4,0.07,178.2,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Credit Card,348.0,Christina Walters
+94,2024-03-20,00:00:00,18,Potatoes,Produce,33.05,8,6,2,0.15,66.1,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Cash,,
+95,2024-02-21,00:00:00,42,Popcorn,Snacks,16.87,3,0,3,0.18,50.61,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Debit Card,468.0,John Whitehead
+96,2024-05-03,00:00:00,35,Coffee,Beverages,40.86,5,0,5,0.07,204.3,2,Westside,Los Angeles,West,9,Valerie Gray,Cashier,Cash,39.0,Anna Henderson
+97,2024-05-22,00:00:00,19,Onions,Produce,39.48,6,0,6,0.08,236.88,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Debit Card,233.0,Aaron Wise
+98,2024-04-07,00:00:00,48,Beans,Canned Goods,28.71,6,0,6,0.05,172.26,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Cash,483.0,Deborah Figueroa
+99,2024-01-17,00:00:00,42,Popcorn,Snacks,19.34,8,0,8,0.06,154.72,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Mobile Payment,24.0,Jessica Smith
+100,2024-01-30,00:00:00,5,Cream,Dairy,31.34,2,0,2,0.11,62.68,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,344.0,Stephen Mckee
+101,2024-04-16,00:00:00,54,Ice Cream,Frozen Foods,33.26,2,0,2,0.12,66.52,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Debit Card,190.0,Sandra Aguilar
+102,2024-03-01,00:00:00,28,Shrimp,Seafood,12.24,6,0,6,0.14,73.44,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Gift Card,,
+103,2024-03-11,00:00:00,46,Candy,Snacks,6.88,4,0,4,0.19,27.52,1,Downtown,New York,East,13,Holly Wood,Cashier,Mobile Payment,109.0,Cameron Parker
+104,2024-03-03,00:00:00,3,Yogurt,Dairy,28.68,3,0,3,0.04,86.04,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Gift Card,111.0,Rebecca Valencia
+105,2024-01-01,00:00:00,30,Crab,Seafood,41.03,5,0,5,0.03,205.15,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Credit Card,409.0,Christine Wright
+106,2024-02-03,00:00:00,23,Turkey,Meat,9.47,1,0,1,0.16,9.47,1,Downtown,New York,East,1,Allison Hill,Cashier,Gift Card,90.0,Richard Henson
+107,2024-04-17,00:00:00,34,Juice,Beverages,45.28,9,0,9,0.01,407.52,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+108,2024-04-25,00:00:00,66,Lotion,Personal Care,14.85,9,0,9,0.12,133.65,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Gift Card,330.0,Marc Moore
+109,2024-04-12,00:00:00,4,Butter,Dairy,34.36,7,0,7,0.1,240.52,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,42.0,Sharon Cherry
+110,2024-01-17,00:00:00,42,Popcorn,Snacks,17.9,3,0,3,0.13,53.7,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Gift Card,,
+111,2024-03-16,00:00:00,49,Tuna,Canned Goods,17.93,8,0,8,0.09,143.44,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Cash,,
+112,2024-02-28,00:00:00,28,Shrimp,Seafood,12.95,7,0,7,0.09,90.65,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Mobile Payment,,
+113,2024-03-06,00:00:00,41,Pretzels,Snacks,18.91,6,0,6,0.14,113.46,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Mobile Payment,426.0,Sierra Johnson
+114,2024-01-25,00:00:00,11,Cake,Bakery,32.72,6,0,6,0.11,196.32,1,Downtown,New York,East,14,Timothy Wong,Cashier,Gift Card,,
+115,2024-03-31,00:00:00,43,Nuts,Snacks,42.89,7,0,7,0.14,300.23,1,Downtown,New York,East,14,Timothy Wong,Cashier,Debit Card,181.0,Evelyn Galvan
+116,2024-02-24,00:00:00,14,Bananas,Produce,39.97,3,0,3,0.04,119.91,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Cash,285.0,Sharon Cochran
+117,2024-05-26,00:00:00,48,Beans,Canned Goods,25.08,4,0,4,0.17,100.32,1,Downtown,New York,East,9,Valerie Gray,Cashier,Gift Card,330.0,Richard Rodriguez
+118,2024-01-08,00:00:00,4,Butter,Dairy,32.45,3,0,3,0.15,97.35,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Debit Card,93.0,Shannon Walker
+119,2024-01-18,00:00:00,19,Onions,Produce,34.76,3,0,3,0.19,104.28,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Cash,,
+120,2024-04-26,00:00:00,28,Shrimp,Seafood,13.38,6,0,6,0.06,80.28,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Debit Card,,
+121,2024-02-10,00:00:00,11,Cake,Bakery,34.92,10,2,8,0.05,279.36,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Mobile Payment,227.0,Julia Torres
+122,2024-05-11,00:00:00,54,Ice Cream,Frozen Foods,37.03,2,0,2,0.02,74.06,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Gift Card,342.0,Crystal Johnson
+123,2024-04-11,00:00:00,40,Chips,Snacks,26.31,10,0,10,0.04,263.1,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Credit Card,,
+124,2024-01-31,00:00:00,33,Soda,Beverages,12.85,1,0,1,0.09,12.85,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Credit Card,361.0,Garrett Lin
+125,2024-03-31,00:00:00,30,Crab,Seafood,35.95,2,0,2,0.15,71.9,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Mobile Payment,472.0,Diana May
+126,2024-04-19,00:00:00,10,Cookies,Bakery,26.6,10,0,10,0.13,266.0,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Debit Card,11.0,William Herrera
+127,2024-04-27,00:00:00,42,Popcorn,Snacks,17.07,6,0,6,0.17,102.42,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Credit Card,206.0,Ashley Waller
+128,2024-03-27,00:00:00,11,Cake,Bakery,35.66,4,0,4,0.03,142.64,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Gift Card,272.0,Victor Baker
+129,2024-03-30,00:00:00,66,Lotion,Personal Care,16.37,3,0,3,0.03,49.11,2,Westside,Los Angeles,West,12,David Garcia,Cashier,Credit Card,79.0,Jeffrey Chandler
+130,2024-04-28,00:00:00,10,Cookies,Bakery,27.83,10,0,10,0.09,278.3,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Gift Card,320.0,Larry Dixon
+131,2024-04-22,00:00:00,42,Popcorn,Snacks,17.9,2,0,2,0.13,35.8,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Debit Card,181.0,Kenneth Scott
+132,2024-04-28,00:00:00,65,Deodorant,Personal Care,38.19,8,6,2,0.17,76.38,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Cash,438.0,April Frost
+133,2024-05-09,00:00:00,12,Pastries,Bakery,6.34,7,0,7,0.11,44.38,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Cash,415.0,Michelle Harmon
+134,2024-05-01,00:00:00,25,Sausages,Meat,30.54,9,0,9,0.01,274.86,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,,
+135,2024-02-14,00:00:00,44,Crackers,Snacks,23.63,1,0,1,0.09,23.63,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Mobile Payment,313.0,Helen Jones
+136,2024-03-13,00:00:00,21,Beef,Meat,29.9,7,0,7,0.07,209.3,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Gift Card,324.0,Erin Edwards
+137,2024-01-25,00:00:00,43,Nuts,Snacks,46.88,9,0,9,0.06,421.92,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Gift Card,,
+138,2024-02-06,00:00:00,43,Nuts,Snacks,43.39,6,0,6,0.13,260.34,1,Downtown,New York,East,19,Matthew Foster,Cashier,Mobile Payment,363.0,Michelle Evans
+139,2024-04-06,00:00:00,11,Cake,Bakery,31.98,6,0,6,0.13,191.88,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Gift Card,344.0,Jason Powell
+140,2024-01-05,00:00:00,55,Vegetables,Frozen Foods,5.24,6,0,6,0.19,31.44,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Debit Card,,
+141,2024-02-05,00:00:00,63,Shampoo,Personal Care,16.04,3,0,3,0.17,48.12,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Cash,277.0,Cameron Fisher
+142,2024-02-03,00:00:00,5,Cream,Dairy,34.15,10,0,10,0.03,341.5,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Gift Card,,
+143,2024-04-15,00:00:00,22,Pork,Meat,8.52,6,0,6,0.05,51.12,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Mobile Payment,386.0,Megan Orr
+144,2024-03-02,00:00:00,58,Paper Towels,Household,40.84,5,0,5,0.16,204.2,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Credit Card,485.0,Elizabeth Kelley
+145,2024-04-07,00:00:00,57,Desserts,Frozen Foods,38.67,9,0,9,0.19,348.03,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Credit Card,,
+146,2024-05-03,00:00:00,18,Potatoes,Produce,38.1,6,0,6,0.02,228.6,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Gift Card,,
+147,2024-03-10,00:00:00,37,Energy Drinks,Beverages,19.78,8,0,8,0.03,158.24,1,Downtown,New York,East,6,Melissa Peterson,Sales Associate,Mobile Payment,467.0,Dustin Jordan
+148,2024-01-07,00:00:00,29,Cod,Seafood,10.58,7,0,7,0.1,74.06,4,Southcenter,Houston,South,12,David Garcia,Cashier,Credit Card,42.0,Mary Marshall
+149,2024-03-22,00:00:00,48,Beans,Canned Goods,26.29,2,0,2,0.13,52.58,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Credit Card,147.0,Daniel Kennedy
+150,2024-04-24,00:00:00,61,Soap,Household,42.24,10,2,8,0.0,337.92,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Credit Card,,
+151,2024-03-01,00:00:00,55,Vegetables,Frozen Foods,6.15,5,0,5,0.05,30.75,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Gift Card,57.0,Rebecca Jackson
+152,2024-01-05,00:00:00,64,Toothpaste,Personal Care,23.59,9,0,9,0.14,212.31,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,315.0,Jose Schultz
+153,2024-04-16,00:00:00,46,Candy,Snacks,8.32,3,0,3,0.02,24.96,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Debit Card,270.0,Robert Potter
+154,2024-01-06,00:00:00,65,Deodorant,Personal Care,45.55,7,0,7,0.01,318.85,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Mobile Payment,,
+155,2024-01-18,00:00:00,33,Soda,Beverages,12.28,6,0,6,0.13,73.68,1,Downtown,New York,East,12,David Garcia,Cashier,Cash,,
+156,2024-03-31,00:00:00,43,Nuts,Snacks,43.39,9,0,9,0.13,390.51,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,,
+157,2024-01-17,00:00:00,62,Cleaning Supplies,Household,30.53,8,4,4,0.01,122.12,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Credit Card,,
+158,2024-04-11,00:00:00,41,Pretzels,Snacks,21.77,9,0,9,0.01,195.93,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Credit Card,442.0,Courtney Gonzalez
+159,2024-02-01,00:00:00,7,Bread,Bakery,44.07,6,0,6,0.08,264.42,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Mobile Payment,,
+160,2024-05-07,00:00:00,50,Corn,Canned Goods,22.62,8,0,8,0.16,180.96,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Debit Card,,
+161,2024-02-16,00:00:00,55,Vegetables,Frozen Foods,6.34,9,0,9,0.02,57.06,1,Downtown,New York,East,14,Timothy Wong,Cashier,Debit Card,157.0,David Alvarez
+162,2024-02-12,00:00:00,58,Paper Towels,Household,48.13,8,0,8,0.01,385.04,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Debit Card,223.0,Angel Perry
+163,2024-04-13,00:00:00,36,Tea,Beverages,9.71,6,0,6,0.15,58.26,1,Downtown,New York,East,3,Allen Robinson,Manager,Credit Card,,
+164,2024-01-09,00:00:00,19,Onions,Produce,36.04,3,0,3,0.16,108.12,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Debit Card,487.0,Cheyenne Horton
+165,2024-04-25,00:00:00,5,Cream,Dairy,29.93,6,0,6,0.15,179.58,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Gift Card,188.0,David Douglas Jr.
+166,2024-03-04,00:00:00,51,Tomatoes,Canned Goods,38.86,2,1,1,0.1,38.86,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Mobile Payment,,
+167,2024-04-24,00:00:00,16,Tomatoes,Produce,27.53,4,0,4,0.06,110.12,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Mobile Payment,70.0,Patricia Rodriguez
+168,2024-04-23,00:00:00,10,Cookies,Bakery,24.77,2,0,2,0.19,49.54,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Debit Card,364.0,Christopher Rubio
+169,2024-03-15,00:00:00,9,Muffins,Bakery,4.94,5,0,5,0.14,24.7,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Credit Card,,
+170,2024-02-21,00:00:00,66,Lotion,Personal Care,15.19,3,0,3,0.1,45.57,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Debit Card,189.0,Amber Wright
+171,2024-01-23,00:00:00,60,Detergent,Household,34.93,2,0,2,0.2,69.86,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Mobile Payment,394.0,Joyce Solis
+172,2024-02-02,00:00:00,53,Pizza,Frozen Foods,31.3,6,0,6,0.09,187.8,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Gift Card,450.0,Victoria Larson
+173,2024-05-08,00:00:00,24,Lamb,Meat,31.85,1,0,1,0.1,31.85,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Debit Card,166.0,Stephanie Salazar
+174,2024-03-13,00:00:00,29,Cod,Seafood,10.23,2,0,2,0.13,20.46,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Gift Card,321.0,Kathy Rivas
+175,2024-01-24,00:00:00,39,Wine,Beverages,11.51,9,0,9,0.12,103.59,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Gift Card,338.0,Stephanie Manning
+176,2024-01-08,00:00:00,44,Crackers,Snacks,22.59,2,2,0,0.13,0.0,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Gift Card,328.0,David Wright
+177,2024-03-15,00:00:00,4,Butter,Dairy,32.07,5,0,5,0.16,160.35,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Mobile Payment,38.0,Pamela Boyd
+178,2024-04-16,00:00:00,8,Bagels,Bakery,5.59,8,0,8,0.07,44.72,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Credit Card,368.0,Denise Jones
+179,2024-02-03,00:00:00,41,Pretzels,Snacks,21.55,6,0,6,0.02,129.3,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Credit Card,137.0,Devon Flores
+180,2024-01-25,00:00:00,58,Paper Towels,Household,44.73,1,0,1,0.08,44.73,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Gift Card,493.0,Brenda Hall
+181,2024-03-21,00:00:00,21,Beef,Meat,28.93,4,0,4,0.1,115.72,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Gift Card,451.0,Michelle Brown
+182,2024-01-24,00:00:00,40,Chips,Snacks,22.2,7,0,7,0.19,155.4,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,25.0,Joshua Perry
+183,2024-04-30,00:00:00,7,Bread,Bakery,39.76,5,0,5,0.17,198.8,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,136.0,Jason Stein
+184,2024-01-12,00:00:00,47,Soup,Canned Goods,35.43,7,0,7,0.11,248.01,4,Southcenter,Houston,South,12,David Garcia,Cashier,Debit Card,38.0,Melissa Gates
+185,2024-05-20,00:00:00,50,Corn,Canned Goods,23.7,5,0,5,0.12,118.5,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Gift Card,500.0,Jamie Smith
+186,2024-03-27,00:00:00,13,Apples,Produce,4.13,9,0,9,0.15,37.17,4,Southcenter,Houston,South,12,David Garcia,Cashier,Credit Card,206.0,Paul Castaneda
+187,2024-01-10,00:00:00,65,Deodorant,Personal Care,38.65,3,0,3,0.16,115.95,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Gift Card,311.0,Jennifer Adkins
+188,2024-03-22,00:00:00,66,Lotion,Personal Care,14.85,3,0,3,0.12,44.55,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Debit Card,260.0,Lindsey Walker
+189,2024-05-24,00:00:00,66,Lotion,Personal Care,16.88,5,0,5,0.0,84.4,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Debit Card,214.0,Jeffrey Johnson
+190,2024-05-01,00:00:00,40,Chips,Snacks,23.02,5,0,5,0.16,115.1,1,Downtown,New York,East,20,Derek Wright,Stocker,Gift Card,370.0,Michael Powell
+191,2024-02-13,00:00:00,7,Bread,Bakery,42.15,9,0,9,0.12,379.35,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,349.0,John Anderson
+192,2024-01-29,00:00:00,32,Water,Beverages,37.21,4,3,1,0.08,37.21,1,Downtown,New York,East,19,Matthew Foster,Cashier,Mobile Payment,211.0,Alyssa Long
+193,2024-01-16,00:00:00,65,Deodorant,Personal Care,40.95,3,0,3,0.11,122.85,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,161.0,Alyssa Day
+194,2024-03-28,00:00:00,23,Turkey,Meat,9.58,9,0,9,0.15,86.22,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Debit Card,99.0,Joel Williams
+195,2024-03-17,00:00:00,32,Water,Beverages,32.36,4,0,4,0.2,129.44,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Debit Card,,
+196,2024-03-30,00:00:00,63,Shampoo,Personal Care,16.23,9,0,9,0.16,146.07,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Debit Card,294.0,Daniel Murphy
+197,2024-02-07,00:00:00,49,Tuna,Canned Goods,18.32,5,1,4,0.07,73.28,4,Southcenter,Houston,South,12,David Garcia,Cashier,Mobile Payment,383.0,Jamie Walton
+198,2024-05-17,00:00:00,62,Cleaning Supplies,Household,26.52,5,0,5,0.14,132.6,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Credit Card,380.0,Darlene Miller
+199,2024-05-15,00:00:00,31,Mussels,Seafood,12.1,4,0,4,0.01,48.4,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,242.0,Joshua Cooke
+200,2024-05-20,00:00:00,13,Apples,Produce,3.94,3,0,3,0.19,11.82,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Mobile Payment,103.0,Matthew Harrington
+201,2024-01-16,00:00:00,37,Energy Drinks,Beverages,19.37,2,0,2,0.05,38.74,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Cash,,
+202,2024-01-10,00:00:00,23,Turkey,Meat,10.82,7,0,7,0.04,75.74,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Debit Card,,
+203,2024-01-28,00:00:00,2,Cheese,Dairy,17.25,6,0,6,0.2,103.5,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Gift Card,456.0,Nicole Herring
+204,2024-03-10,00:00:00,18,Potatoes,Produce,36.16,4,0,4,0.07,144.64,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Mobile Payment,368.0,Alex Hernandez
+205,2024-03-16,00:00:00,24,Lamb,Meat,33.97,10,0,10,0.04,339.7,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Gift Card,,
+206,2024-03-24,00:00:00,52,Fruit,Canned Goods,33.64,2,0,2,0.02,67.28,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Credit Card,480.0,Michael Elliott
+207,2024-04-08,00:00:00,32,Water,Beverages,38.43,4,0,4,0.05,153.72,1,Downtown,New York,East,9,Valerie Gray,Cashier,Debit Card,371.0,Michael Wang
+208,2024-03-01,00:00:00,2,Cheese,Dairy,19.62,1,0,1,0.09,19.62,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Credit Card,258.0,Lawrence Adkins
+209,2024-04-04,00:00:00,40,Chips,Snacks,22.2,10,0,10,0.19,222.0,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Mobile Payment,383.0,Robert Oconnell
+210,2024-04-30,00:00:00,48,Beans,Canned Goods,25.08,9,0,9,0.17,225.72,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Credit Card,306.0,Alexander Collins
+211,2024-05-15,00:00:00,11,Cake,Bakery,32.72,6,0,6,0.11,196.32,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Cash,,
+212,2024-05-17,00:00:00,65,Deodorant,Personal Care,38.19,3,0,3,0.17,114.57,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Mobile Payment,106.0,Tina Sanders
+213,2024-04-24,00:00:00,63,Shampoo,Personal Care,17.39,1,0,1,0.1,17.39,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Mobile Payment,287.0,Angela Vaughn
+214,2024-04-11,00:00:00,60,Detergent,Household,37.11,5,0,5,0.15,185.55,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Gift Card,217.0,Ashley Barton
+215,2024-01-16,00:00:00,45,Chocolate,Snacks,34.61,2,0,2,0.09,69.22,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Debit Card,394.0,Lindsay Martinez
+216,2024-04-07,00:00:00,18,Potatoes,Produce,31.88,8,0,8,0.18,255.04,4,Southcenter,Houston,South,12,David Garcia,Cashier,Mobile Payment,494.0,Dr. Hannah Patterson
+217,2024-02-15,00:00:00,18,Potatoes,Produce,37.71,9,0,9,0.03,339.39,3,Northgate,Chicago,Midwest,4,Cristian Santos,Sales Associate,Credit Card,,
+218,2024-05-19,00:00:00,3,Yogurt,Dairy,25.09,7,0,7,0.16,175.63,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Credit Card,80.0,Jonathan Peterson
+219,2024-01-09,00:00:00,36,Tea,Beverages,9.25,7,0,7,0.19,64.75,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Cash,35.0,Samantha Garcia
+220,2024-04-24,00:00:00,13,Apples,Produce,4.03,10,0,10,0.17,40.3,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Credit Card,,
+221,2024-05-18,00:00:00,52,Fruit,Canned Goods,28.84,4,0,4,0.16,115.36,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Credit Card,149.0,Madison Poole
+222,2024-05-27,00:00:00,30,Crab,Seafood,35.53,10,0,10,0.16,355.3,5,Eastville,Miami,Southeast,11,Amber Perez,Assistant Manager,Credit Card,74.0,Jessica Gross
+223,2024-03-17,00:00:00,67,Razors,Personal Care,5.25,5,0,5,0.19,26.25,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Credit Card,219.0,Debra Morton
+224,2024-04-07,00:00:00,64,Toothpaste,Personal Care,25.24,9,0,9,0.08,227.16,1,Downtown,New York,East,12,David Garcia,Cashier,Credit Card,95.0,Karen Graham
+225,2024-03-17,00:00:00,61,Soap,Household,34.64,3,0,3,0.18,103.92,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Gift Card,214.0,Debra Christian
+226,2024-03-06,00:00:00,18,Potatoes,Produce,38.1,4,0,4,0.02,152.4,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Mobile Payment,,
+227,2024-01-14,00:00:00,12,Pastries,Bakery,6.27,5,0,5,0.12,31.35,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Cash,,
+228,2024-02-25,00:00:00,25,Sausages,Meat,25.3,8,0,8,0.18,202.4,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,,
+229,2024-01-31,00:00:00,2,Cheese,Dairy,18.54,8,0,8,0.14,148.32,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Credit Card,123.0,Angelica Keith
+230,2024-04-29,00:00:00,42,Popcorn,Snacks,19.34,9,0,9,0.06,174.06,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Debit Card,255.0,John Bishop
+231,2024-03-22,00:00:00,60,Detergent,Household,40.17,4,0,4,0.08,160.68,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Gift Card,,
+232,2024-05-21,00:00:00,19,Onions,Produce,39.48,10,0,10,0.08,394.8,1,Downtown,New York,East,9,Valerie Gray,Cashier,Credit Card,118.0,Allen Rosales
+233,2024-05-07,00:00:00,49,Tuna,Canned Goods,16.94,9,0,9,0.14,152.46,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Debit Card,,
+234,2024-02-13,00:00:00,63,Shampoo,Personal Care,16.62,6,0,6,0.14,99.72,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Mobile Payment,456.0,Daniel Salinas
+235,2024-01-20,00:00:00,8,Bagels,Bakery,5.53,1,0,1,0.08,5.53,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Credit Card,78.0,Spencer Haynes
+236,2024-04-26,00:00:00,2,Cheese,Dairy,18.76,6,0,6,0.13,112.56,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Gift Card,,
+237,2024-05-16,00:00:00,63,Shampoo,Personal Care,19.32,9,0,9,0.0,173.88,1,Downtown,New York,East,1,Allison Hill,Cashier,Debit Card,147.0,Adam Vaughan
+238,2024-02-15,00:00:00,3,Yogurt,Dairy,26.88,2,0,2,0.1,53.76,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Credit Card,270.0,Nathan Freeman
+239,2024-04-11,00:00:00,33,Soda,Beverages,12.99,2,0,2,0.08,25.98,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Gift Card,357.0,Melissa Brewer
+240,2024-01-09,00:00:00,29,Cod,Seafood,10.82,2,0,2,0.08,21.64,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Mobile Payment,5.0,Ricky Davis II
+241,2024-04-21,00:00:00,22,Pork,Meat,7.45,6,0,6,0.17,44.7,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Cash,,
+242,2024-05-25,00:00:00,6,Eggs,Dairy,11.99,8,0,8,0.18,95.92,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Debit Card,,
+243,2024-01-05,00:00:00,5,Cream,Dairy,29.93,4,0,4,0.15,119.72,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Mobile Payment,,
+244,2024-03-02,00:00:00,39,Wine,Beverages,12.03,10,0,10,0.08,120.3,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Gift Card,387.0,Elizabeth Perkins
+245,2024-03-29,00:00:00,18,Potatoes,Produce,36.94,1,0,1,0.05,36.94,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Cash,394.0,Joseph Coleman
+246,2024-03-10,00:00:00,51,Tomatoes,Canned Goods,40.16,8,0,8,0.07,321.28,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Mobile Payment,349.0,Erin Warner
+247,2024-03-16,00:00:00,49,Tuna,Canned Goods,19.31,4,0,4,0.02,77.24,1,Downtown,New York,East,20,Derek Wright,Stocker,Credit Card,402.0,David Martinez
+248,2024-04-02,00:00:00,20,Chicken,Meat,15.9,2,0,2,0.19,31.8,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Mobile Payment,139.0,Bryan Herrera
+249,2024-02-17,00:00:00,14,Bananas,Produce,37.06,7,0,7,0.11,259.42,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Mobile Payment,46.0,Cathy Robinson
+250,2024-03-24,00:00:00,46,Candy,Snacks,7.81,7,4,3,0.08,23.43,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Cash,,
+251,2024-02-13,00:00:00,32,Water,Beverages,38.43,7,0,7,0.05,269.01,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Debit Card,33.0,Dr. William Warren
+252,2024-04-17,00:00:00,22,Pork,Meat,8.79,5,0,5,0.02,43.95,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Debit Card,,
+253,2024-02-20,00:00:00,64,Toothpaste,Personal Care,25.78,8,0,8,0.06,206.24,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Mobile Payment,318.0,Brian Lee
+254,2024-03-26,00:00:00,49,Tuna,Canned Goods,16.35,7,0,7,0.17,114.45,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Gift Card,165.0,Christopher Smith
+255,2024-02-15,00:00:00,26,Salmon,Seafood,25.54,7,0,7,0.06,178.78,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Mobile Payment,,
+256,2024-03-12,00:00:00,32,Water,Beverages,32.76,7,0,7,0.19,229.32,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Credit Card,280.0,Denise Mccann
+257,2024-04-28,00:00:00,24,Lamb,Meat,33.27,4,0,4,0.06,133.08,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Cash,,
+258,2024-03-18,00:00:00,53,Pizza,Frozen Foods,33.37,4,0,4,0.03,133.48,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+259,2024-05-02,00:00:00,10,Cookies,Bakery,27.52,10,0,10,0.1,275.2,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Mobile Payment,405.0,Melissa Martinez
+260,2024-01-22,00:00:00,47,Soup,Canned Goods,34.63,2,0,2,0.13,69.26,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Debit Card,314.0,Katherine Salas
+261,2024-03-25,00:00:00,6,Eggs,Dairy,14.33,7,0,7,0.02,100.31,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,266.0,Julie Alexander
+262,2024-04-10,00:00:00,29,Cod,Seafood,10.35,8,0,8,0.12,82.8,4,Southcenter,Houston,South,12,David Garcia,Cashier,Gift Card,13.0,Anthony Everett
+263,2024-04-16,00:00:00,62,Cleaning Supplies,Household,24.98,2,0,2,0.19,49.96,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Credit Card,176.0,Rodney Morales
+264,2024-05-03,00:00:00,59,Toilet Paper,Household,23.55,6,0,6,0.09,141.3,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Mobile Payment,154.0,Mark Brown
+265,2024-03-28,00:00:00,6,Eggs,Dairy,14.18,2,0,2,0.03,28.36,1,Downtown,New York,East,1,Allison Hill,Cashier,Credit Card,283.0,Justin Torres
+266,2024-04-19,00:00:00,21,Beef,Meat,29.58,8,0,8,0.08,236.64,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,337.0,Bailey Duran DDS
+267,2024-02-20,00:00:00,56,Meals,Frozen Foods,8.05,8,0,8,0.08,64.4,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,386.0,Courtney Mills
+268,2024-05-17,00:00:00,9,Muffins,Bakery,5.51,3,0,3,0.04,16.53,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Cash,442.0,Jeremy Dalton
+269,2024-04-09,00:00:00,63,Shampoo,Personal Care,18.93,10,0,10,0.02,189.3,5,Eastville,Miami,Southeast,11,Amber Perez,Assistant Manager,Debit Card,,
+270,2024-01-22,00:00:00,23,Turkey,Meat,10.71,3,0,3,0.05,32.13,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,356.0,Elizabeth Oliver DDS
+271,2024-04-17,00:00:00,19,Onions,Produce,39.48,10,0,10,0.08,394.8,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,276.0,Theresa Clark
+272,2024-05-05,00:00:00,23,Turkey,Meat,10.59,5,0,5,0.06,52.95,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Mobile Payment,444.0,Matthew Moore
+273,2024-02-04,00:00:00,46,Candy,Snacks,6.88,4,0,4,0.19,27.52,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Gift Card,210.0,Benjamin Smith
+274,2024-05-05,00:00:00,63,Shampoo,Personal Care,19.13,3,0,3,0.01,57.39,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Credit Card,141.0,Kirk Carter
+275,2024-02-13,00:00:00,29,Cod,Seafood,10.0,8,0,8,0.15,80.0,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Mobile Payment,58.0,Michael Warner
+276,2024-04-03,00:00:00,15,Oranges,Produce,43.95,9,0,9,0.01,395.55,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Mobile Payment,218.0,Michael Bradshaw
+277,2024-01-09,00:00:00,14,Bananas,Produce,34.56,8,0,8,0.17,276.48,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,61.0,Lori Guerrero
+278,2024-03-30,00:00:00,31,Mussels,Seafood,11.85,10,0,10,0.03,118.5,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Credit Card,,
+279,2024-03-30,00:00:00,27,Tuna,Seafood,8.02,9,0,9,0.11,72.18,1,Downtown,New York,East,19,Matthew Foster,Cashier,Debit Card,,
+280,2024-03-09,00:00:00,38,Beer,Beverages,6.88,9,0,9,0.14,61.92,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Cash,385.0,Jessica Stephens
+281,2024-02-02,00:00:00,53,Pizza,Frozen Foods,29.58,3,0,3,0.14,88.74,1,Downtown,New York,East,9,Valerie Gray,Cashier,Credit Card,,
+282,2024-05-27,00:00:00,51,Tomatoes,Canned Goods,39.73,5,0,5,0.08,198.65,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Cash,451.0,Susan Serrano
+283,2024-03-12,00:00:00,12,Pastries,Bakery,6.41,6,0,6,0.1,38.46,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Gift Card,397.0,Christopher Parker
+284,2024-01-17,00:00:00,12,Pastries,Bakery,5.77,9,0,9,0.19,51.93,4,Southcenter,Houston,South,12,David Garcia,Cashier,Credit Card,166.0,Laura Roberts
+285,2024-05-27,00:00:00,37,Energy Drinks,Beverages,18.35,3,0,3,0.1,55.05,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Debit Card,,
+286,2024-04-27,00:00:00,7,Bread,Bakery,39.76,1,0,1,0.17,39.76,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Mobile Payment,491.0,Michael Lyons
+287,2024-03-18,00:00:00,55,Vegetables,Frozen Foods,5.31,3,0,3,0.18,15.93,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Cash,129.0,Kathryn Snyder
+288,2024-01-14,00:00:00,11,Cake,Bakery,31.25,7,0,7,0.15,218.75,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Credit Card,47.0,Andrew Reynolds
+289,2024-05-02,00:00:00,13,Apples,Produce,4.62,2,0,2,0.05,9.24,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Mobile Payment,357.0,David Davis
+290,2024-02-03,00:00:00,44,Crackers,Snacks,23.89,8,0,8,0.08,191.12,1,Downtown,New York,East,14,Timothy Wong,Cashier,Cash,189.0,Sara Johnston
+291,2024-02-04,00:00:00,39,Wine,Beverages,11.64,3,0,3,0.11,34.92,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Gift Card,226.0,Yvonne Chambers
+292,2024-04-15,00:00:00,45,Chocolate,Snacks,31.56,10,0,10,0.17,315.6,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Cash,,
+293,2024-04-08,00:00:00,18,Potatoes,Produce,36.55,6,0,6,0.06,219.3,1,Downtown,New York,East,19,Matthew Foster,Cashier,Credit Card,331.0,Andrew Avila
+294,2024-03-13,00:00:00,11,Cake,Bakery,31.98,1,0,1,0.13,31.98,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Debit Card,311.0,Matthew Moon
+295,2024-03-16,00:00:00,66,Lotion,Personal Care,14.18,1,0,1,0.16,14.18,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Credit Card,58.0,Kevin Walters
+296,2024-01-19,00:00:00,31,Mussels,Seafood,12.22,9,0,9,0.0,109.98,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Debit Card,,
+297,2024-04-17,00:00:00,17,Lettuce,Produce,3.15,6,0,6,0.03,18.9,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Mobile Payment,,
+298,2024-01-18,00:00:00,10,Cookies,Bakery,30.27,1,0,1,0.01,30.27,1,Downtown,New York,East,19,Matthew Foster,Cashier,Cash,,
+299,2024-05-08,00:00:00,51,Tomatoes,Canned Goods,39.73,7,0,7,0.08,278.11,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Gift Card,79.0,Brandon Bailey MD
+300,2024-01-21,00:00:00,36,Tea,Beverages,9.25,9,0,9,0.19,83.25,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Credit Card,201.0,Shannon Rivera
+301,2024-03-02,00:00:00,9,Muffins,Bakery,4.71,1,0,1,0.18,4.71,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Cash,312.0,Donna Landry
+302,2024-01-31,00:00:00,8,Bagels,Bakery,5.17,1,0,1,0.14,5.17,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Credit Card,178.0,Krista Gibson
+303,2024-02-12,00:00:00,67,Razors,Personal Care,5.44,6,0,6,0.16,32.64,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Debit Card,,
+304,2024-04-19,00:00:00,16,Tomatoes,Produce,27.83,5,0,5,0.05,139.15,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Gift Card,255.0,Frank Cordova
+305,2024-01-15,00:00:00,59,Toilet Paper,Household,25.1,8,0,8,0.03,200.8,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Credit Card,53.0,Jose Travis
+306,2024-01-01,00:00:00,15,Oranges,Produce,44.39,1,0,1,0.0,44.39,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Cash,197.0,Kimberly Gutierrez
+307,2024-05-21,00:00:00,20,Chicken,Meat,18.65,7,0,7,0.05,130.55,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Debit Card,40.0,Isaiah Avila
+308,2024-01-14,00:00:00,48,Beans,Canned Goods,27.2,3,0,3,0.1,81.6,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Cash,,
+309,2024-03-20,00:00:00,9,Muffins,Bakery,5.22,6,0,6,0.09,31.32,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Debit Card,289.0,Olivia Harris
+310,2024-04-28,00:00:00,39,Wine,Beverages,11.77,6,0,6,0.1,70.62,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Credit Card,,
+311,2024-04-14,00:00:00,32,Water,Beverages,37.62,1,0,1,0.07,37.62,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Cash,,
+312,2024-01-27,00:00:00,1,Milk,Dairy,10.2,4,0,4,0.05,40.8,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Mobile Payment,,
+313,2024-01-12,00:00:00,19,Onions,Produce,38.62,4,0,4,0.1,154.48,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Debit Card,383.0,Tanya Kim
+314,2024-05-09,00:00:00,11,Cake,Bakery,33.82,3,0,3,0.08,101.46,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Gift Card,223.0,Barbara Dudley
+315,2024-03-07,00:00:00,17,Lettuce,Produce,2.99,6,0,6,0.08,17.94,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Debit Card,140.0,Cynthia Moore
+316,2024-02-04,00:00:00,30,Crab,Seafood,41.45,10,0,10,0.02,414.5,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Mobile Payment,209.0,Kristen Davis
+317,2024-02-23,00:00:00,16,Tomatoes,Produce,27.83,8,0,8,0.05,222.64,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Cash,414.0,Susan Murray MD
+318,2024-02-25,00:00:00,39,Wine,Beverages,11.25,6,0,6,0.14,67.5,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Debit Card,26.0,Kathleen Moran
+319,2024-01-08,00:00:00,39,Wine,Beverages,11.64,7,0,7,0.11,81.48,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Gift Card,237.0,Denise Davenport
+320,2024-01-04,00:00:00,14,Bananas,Produce,33.31,1,0,1,0.2,33.31,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Credit Card,206.0,Mrs. Kristen Reyes
+321,2024-05-30,00:00:00,48,Beans,Canned Goods,29.92,5,0,5,0.01,149.6,1,Downtown,New York,East,19,Matthew Foster,Cashier,Cash,331.0,Katie Suarez
+322,2024-03-25,00:00:00,57,Desserts,Frozen Foods,47.26,2,2,0,0.01,0.0,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Gift Card,371.0,Desiree Tyler
+323,2024-04-07,00:00:00,51,Tomatoes,Canned Goods,41.45,7,0,7,0.04,290.15,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,229.0,Timothy Romero
+324,2024-03-03,00:00:00,20,Chicken,Meat,16.1,5,0,5,0.18,80.5,1,Downtown,New York,East,20,Derek Wright,Stocker,Mobile Payment,144.0,Diane Evans
+325,2024-02-21,00:00:00,50,Corn,Canned Goods,21.54,9,0,9,0.2,193.86,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Gift Card,,
+326,2024-05-19,00:00:00,49,Tuna,Canned Goods,17.53,8,0,8,0.11,140.24,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Debit Card,93.0,Yvonne Burns
+327,2024-02-26,00:00:00,4,Butter,Dairy,32.07,1,0,1,0.16,32.07,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,,
+328,2024-05-29,00:00:00,61,Soap,Household,41.4,4,0,4,0.02,165.6,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Credit Card,418.0,Joshua Reed
+329,2024-04-09,00:00:00,8,Bagels,Bakery,4.81,6,0,6,0.2,28.86,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Credit Card,304.0,Kimberly Gibson
+330,2024-01-08,00:00:00,41,Pretzels,Snacks,19.57,6,0,6,0.11,117.42,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Gift Card,,
+331,2024-02-14,00:00:00,64,Toothpaste,Personal Care,26.06,8,1,7,0.05,182.42,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Credit Card,245.0,Colin Terry
+332,2024-02-21,00:00:00,1,Milk,Dairy,10.31,3,0,3,0.04,30.93,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Debit Card,76.0,Cynthia Rowe
+333,2024-04-03,00:00:00,19,Onions,Produce,34.76,2,0,2,0.19,69.52,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Mobile Payment,173.0,Patrick Thornton
+334,2024-02-10,00:00:00,39,Wine,Beverages,10.59,7,0,7,0.19,74.13,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Debit Card,496.0,Jasmin Alvarado
+335,2024-02-14,00:00:00,46,Candy,Snacks,7.3,7,0,7,0.14,51.1,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Credit Card,1.0,Veronica Simpson
+336,2024-02-16,00:00:00,51,Tomatoes,Canned Goods,36.27,10,0,10,0.16,362.7,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Gift Card,290.0,Jonathan Lawrence
+337,2024-03-25,00:00:00,14,Bananas,Produce,33.31,2,0,2,0.2,66.62,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Credit Card,494.0,Shelly Alexander
+338,2024-01-03,00:00:00,12,Pastries,Bakery,6.12,5,0,5,0.14,30.6,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,56.0,Joyce Bowen
+339,2024-04-22,00:00:00,1,Milk,Dairy,8.81,7,0,7,0.18,61.67,1,Downtown,New York,East,13,Holly Wood,Cashier,Mobile Payment,,
+340,2024-01-26,00:00:00,45,Chocolate,Snacks,33.47,8,0,8,0.12,267.76,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,38.0,Matthew Moore
+341,2024-03-22,00:00:00,5,Cream,Dairy,34.86,5,0,5,0.01,174.3,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Credit Card,,
+342,2024-01-24,00:00:00,21,Beef,Meat,28.29,6,0,6,0.12,169.74,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Mobile Payment,,
+343,2024-04-21,00:00:00,56,Meals,Frozen Foods,8.14,3,0,3,0.07,24.42,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Credit Card,284.0,Wayne Morgan
+344,2024-03-01,00:00:00,34,Juice,Beverages,44.37,2,2,0,0.03,0.0,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Debit Card,45.0,Marie Christian
+345,2024-02-21,00:00:00,38,Beer,Beverages,6.96,2,1,1,0.13,6.96,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Cash,60.0,Shannon James
+346,2024-05-05,00:00:00,40,Chips,Snacks,24.39,5,0,5,0.11,121.95,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Credit Card,196.0,Nathan Malone
+347,2024-01-12,00:00:00,48,Beans,Canned Goods,28.71,5,0,5,0.05,143.55,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Debit Card,78.0,Amanda Jones
+348,2024-05-18,00:00:00,13,Apples,Produce,4.28,7,0,7,0.12,29.96,1,Downtown,New York,East,12,David Garcia,Cashier,Gift Card,199.0,Tammie Bright
+349,2024-05-01,00:00:00,67,Razors,Personal Care,5.83,10,0,10,0.1,58.3,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Cash,438.0,Jessica Garcia
+350,2024-05-12,00:00:00,5,Cream,Dairy,30.98,10,0,10,0.12,309.8,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Cash,,
+351,2024-02-24,00:00:00,58,Paper Towels,Household,44.73,4,0,4,0.08,178.92,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Mobile Payment,422.0,Shelia Wallace
+352,2024-03-22,00:00:00,19,Onions,Produce,38.19,2,0,2,0.11,76.38,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Gift Card,142.0,Stephanie Williams
+353,2024-05-30,00:00:00,67,Razors,Personal Care,6.35,9,0,9,0.02,57.15,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,302.0,Elaine Brooks
+354,2024-01-26,00:00:00,13,Apples,Produce,3.99,5,0,5,0.18,19.95,1,Downtown,New York,East,19,Matthew Foster,Cashier,Mobile Payment,336.0,Joseph Knight
+355,2024-05-01,00:00:00,63,Shampoo,Personal Care,17.77,1,0,1,0.08,17.77,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Gift Card,356.0,Carolyn Miller
+356,2024-03-25,00:00:00,52,Fruit,Canned Goods,28.15,4,4,0,0.18,0.0,1,Downtown,New York,East,13,Holly Wood,Cashier,Debit Card,419.0,Lisa Allen
+357,2024-05-05,00:00:00,39,Wine,Beverages,12.43,2,0,2,0.05,24.86,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Debit Card,,
+358,2024-04-16,00:00:00,57,Desserts,Frozen Foods,45.83,10,0,10,0.04,458.3,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,,
+359,2024-04-05,00:00:00,53,Pizza,Frozen Foods,33.37,1,0,1,0.03,33.37,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Debit Card,,
+360,2024-05-25,00:00:00,52,Fruit,Canned Goods,28.15,1,0,1,0.18,28.15,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Credit Card,,
+361,2024-01-13,00:00:00,32,Water,Beverages,38.43,6,0,6,0.05,230.58,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Mobile Payment,326.0,Briana Murray
+362,2024-04-05,00:00:00,16,Tomatoes,Produce,28.12,8,0,8,0.04,224.96,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Mobile Payment,180.0,David Smith
+363,2024-01-24,00:00:00,45,Chocolate,Snacks,36.89,5,1,4,0.03,147.56,2,Westside,Los Angeles,West,9,Valerie Gray,Cashier,Gift Card,,
+364,2024-02-22,00:00:00,28,Shrimp,Seafood,12.81,5,0,5,0.1,64.05,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Cash,68.0,Stephanie Byrd
+365,2024-02-27,00:00:00,23,Turkey,Meat,9.13,5,0,5,0.19,45.65,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Debit Card,193.0,Jeremy Reed
+366,2024-02-25,00:00:00,45,Chocolate,Snacks,34.23,8,0,8,0.1,273.84,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Gift Card,53.0,Margaret Coleman
+367,2024-05-23,00:00:00,1,Milk,Dairy,10.1,10,0,10,0.06,101.0,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Cash,173.0,Ryan Gonzalez
+368,2024-03-07,00:00:00,36,Tea,Beverages,10.28,5,0,5,0.1,51.4,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,,
+369,2024-01-07,00:00:00,52,Fruit,Canned Goods,32.61,8,0,8,0.05,260.88,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Mobile Payment,378.0,John Young
+370,2024-02-18,00:00:00,5,Cream,Dairy,33.8,6,0,6,0.04,202.8,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Gift Card,244.0,Laura Haney
+371,2024-02-13,00:00:00,46,Candy,Snacks,8.32,9,0,9,0.02,74.88,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Credit Card,,
+372,2024-02-26,00:00:00,24,Lamb,Meat,29.37,6,0,6,0.17,176.22,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Mobile Payment,,
+373,2024-05-29,00:00:00,43,Nuts,Snacks,48.87,5,0,5,0.02,244.35,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Cash,,
+374,2024-05-08,00:00:00,10,Cookies,Bakery,28.13,2,0,2,0.08,56.26,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Debit Card,446.0,William Barrett
+375,2024-03-28,00:00:00,20,Chicken,Meat,16.1,7,0,7,0.18,112.7,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Mobile Payment,442.0,Keith Jennings
+376,2024-03-26,00:00:00,24,Lamb,Meat,35.04,3,0,3,0.01,105.12,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,390.0,Amber Obrien
+377,2024-05-05,00:00:00,22,Pork,Meat,8.16,2,0,2,0.09,16.32,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Mobile Payment,495.0,Tanner Mitchell DDS
+378,2024-01-10,00:00:00,62,Cleaning Supplies,Household,28.68,9,0,9,0.07,258.12,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Cash,,
+379,2024-03-04,00:00:00,25,Sausages,Meat,28.69,4,0,4,0.07,114.76,1,Downtown,New York,East,1,Allison Hill,Cashier,Credit Card,258.0,Heather Fields
+380,2024-01-12,00:00:00,40,Chips,Snacks,24.94,5,0,5,0.09,124.7,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Gift Card,173.0,Megan Le
+381,2024-05-05,00:00:00,56,Meals,Frozen Foods,8.49,6,0,6,0.03,50.94,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Mobile Payment,115.0,Sara Fuller
+382,2024-05-30,00:00:00,17,Lettuce,Produce,3.02,9,0,9,0.07,27.18,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Cash,328.0,Maria Parker
+383,2024-01-13,00:00:00,33,Soda,Beverages,12.28,10,0,10,0.13,122.8,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Cash,60.0,Kevin Oconnor
+384,2024-02-01,00:00:00,54,Ice Cream,Frozen Foods,32.5,9,0,9,0.14,292.5,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Credit Card,323.0,Edward Burgess
+385,2024-01-26,00:00:00,2,Cheese,Dairy,18.97,9,0,9,0.12,170.73,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Credit Card,461.0,Carlos Ryan
+386,2024-01-31,00:00:00,14,Bananas,Produce,40.81,5,0,5,0.02,204.05,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Credit Card,399.0,Kiara Mcintyre
+387,2024-04-01,00:00:00,34,Juice,Beverages,45.28,7,0,7,0.01,316.96,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Mobile Payment,,
+388,2024-01-01,00:00:00,62,Cleaning Supplies,Household,25.29,1,0,1,0.18,25.29,3,Northgate,Chicago,Midwest,8,Lindsey Roman,Stocker,Gift Card,77.0,Dawn Summers
+389,2024-01-26,00:00:00,12,Pastries,Bakery,6.48,5,0,5,0.09,32.4,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Debit Card,26.0,Dr. Paul Morgan
+390,2024-03-15,00:00:00,13,Apples,Produce,4.57,6,0,6,0.06,27.42,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Cash,389.0,Victor Taylor
+391,2024-02-13,00:00:00,6,Eggs,Dairy,13.3,6,0,6,0.09,79.8,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Gift Card,376.0,Shannon Ramsey
+392,2024-02-16,00:00:00,12,Pastries,Bakery,5.77,2,0,2,0.19,11.54,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Debit Card,,
+393,2024-01-29,00:00:00,62,Cleaning Supplies,Household,30.53,3,0,3,0.01,91.59,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Credit Card,467.0,Tracy Ballard
+394,2024-02-16,00:00:00,62,Cleaning Supplies,Household,28.68,10,0,10,0.07,286.8,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Cash,,
+395,2024-01-29,00:00:00,17,Lettuce,Produce,3.22,7,0,7,0.01,22.54,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Debit Card,445.0,Richard Smith
+396,2024-05-13,00:00:00,29,Cod,Seafood,10.23,10,0,10,0.13,102.3,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Credit Card,340.0,Jordan Chambers
+397,2024-01-14,00:00:00,50,Corn,Canned Goods,26.12,1,0,1,0.03,26.12,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Mobile Payment,,
+398,2024-03-23,00:00:00,22,Pork,Meat,8.43,4,0,4,0.06,33.72,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Gift Card,330.0,Lauren Carson
+399,2024-01-21,00:00:00,49,Tuna,Canned Goods,17.53,8,0,8,0.11,140.24,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Cash,,
+400,2024-05-07,00:00:00,58,Paper Towels,Household,44.73,1,0,1,0.08,44.73,3,Northgate,Chicago,Midwest,4,Cristian Santos,Sales Associate,Gift Card,423.0,Ashley Hall
+401,2024-03-18,00:00:00,12,Pastries,Bakery,6.19,9,0,9,0.13,55.71,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Mobile Payment,,
+402,2024-04-26,00:00:00,47,Soup,Canned Goods,35.03,6,0,6,0.12,210.18,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Mobile Payment,,
+403,2024-01-25,00:00:00,47,Soup,Canned Goods,33.04,4,3,1,0.17,33.04,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Debit Card,192.0,Stephen Hoffman
+404,2024-05-06,00:00:00,14,Bananas,Produce,35.39,3,0,3,0.15,106.17,1,Downtown,New York,East,6,Melissa Peterson,Sales Associate,Mobile Payment,313.0,Connie Brown
+405,2024-04-10,00:00:00,26,Salmon,Seafood,22.82,4,0,4,0.16,91.28,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Debit Card,213.0,Susan Turner
+406,2024-04-25,00:00:00,6,Eggs,Dairy,11.84,8,0,8,0.19,94.72,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Credit Card,,
+407,2024-05-21,00:00:00,1,Milk,Dairy,9.67,7,0,7,0.1,67.69,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Gift Card,,
+408,2024-02-02,00:00:00,23,Turkey,Meat,9.92,2,0,2,0.12,19.84,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Debit Card,197.0,Charles Shah
+409,2024-03-11,00:00:00,54,Ice Cream,Frozen Foods,30.61,7,0,7,0.19,214.27,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Mobile Payment,,
+410,2024-05-11,00:00:00,18,Potatoes,Produce,34.6,5,0,5,0.11,173.0,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Debit Card,,
+411,2024-03-15,00:00:00,28,Shrimp,Seafood,13.8,6,0,6,0.03,82.8,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Credit Card,356.0,Johnathan Davis
+412,2024-05-23,00:00:00,42,Popcorn,Snacks,16.66,8,0,8,0.19,133.28,1,Downtown,New York,East,12,David Garcia,Cashier,Mobile Payment,458.0,Brandy Chavez
+413,2024-05-13,00:00:00,37,Energy Drinks,Beverages,20.19,2,1,1,0.01,20.19,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Cash,385.0,Natalie Bautista
+414,2024-02-07,00:00:00,21,Beef,Meat,30.22,1,0,1,0.06,30.22,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Gift Card,417.0,Patrick Moore
+415,2024-05-23,00:00:00,58,Paper Towels,Household,43.27,4,0,4,0.11,173.08,1,Downtown,New York,East,20,Derek Wright,Stocker,Credit Card,408.0,Brett Burns
+416,2024-04-09,00:00:00,37,Energy Drinks,Beverages,16.31,7,0,7,0.2,114.17,1,Downtown,New York,East,13,Holly Wood,Cashier,Debit Card,,
+417,2024-02-21,00:00:00,7,Bread,Bakery,39.76,10,0,10,0.17,397.6,1,Downtown,New York,East,9,Valerie Gray,Cashier,Mobile Payment,,
+418,2024-02-20,00:00:00,48,Beans,Canned Goods,29.01,4,0,4,0.04,116.04,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Cash,89.0,Trevor Johnson
+419,2024-01-11,00:00:00,66,Lotion,Personal Care,16.04,7,0,7,0.05,112.28,1,Downtown,New York,East,13,Holly Wood,Cashier,Credit Card,131.0,Jeremy Sampson
+420,2024-02-09,00:00:00,1,Milk,Dairy,10.1,1,0,1,0.06,10.1,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Cash,,
+421,2024-05-20,00:00:00,39,Wine,Beverages,11.25,6,0,6,0.14,67.5,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Gift Card,95.0,Ariana Jennings
+422,2024-02-10,00:00:00,67,Razors,Personal Care,5.96,7,0,7,0.08,41.72,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Debit Card,110.0,Vanessa Howard
+423,2024-03-16,00:00:00,43,Nuts,Snacks,43.89,4,0,4,0.12,175.56,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Mobile Payment,,
+424,2024-04-24,00:00:00,2,Cheese,Dairy,18.97,4,0,4,0.12,75.88,1,Downtown,New York,East,12,David Garcia,Cashier,Gift Card,21.0,Colton Martinez
+425,2024-04-08,00:00:00,42,Popcorn,Snacks,19.34,5,0,5,0.06,96.7,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Gift Card,,
+426,2024-04-24,00:00:00,48,Beans,Canned Goods,28.41,8,4,4,0.06,113.64,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Cash,,
+427,2024-01-02,00:00:00,22,Pork,Meat,7.8,2,0,2,0.13,15.6,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Credit Card,,
+428,2024-05-17,00:00:00,55,Vegetables,Frozen Foods,5.24,7,0,7,0.19,36.68,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Credit Card,368.0,Jordan Bates
+429,2024-01-19,00:00:00,43,Nuts,Snacks,47.38,1,0,1,0.05,47.38,1,Downtown,New York,East,3,Allen Robinson,Manager,Cash,117.0,Linda Smith
+430,2024-04-25,00:00:00,34,Juice,Beverages,45.74,7,0,7,0.0,320.18,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Cash,329.0,Dana Martinez
+431,2024-01-19,00:00:00,9,Muffins,Bakery,5.63,6,0,6,0.02,33.78,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Debit Card,145.0,Andrea Hubbard
+432,2024-01-08,00:00:00,57,Desserts,Frozen Foods,45.83,8,0,8,0.04,366.64,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Mobile Payment,,
+433,2024-04-05,00:00:00,38,Beer,Beverages,7.12,1,0,1,0.11,7.12,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,294.0,Daniel Kane
+434,2024-01-22,00:00:00,51,Tomatoes,Canned Goods,36.7,5,0,5,0.15,183.5,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,464.0,Charles Lester
+435,2024-02-17,00:00:00,66,Lotion,Personal Care,16.04,4,0,4,0.05,64.16,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Cash,410.0,Scott Thomas
+436,2024-05-20,00:00:00,7,Bread,Bakery,47.42,2,0,2,0.01,94.84,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Cash,298.0,David Thompson
+437,2024-02-02,00:00:00,63,Shampoo,Personal Care,17.0,4,0,4,0.12,68.0,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Credit Card,231.0,Allison Smith
+438,2024-05-29,00:00:00,43,Nuts,Snacks,46.38,3,0,3,0.07,139.14,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Debit Card,,
+439,2024-03-04,00:00:00,22,Pork,Meat,7.8,4,0,4,0.13,31.2,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Debit Card,,
+440,2024-04-28,00:00:00,18,Potatoes,Produce,36.55,8,0,8,0.06,292.4,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Gift Card,331.0,Cynthia Morris
+441,2024-05-17,00:00:00,11,Cake,Bakery,30.14,4,0,4,0.18,120.56,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Cash,,
+442,2024-05-28,00:00:00,3,Yogurt,Dairy,26.29,10,0,10,0.12,262.9,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Cash,279.0,Anthony Harmon
+443,2024-04-10,00:00:00,61,Soap,Household,37.17,4,0,4,0.12,148.68,2,Westside,Los Angeles,West,12,David Garcia,Cashier,Debit Card,257.0,Nichole Alvarez
+444,2024-04-03,00:00:00,66,Lotion,Personal Care,14.01,9,4,5,0.17,70.05,1,Downtown,New York,East,13,Holly Wood,Cashier,Gift Card,388.0,Kayla Rodriguez
+445,2024-02-10,00:00:00,66,Lotion,Personal Care,15.02,3,0,3,0.11,45.06,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Credit Card,,
+446,2024-02-26,00:00:00,62,Cleaning Supplies,Household,29.3,8,0,8,0.05,234.4,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Credit Card,106.0,Theresa Williams
+447,2024-04-30,00:00:00,67,Razors,Personal Care,6.42,8,0,8,0.01,51.36,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Debit Card,496.0,Sharon Boyd
+448,2024-05-28,00:00:00,67,Razors,Personal Care,5.96,9,0,9,0.08,53.64,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Mobile Payment,335.0,Victor Brown
+449,2024-04-06,00:00:00,10,Cookies,Bakery,28.44,4,0,4,0.07,113.76,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Debit Card,247.0,James Parks
+450,2024-04-22,00:00:00,1,Milk,Dairy,9.67,3,0,3,0.1,29.01,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Debit Card,96.0,Theodore Jones Jr.
+451,2024-01-31,00:00:00,21,Beef,Meat,29.9,4,0,4,0.07,119.6,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,246.0,Ana Hill
+452,2024-02-11,00:00:00,62,Cleaning Supplies,Household,29.91,7,1,6,0.03,179.46,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Gift Card,323.0,Kimberly Nguyen
+453,2024-02-07,00:00:00,66,Lotion,Personal Care,13.84,1,0,1,0.18,13.84,1,Downtown,New York,East,19,Matthew Foster,Cashier,Gift Card,,
+454,2024-02-25,00:00:00,3,Yogurt,Dairy,27.18,8,0,8,0.09,217.44,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Mobile Payment,426.0,Kerry Chavez DDS
+455,2024-05-29,00:00:00,53,Pizza,Frozen Foods,30.96,3,0,3,0.1,92.88,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Credit Card,,
+456,2024-01-18,00:00:00,44,Crackers,Snacks,25.19,4,0,4,0.03,100.76,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Cash,441.0,Michael Farrell
+457,2024-01-25,00:00:00,65,Deodorant,Personal Care,40.49,3,0,3,0.12,121.47,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Cash,,
+458,2024-05-03,00:00:00,65,Deodorant,Personal Care,40.95,3,0,3,0.11,122.85,1,Downtown,New York,East,3,Allen Robinson,Manager,Cash,,
+459,2024-04-04,00:00:00,56,Meals,Frozen Foods,7.96,1,0,1,0.09,7.96,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Mobile Payment,,
+460,2024-05-27,00:00:00,49,Tuna,Canned Goods,18.71,2,0,2,0.05,37.42,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Credit Card,,
+461,2024-05-19,00:00:00,11,Cake,Bakery,36.76,7,0,7,0.0,257.32,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,61.0,Patricia Le
+462,2024-02-22,00:00:00,67,Razors,Personal Care,6.35,6,0,6,0.02,38.1,1,Downtown,New York,East,13,Holly Wood,Cashier,Mobile Payment,130.0,Jesse Perez
+463,2024-05-24,00:00:00,34,Juice,Beverages,36.59,6,0,6,0.2,219.54,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Mobile Payment,,
+464,2024-05-03,00:00:00,53,Pizza,Frozen Foods,30.62,3,0,3,0.11,91.86,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,,
+465,2024-01-31,00:00:00,45,Chocolate,Snacks,32.71,4,0,4,0.14,130.84,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Credit Card,261.0,Jesse Perry
+466,2024-01-14,00:00:00,52,Fruit,Canned Goods,29.87,3,0,3,0.13,89.61,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Cash,,
+467,2024-01-23,00:00:00,61,Soap,Household,39.28,2,0,2,0.07,78.56,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Gift Card,197.0,Jeffery Ortega
+468,2024-03-14,00:00:00,52,Fruit,Canned Goods,29.18,10,0,10,0.15,291.8,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Credit Card,225.0,Christian Leblanc
+469,2024-03-14,00:00:00,2,Cheese,Dairy,18.97,4,2,2,0.12,37.94,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Cash,336.0,Ronald Davis
+470,2024-03-11,00:00:00,1,Milk,Dairy,9.88,7,0,7,0.08,69.16,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Gift Card,8.0,Parker Cain
+471,2024-03-13,00:00:00,9,Muffins,Bakery,5.34,9,0,9,0.07,48.06,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Debit Card,494.0,Laurie Hoffman
+472,2024-05-27,00:00:00,25,Sausages,Meat,28.38,1,0,1,0.08,28.38,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Cash,258.0,Bryan Gomez
+473,2024-05-11,00:00:00,38,Beer,Beverages,6.72,5,0,5,0.16,33.6,3,Northgate,Chicago,Midwest,4,Cristian Santos,Sales Associate,Gift Card,227.0,Nicole Parrish
+474,2024-03-03,00:00:00,49,Tuna,Canned Goods,17.93,6,0,6,0.09,107.58,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,,
+475,2024-03-07,00:00:00,4,Butter,Dairy,32.07,2,0,2,0.16,64.14,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Credit Card,118.0,Tracy Burke
+476,2024-05-12,00:00:00,41,Pretzels,Snacks,20.89,9,5,4,0.05,83.56,4,Southcenter,Houston,South,12,David Garcia,Cashier,Cash,384.0,Kenneth Lewis
+477,2024-02-15,00:00:00,44,Crackers,Snacks,24.93,8,0,8,0.04,199.44,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Gift Card,485.0,Courtney Rodriguez
+478,2024-03-01,00:00:00,25,Sausages,Meat,29.62,4,0,4,0.04,118.48,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Credit Card,,
+479,2024-01-31,00:00:00,46,Candy,Snacks,7.39,2,0,2,0.13,14.78,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Gift Card,439.0,Holly Farmer
+480,2024-03-21,00:00:00,6,Eggs,Dairy,11.99,8,0,8,0.18,95.92,4,Southcenter,Houston,South,12,David Garcia,Cashier,Gift Card,,
+481,2024-03-12,00:00:00,63,Shampoo,Personal Care,17.0,7,0,7,0.12,119.0,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Cash,217.0,Renee Bruce
+482,2024-05-08,00:00:00,62,Cleaning Supplies,Household,26.52,6,0,6,0.14,159.12,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Credit Card,62.0,Sabrina Austin
+483,2024-01-03,00:00:00,67,Razors,Personal Care,5.96,1,0,1,0.08,5.96,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Cash,314.0,Allison Hickman
+484,2024-03-08,00:00:00,34,Juice,Beverages,37.05,4,0,4,0.19,148.2,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Debit Card,256.0,Debra White
+485,2024-04-05,00:00:00,55,Vegetables,Frozen Foods,6.08,6,0,6,0.06,36.48,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Credit Card,295.0,Ellen Morgan
+486,2024-03-01,00:00:00,30,Crab,Seafood,38.92,9,0,9,0.08,350.28,1,Downtown,New York,East,9,Valerie Gray,Cashier,Credit Card,,
+487,2024-02-15,00:00:00,20,Chicken,Meat,15.7,7,0,7,0.2,109.9,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Gift Card,162.0,Sergio Knight
+488,2024-05-23,00:00:00,63,Shampoo,Personal Care,16.62,10,2,8,0.14,132.96,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Cash,131.0,Charles Schultz
+489,2024-03-26,00:00:00,61,Soap,Household,37.59,5,0,5,0.11,187.95,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Debit Card,211.0,Paul Lewis
+490,2024-02-20,00:00:00,16,Tomatoes,Produce,25.48,10,0,10,0.13,254.8,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Credit Card,,
+491,2024-05-10,00:00:00,37,Energy Drinks,Beverages,18.55,8,0,8,0.09,148.4,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Cash,147.0,Glen Wood
+492,2024-03-27,00:00:00,60,Detergent,Household,38.86,7,0,7,0.11,272.02,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Cash,176.0,Paula Bradley
+493,2024-03-15,00:00:00,30,Crab,Seafood,38.92,5,0,5,0.08,194.6,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Mobile Payment,,
+494,2024-04-25,00:00:00,47,Soup,Canned Goods,33.04,7,0,7,0.17,231.28,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Credit Card,,
+495,2024-02-12,00:00:00,33,Soda,Beverages,13.98,7,0,7,0.01,97.86,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Mobile Payment,14.0,Anthony Moore
+496,2024-01-27,00:00:00,51,Tomatoes,Canned Goods,42.32,5,0,5,0.02,211.6,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Mobile Payment,127.0,Megan Nelson
+497,2024-02-03,00:00:00,37,Energy Drinks,Beverages,20.19,9,0,9,0.01,181.71,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Debit Card,,
+498,2024-05-18,00:00:00,42,Popcorn,Snacks,19.95,5,0,5,0.03,99.75,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Gift Card,306.0,Karla Ramos
+499,2024-05-14,00:00:00,59,Toilet Paper,Household,24.07,9,0,9,0.07,216.63,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Gift Card,46.0,Paul Wilson
+500,2024-04-15,00:00:00,57,Desserts,Frozen Foods,47.74,5,0,5,0.0,238.7,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Gift Card,,
+501,2024-04-30,00:00:00,18,Potatoes,Produce,31.49,9,8,1,0.19,31.49,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Mobile Payment,393.0,Douglas Gregory
+502,2024-02-29,00:00:00,56,Meals,Frozen Foods,8.4,1,0,1,0.04,8.4,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Gift Card,128.0,Mr. Andrew Foster
+503,2024-02-26,00:00:00,21,Beef,Meat,27.97,5,0,5,0.13,139.85,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Gift Card,,
+504,2024-03-09,00:00:00,35,Coffee,Beverages,43.5,7,0,7,0.01,304.5,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,327.0,Aimee Turner
+505,2024-03-10,00:00:00,59,Toilet Paper,Household,24.33,10,0,10,0.06,243.3,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Credit Card,274.0,Chad Scott
+506,2024-03-13,00:00:00,3,Yogurt,Dairy,27.18,5,0,5,0.09,135.9,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Cash,78.0,Adam Burgess
+507,2024-03-28,00:00:00,2,Cheese,Dairy,18.11,7,0,7,0.16,126.77,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Debit Card,406.0,James Padilla
+508,2024-02-07,00:00:00,5,Cream,Dairy,32.39,1,0,1,0.08,32.39,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Gift Card,99.0,Sandra Drake
+509,2024-02-01,00:00:00,33,Soda,Beverages,11.44,4,0,4,0.19,45.76,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,,
+510,2024-01-25,00:00:00,5,Cream,Dairy,33.8,9,0,9,0.04,304.2,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Mobile Payment,160.0,Scott Williams
+511,2024-05-20,00:00:00,42,Popcorn,Snacks,18.51,9,0,9,0.1,166.59,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Debit Card,455.0,Thomas Atkins
+512,2024-03-01,00:00:00,7,Bread,Bakery,46.46,7,0,7,0.03,325.22,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Debit Card,203.0,Laura Mckinney
+513,2024-05-28,00:00:00,32,Water,Beverages,39.24,8,0,8,0.03,313.92,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Cash,256.0,Brian Smith
+514,2024-01-16,00:00:00,12,Pastries,Bakery,6.91,1,0,1,0.03,6.91,5,Eastville,Miami,Southeast,11,Amber Perez,Assistant Manager,Gift Card,,
+515,2024-03-22,00:00:00,17,Lettuce,Produce,2.76,9,0,9,0.15,24.84,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Mobile Payment,,
+516,2024-02-04,00:00:00,3,Yogurt,Dairy,26.88,5,0,5,0.1,134.4,4,Southcenter,Houston,South,12,David Garcia,Cashier,Mobile Payment,278.0,Robert Montgomery
+517,2024-02-17,00:00:00,63,Shampoo,Personal Care,16.42,9,0,9,0.15,147.78,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Debit Card,,
+518,2024-02-09,00:00:00,21,Beef,Meat,30.54,8,0,8,0.05,244.32,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Debit Card,398.0,Tamara Davis
+519,2024-01-05,00:00:00,65,Deodorant,Personal Care,38.65,10,0,10,0.16,386.5,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Credit Card,33.0,Dana Chapman
+520,2024-05-07,00:00:00,50,Corn,Canned Goods,25.31,9,0,9,0.06,227.79,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Mobile Payment,57.0,Jennifer Collins
+521,2024-01-12,00:00:00,13,Apples,Produce,4.81,3,0,3,0.01,14.43,5,Eastville,Miami,Southeast,3,Allen Robinson,Manager,Cash,51.0,Gary Jackson
+522,2024-05-05,00:00:00,5,Cream,Dairy,30.98,9,0,9,0.12,278.82,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Cash,311.0,Ashley Hicks
+523,2024-05-05,00:00:00,10,Cookies,Bakery,26.6,2,0,2,0.13,53.2,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Debit Card,481.0,Hannah Luna
+524,2024-03-09,00:00:00,54,Ice Cream,Frozen Foods,31.37,9,2,7,0.17,219.59,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Cash,,
+525,2024-02-29,00:00:00,67,Razors,Personal Care,6.22,9,0,9,0.04,55.98,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Credit Card,486.0,Robin Young
+526,2024-04-16,00:00:00,23,Turkey,Meat,9.92,2,0,2,0.12,19.84,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Mobile Payment,,
+527,2024-02-16,00:00:00,55,Vegetables,Frozen Foods,6.02,9,0,9,0.07,54.18,1,Downtown,New York,East,6,Melissa Peterson,Sales Associate,Credit Card,308.0,Craig Morrison
+528,2024-05-20,00:00:00,57,Desserts,Frozen Foods,43.92,6,0,6,0.08,263.52,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Mobile Payment,,
+529,2024-05-24,00:00:00,42,Popcorn,Snacks,17.48,9,0,9,0.15,157.32,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Debit Card,232.0,Mary Thompson
+530,2024-01-09,00:00:00,58,Paper Towels,Household,43.76,5,0,5,0.1,218.8,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Debit Card,114.0,Kathleen Webster
+531,2024-03-11,00:00:00,28,Shrimp,Seafood,12.66,9,0,9,0.11,113.94,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Gift Card,20.0,Joann Glass
+532,2024-02-05,00:00:00,59,Toilet Paper,Household,22.77,5,0,5,0.12,113.85,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Credit Card,154.0,Madison Weber
+533,2024-05-25,00:00:00,12,Pastries,Bakery,6.12,4,0,4,0.14,24.48,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Mobile Payment,423.0,Lori Hernandez
+534,2024-01-10,00:00:00,13,Apples,Produce,4.08,10,0,10,0.16,40.8,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Debit Card,419.0,Jeremy Turner
+535,2024-02-28,00:00:00,56,Meals,Frozen Foods,7.61,10,0,10,0.13,76.1,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Mobile Payment,269.0,Anthony Romero
+536,2024-05-24,00:00:00,6,Eggs,Dairy,12.57,3,0,3,0.14,37.71,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,375.0,Jesse Brown
+537,2024-05-27,00:00:00,51,Tomatoes,Canned Goods,39.29,9,0,9,0.09,353.61,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Mobile Payment,173.0,Angela Lin
+538,2024-01-13,00:00:00,11,Cake,Bakery,36.02,9,0,9,0.02,324.18,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Gift Card,358.0,Lisa Hunter
+539,2024-05-23,00:00:00,17,Lettuce,Produce,2.83,4,0,4,0.13,11.32,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Credit Card,377.0,Julian Conner
+540,2024-03-09,00:00:00,32,Water,Beverages,33.17,7,0,7,0.18,232.19,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Cash,212.0,Joanna Pacheco
+541,2024-02-18,00:00:00,55,Vegetables,Frozen Foods,5.63,6,0,6,0.13,33.78,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Debit Card,180.0,Erica Alvarez
+542,2024-04-22,00:00:00,57,Desserts,Frozen Foods,45.35,1,0,1,0.05,45.35,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Debit Card,373.0,Antonio Garcia
+543,2024-03-03,00:00:00,11,Cake,Bakery,30.51,10,0,10,0.17,305.1,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Debit Card,356.0,Gwendolyn Klein
+544,2024-04-30,00:00:00,15,Oranges,Produce,37.73,1,0,1,0.15,37.73,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Credit Card,268.0,Carrie Wright
+545,2024-02-06,00:00:00,34,Juice,Beverages,37.51,1,0,1,0.18,37.51,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Gift Card,88.0,Jeffrey Mills
+546,2024-03-10,00:00:00,8,Bagels,Bakery,4.87,1,0,1,0.19,4.87,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Cash,139.0,Jake Campbell
+547,2024-03-15,00:00:00,47,Soup,Canned Goods,36.63,7,0,7,0.08,256.41,1,Downtown,New York,East,1,Allison Hill,Cashier,Cash,,
+548,2024-01-23,00:00:00,63,Shampoo,Personal Care,15.65,3,0,3,0.19,46.95,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Gift Card,,
+549,2024-05-15,00:00:00,3,Yogurt,Dairy,27.48,5,0,5,0.08,137.4,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Credit Card,351.0,George Harper
+550,2024-03-01,00:00:00,46,Candy,Snacks,8.41,9,0,9,0.01,75.69,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Debit Card,,
+551,2024-02-27,00:00:00,4,Butter,Dairy,35.13,3,0,3,0.08,105.39,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Credit Card,196.0,Maria Jones
+552,2024-04-16,00:00:00,67,Razors,Personal Care,5.9,4,0,4,0.09,23.6,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Debit Card,,
+553,2024-02-03,00:00:00,43,Nuts,Snacks,43.89,4,0,4,0.12,175.56,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Credit Card,,
+554,2024-04-20,00:00:00,40,Chips,Snacks,24.39,3,0,3,0.11,73.17,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Credit Card,286.0,Michael Mitchell
+555,2024-02-07,00:00:00,16,Tomatoes,Produce,24.02,1,0,1,0.18,24.02,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Mobile Payment,,
+556,2024-02-08,00:00:00,39,Wine,Beverages,12.56,4,0,4,0.04,50.24,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Gift Card,311.0,Mary Escobar
+557,2024-02-29,00:00:00,30,Crab,Seafood,36.38,1,0,1,0.14,36.38,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Mobile Payment,434.0,Felicia Aguilar
+558,2024-04-09,00:00:00,61,Soap,Household,40.97,8,0,8,0.03,327.76,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Credit Card,392.0,Gregory Ponce
+559,2024-02-26,00:00:00,2,Cheese,Dairy,21.34,4,0,4,0.01,85.36,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Mobile Payment,,
+560,2024-03-04,00:00:00,63,Shampoo,Personal Care,19.13,7,0,7,0.01,133.91,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Mobile Payment,,
+561,2024-05-17,00:00:00,51,Tomatoes,Canned Goods,37.13,9,0,9,0.14,334.17,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Cash,232.0,Jenna Larson
+562,2024-05-12,00:00:00,59,Toilet Paper,Household,22.0,9,0,9,0.15,198.0,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Gift Card,392.0,Emily Bennett
+563,2024-04-22,00:00:00,7,Bread,Bakery,40.71,7,0,7,0.15,284.97,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Debit Card,217.0,Robin Santiago
+564,2024-05-12,00:00:00,38,Beer,Beverages,6.96,3,0,3,0.13,20.88,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Cash,,
+565,2024-05-19,00:00:00,15,Oranges,Produce,41.73,3,0,3,0.06,125.19,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Cash,303.0,Nancy Jennings
+566,2024-03-05,00:00:00,26,Salmon,Seafood,22.28,6,0,6,0.18,133.68,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Credit Card,,
+567,2024-04-25,00:00:00,16,Tomatoes,Produce,25.19,6,0,6,0.14,151.14,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Gift Card,82.0,Maria Henderson
+568,2024-01-12,00:00:00,49,Tuna,Canned Goods,17.53,3,0,3,0.11,52.59,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,75.0,Jack White
+569,2024-03-19,00:00:00,23,Turkey,Meat,9.13,5,0,5,0.19,45.65,1,Downtown,New York,East,14,Timothy Wong,Cashier,Debit Card,61.0,Travis Tucker
+570,2024-03-05,00:00:00,17,Lettuce,Produce,2.7,1,0,1,0.17,2.7,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Gift Card,,
+571,2024-05-30,00:00:00,64,Toothpaste,Personal Care,24.96,8,0,8,0.09,199.68,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Gift Card,126.0,Chad Jones
+572,2024-02-23,00:00:00,36,Tea,Beverages,11.31,1,0,1,0.01,11.31,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Debit Card,438.0,Ashley Wise
+573,2024-03-17,00:00:00,5,Cream,Dairy,34.86,6,0,6,0.01,209.16,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Mobile Payment,,
+574,2024-05-26,00:00:00,21,Beef,Meat,29.26,9,0,9,0.09,263.34,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Gift Card,19.0,Sophia Johnson
+575,2024-04-04,00:00:00,12,Pastries,Bakery,6.05,7,0,7,0.15,42.35,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Gift Card,242.0,Ralph Anderson
+576,2024-03-25,00:00:00,18,Potatoes,Produce,37.32,9,0,9,0.04,335.88,1,Downtown,New York,East,9,Valerie Gray,Cashier,Credit Card,56.0,Christopher Guerra
+577,2024-03-14,00:00:00,12,Pastries,Bakery,6.69,7,0,7,0.06,46.83,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Gift Card,320.0,Rhonda Martin
+578,2024-05-24,00:00:00,46,Candy,Snacks,7.39,8,0,8,0.13,59.12,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Mobile Payment,,
+579,2024-01-01,00:00:00,30,Crab,Seafood,35.95,2,1,1,0.15,35.95,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Credit Card,,
+580,2024-03-26,00:00:00,54,Ice Cream,Frozen Foods,32.88,6,0,6,0.13,197.28,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Cash,354.0,Jason Rhodes
+581,2024-03-19,00:00:00,37,Energy Drinks,Beverages,19.17,5,0,5,0.06,95.85,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Cash,171.0,Jeremy Mitchell
+582,2024-01-08,00:00:00,44,Crackers,Snacks,21.56,3,0,3,0.17,64.68,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Mobile Payment,,
+583,2024-02-09,00:00:00,5,Cream,Dairy,31.34,8,0,8,0.11,250.72,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Debit Card,417.0,Joann Ferguson
+584,2024-03-17,00:00:00,53,Pizza,Frozen Foods,32.34,10,0,10,0.06,323.4,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Gift Card,296.0,Robert Harrison
+585,2024-02-08,00:00:00,43,Nuts,Snacks,46.38,5,0,5,0.07,231.9,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Mobile Payment,432.0,Holly Valentine
+586,2024-04-09,00:00:00,22,Pork,Meat,7.45,3,0,3,0.17,22.35,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Debit Card,,
+587,2024-04-15,00:00:00,41,Pretzels,Snacks,20.89,2,0,2,0.05,41.78,1,Downtown,New York,East,9,Valerie Gray,Cashier,Mobile Payment,,
+588,2024-03-18,00:00:00,39,Wine,Beverages,10.99,3,0,3,0.16,32.97,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Credit Card,,
+589,2024-05-03,00:00:00,57,Desserts,Frozen Foods,44.4,9,0,9,0.07,399.6,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Mobile Payment,,
+590,2024-01-26,00:00:00,40,Chips,Snacks,26.59,9,0,9,0.03,239.31,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Cash,366.0,Mrs. Diane Reyes
+591,2024-03-20,00:00:00,67,Razors,Personal Care,5.7,1,0,1,0.12,5.7,1,Downtown,New York,East,1,Allison Hill,Cashier,Cash,456.0,Tracy Montoya
+592,2024-03-20,00:00:00,6,Eggs,Dairy,13.74,1,0,1,0.06,13.74,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Credit Card,99.0,Brenda Wright
+593,2024-03-22,00:00:00,37,Energy Drinks,Beverages,19.37,8,0,8,0.05,154.96,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,8.0,Shelly Spencer
+594,2024-05-18,00:00:00,66,Lotion,Personal Care,16.04,6,0,6,0.05,96.24,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Debit Card,88.0,Ryan Rosales
+595,2024-03-27,00:00:00,10,Cookies,Bakery,29.66,9,0,9,0.03,266.94,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Mobile Payment,,
+596,2024-01-14,00:00:00,7,Bread,Bakery,45.98,2,0,2,0.04,91.96,1,Downtown,New York,East,13,Holly Wood,Cashier,Gift Card,,
+597,2024-03-20,00:00:00,58,Paper Towels,Household,41.81,6,0,6,0.14,250.86,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Gift Card,473.0,Phillip Nelson
+598,2024-01-24,00:00:00,60,Detergent,Household,41.04,8,0,8,0.06,328.32,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Mobile Payment,486.0,Brittany Kim
+599,2024-03-07,00:00:00,29,Cod,Seafood,10.11,6,0,6,0.14,60.66,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Debit Card,,
+600,2024-01-08,00:00:00,42,Popcorn,Snacks,19.13,2,0,2,0.07,38.26,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,,
+601,2024-05-27,00:00:00,37,Energy Drinks,Beverages,18.76,3,0,3,0.08,56.28,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Cash,333.0,Courtney Hayes
+602,2024-04-28,00:00:00,10,Cookies,Bakery,29.05,7,0,7,0.05,203.35,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,499.0,Alexander Brown
+603,2024-03-28,00:00:00,62,Cleaning Supplies,Household,27.14,4,0,4,0.12,108.56,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Mobile Payment,176.0,Cynthia Vang
+604,2024-05-26,00:00:00,31,Mussels,Seafood,10.75,8,0,8,0.12,86.0,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Debit Card,421.0,Alfred Galvan
+605,2024-04-13,00:00:00,57,Desserts,Frozen Foods,41.06,2,0,2,0.14,82.12,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Gift Card,,
+606,2024-01-16,00:00:00,49,Tuna,Canned Goods,19.11,2,0,2,0.03,38.22,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Gift Card,,
+607,2024-04-25,00:00:00,1,Milk,Dairy,9.45,9,0,9,0.12,85.05,2,Westside,Los Angeles,West,5,Kevin Pacheco,Sales Associate,Mobile Payment,349.0,Marie Moody
+608,2024-03-18,00:00:00,41,Pretzels,Snacks,18.03,7,0,7,0.18,126.21,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Cash,314.0,Dustin Gallegos
+609,2024-03-16,00:00:00,66,Lotion,Personal Care,15.02,1,0,1,0.11,15.02,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Cash,287.0,Brenda Thornton
+610,2024-01-08,00:00:00,46,Candy,Snacks,7.47,4,0,4,0.12,29.88,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Debit Card,,
+611,2024-05-19,00:00:00,52,Fruit,Canned Goods,31.24,4,0,4,0.09,124.96,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Credit Card,432.0,Aaron Miller
+612,2024-03-14,00:00:00,47,Soup,Canned Goods,39.41,3,0,3,0.01,118.23,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Cash,454.0,Ruben Dunn
+613,2024-01-22,00:00:00,63,Shampoo,Personal Care,17.77,3,0,3,0.08,53.31,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+614,2024-04-26,00:00:00,55,Vegetables,Frozen Foods,5.43,9,0,9,0.16,48.87,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Mobile Payment,96.0,Kelsey Rodriguez
+615,2024-05-27,00:00:00,55,Vegetables,Frozen Foods,6.15,8,0,8,0.05,49.2,5,Eastville,Miami,Southeast,1,Allison Hill,Cashier,Gift Card,475.0,Eric Williams
+616,2024-05-25,00:00:00,47,Soup,Canned Goods,39.01,8,0,8,0.02,312.08,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Mobile Payment,,
+617,2024-03-12,00:00:00,11,Cake,Bakery,33.08,8,0,8,0.1,264.64,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Gift Card,242.0,Riley Bryant
+618,2024-03-20,00:00:00,10,Cookies,Bakery,28.44,10,0,10,0.07,284.4,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Cash,263.0,Taylor Carlson
+619,2024-04-17,00:00:00,61,Soap,Household,35.48,6,0,6,0.16,212.88,5,Eastville,Miami,Southeast,11,Amber Perez,Assistant Manager,Debit Card,356.0,Jose Allen
+620,2024-01-16,00:00:00,39,Wine,Beverages,11.64,8,0,8,0.11,93.12,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Debit Card,,
+621,2024-01-22,00:00:00,4,Butter,Dairy,31.69,3,0,3,0.17,95.07,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Debit Card,316.0,Jeffrey Mendez
+622,2024-01-04,00:00:00,36,Tea,Beverages,9.36,2,0,2,0.18,18.72,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,190.0,Jason Beck
+623,2024-05-04,00:00:00,23,Turkey,Meat,9.35,3,0,3,0.17,28.05,3,Northgate,Chicago,Midwest,8,Lindsey Roman,Stocker,Debit Card,,
+624,2024-05-06,00:00:00,19,Onions,Produce,40.76,7,0,7,0.05,285.32,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+625,2024-03-29,00:00:00,22,Pork,Meat,7.62,1,0,1,0.15,7.62,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Cash,238.0,William Jones
+626,2024-05-01,00:00:00,52,Fruit,Canned Goods,29.52,9,0,9,0.14,265.68,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Mobile Payment,75.0,Katie Mcneil
+627,2024-04-24,00:00:00,56,Meals,Frozen Foods,7.09,7,0,7,0.19,49.63,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Cash,273.0,Jeanette Harrison
+628,2024-03-10,00:00:00,46,Candy,Snacks,7.13,6,0,6,0.16,42.78,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Debit Card,201.0,Veronica King
+629,2024-02-19,00:00:00,60,Detergent,Household,37.55,9,0,9,0.14,337.95,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Credit Card,6.0,Richard Cooper
+630,2024-04-15,00:00:00,2,Cheese,Dairy,18.54,2,0,2,0.14,37.08,1,Downtown,New York,East,1,Allison Hill,Cashier,Debit Card,146.0,Lori Ingram
+631,2024-01-07,00:00:00,33,Soda,Beverages,11.44,10,0,10,0.19,114.4,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Credit Card,,
+632,2024-02-03,00:00:00,16,Tomatoes,Produce,24.02,7,0,7,0.18,168.14,1,Downtown,New York,East,3,Allen Robinson,Manager,Gift Card,,
+633,2024-03-05,00:00:00,24,Lamb,Meat,28.67,5,0,5,0.19,143.35,1,Downtown,New York,East,6,Melissa Peterson,Sales Associate,Mobile Payment,,
+634,2024-03-06,00:00:00,36,Tea,Beverages,10.73,3,0,3,0.06,32.19,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Cash,171.0,Evelyn Williams
+635,2024-02-15,00:00:00,8,Bagels,Bakery,4.81,8,0,8,0.2,38.48,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,92.0,Robin Thompson
+636,2024-05-18,00:00:00,63,Shampoo,Personal Care,16.81,7,0,7,0.13,117.67,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+637,2024-01-19,00:00:00,14,Bananas,Produce,34.98,10,0,10,0.16,349.8,1,Downtown,New York,East,3,Allen Robinson,Manager,Cash,,
+638,2024-04-09,00:00:00,20,Chicken,Meat,18.26,5,0,5,0.07,91.3,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Mobile Payment,264.0,Julie Dominguez
+639,2024-04-13,00:00:00,63,Shampoo,Personal Care,19.32,2,0,2,0.0,38.64,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Mobile Payment,275.0,Robin Brown
+640,2024-04-12,00:00:00,46,Candy,Snacks,6.88,1,0,1,0.19,6.88,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Cash,437.0,Judith Carter
+641,2024-03-15,00:00:00,44,Crackers,Snacks,25.71,4,0,4,0.01,102.84,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Mobile Payment,154.0,Curtis Williams
+642,2024-05-04,00:00:00,50,Corn,Canned Goods,24.51,2,0,2,0.09,49.02,1,Downtown,New York,East,12,David Garcia,Cashier,Credit Card,99.0,Kaylee Hays
+643,2024-05-05,00:00:00,4,Butter,Dairy,33.98,7,0,7,0.11,237.86,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Debit Card,495.0,Dawn Mullins
+644,2024-03-27,00:00:00,58,Paper Towels,Household,41.81,1,0,1,0.14,41.81,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Mobile Payment,414.0,Howard Norman
+645,2024-02-08,00:00:00,67,Razors,Personal Care,6.42,10,0,10,0.01,64.2,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Credit Card,10.0,Evelyn Martinez
+646,2024-03-03,00:00:00,61,Soap,Household,41.82,3,3,0,0.01,0.0,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Debit Card,,
+647,2024-02-13,00:00:00,13,Apples,Produce,4.08,10,0,10,0.16,40.8,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Cash,410.0,Steve Paul
+648,2024-04-19,00:00:00,29,Cod,Seafood,9.41,6,0,6,0.2,56.46,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Mobile Payment,500.0,Jasmine Beltran
+649,2024-01-12,00:00:00,18,Potatoes,Produce,38.49,10,0,10,0.01,384.9,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Debit Card,213.0,Jonathan Glass MD
+650,2024-02-12,00:00:00,22,Pork,Meat,7.89,8,0,8,0.12,63.12,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,434.0,Monica Miller
+651,2024-05-04,00:00:00,49,Tuna,Canned Goods,15.96,2,1,1,0.19,15.96,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Gift Card,,
+652,2024-02-22,00:00:00,54,Ice Cream,Frozen Foods,34.01,3,0,3,0.1,102.03,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Mobile Payment,90.0,Samantha Gardner
+653,2024-05-07,00:00:00,5,Cream,Dairy,30.63,10,0,10,0.13,306.3,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Debit Card,3.0,Bobby Guerrero
+654,2024-05-15,00:00:00,31,Mussels,Seafood,10.14,2,0,2,0.17,20.28,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Gift Card,238.0,Lance Simmons
+655,2024-02-19,00:00:00,27,Tuna,Seafood,7.75,2,0,2,0.14,15.5,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Mobile Payment,82.0,Heather Williams
+656,2024-03-13,00:00:00,6,Eggs,Dairy,13.6,4,0,4,0.07,54.4,1,Downtown,New York,East,12,David Garcia,Cashier,Mobile Payment,380.0,Heather Bolton
+657,2024-02-10,00:00:00,7,Bread,Bakery,46.94,1,0,1,0.02,46.94,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Credit Card,,
+658,2024-03-24,00:00:00,42,Popcorn,Snacks,19.13,4,0,4,0.07,76.52,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Cash,212.0,William Gould
+659,2024-01-19,00:00:00,26,Salmon,Seafood,26.9,8,0,8,0.01,215.2,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Mobile Payment,476.0,Mark Cox
+660,2024-04-05,00:00:00,59,Toilet Paper,Household,24.84,3,0,3,0.04,74.52,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Debit Card,,
+661,2024-01-09,00:00:00,26,Salmon,Seafood,26.35,10,0,10,0.03,263.5,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Mobile Payment,88.0,Meghan Cisneros
+662,2024-02-10,00:00:00,44,Crackers,Snacks,22.85,10,0,10,0.12,228.5,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Gift Card,,
+663,2024-05-05,00:00:00,12,Pastries,Bakery,5.91,4,0,4,0.17,23.64,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Debit Card,220.0,Lawrence Harrington
+664,2024-04-21,00:00:00,32,Water,Beverages,32.76,10,0,10,0.19,327.6,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Credit Card,,
+665,2024-01-11,00:00:00,1,Milk,Dairy,9.67,8,0,8,0.1,77.36,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Mobile Payment,246.0,Austin Osborne
+666,2024-03-02,00:00:00,13,Apples,Produce,4.86,2,0,2,0.0,9.72,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,,
+667,2024-03-02,00:00:00,17,Lettuce,Produce,3.15,2,2,0,0.03,0.0,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Mobile Payment,,
+668,2024-02-05,00:00:00,4,Butter,Dairy,31.69,7,0,7,0.17,221.83,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Mobile Payment,,
+669,2024-03-26,00:00:00,1,Milk,Dairy,9.13,9,7,2,0.15,18.26,1,Downtown,New York,East,13,Holly Wood,Cashier,Gift Card,407.0,James Bradley
+670,2024-03-26,00:00:00,27,Tuna,Seafood,7.39,1,0,1,0.18,7.39,1,Downtown,New York,East,20,Derek Wright,Stocker,Debit Card,,
+671,2024-04-29,00:00:00,15,Oranges,Produce,42.61,10,6,4,0.04,170.44,4,Southcenter,Houston,South,12,David Garcia,Cashier,Gift Card,,
+672,2024-03-02,00:00:00,27,Tuna,Seafood,8.11,9,0,9,0.1,72.99,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Gift Card,,
+673,2024-03-31,00:00:00,27,Tuna,Seafood,8.29,5,0,5,0.08,41.45,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Cash,177.0,Meghan Rush
+674,2024-05-14,00:00:00,58,Paper Towels,Household,43.27,2,0,2,0.11,86.54,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Gift Card,,
+675,2024-01-17,00:00:00,58,Paper Towels,Household,44.24,4,0,4,0.09,176.96,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Cash,92.0,Phillip Berry
+676,2024-02-12,00:00:00,37,Energy Drinks,Beverages,19.78,5,0,5,0.03,98.9,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Credit Card,,
+677,2024-04-16,00:00:00,67,Razors,Personal Care,5.9,9,0,9,0.09,53.1,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Mobile Payment,331.0,Jennifer Banks
+678,2024-01-17,00:00:00,3,Yogurt,Dairy,28.38,1,0,1,0.05,28.38,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Gift Card,211.0,Brian Fitzgerald
+679,2024-05-15,00:00:00,44,Crackers,Snacks,24.41,9,0,9,0.06,219.69,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Credit Card,,
+680,2024-02-28,00:00:00,40,Chips,Snacks,25.77,8,0,8,0.06,206.16,2,Westside,Los Angeles,West,9,Valerie Gray,Cashier,Cash,146.0,Mr. Justin Green III
+681,2024-02-11,00:00:00,59,Toilet Paper,Household,20.96,9,0,9,0.19,188.64,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Credit Card,60.0,Zachary Mitchell
+682,2024-02-02,00:00:00,6,Eggs,Dairy,14.04,8,0,8,0.04,112.32,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Gift Card,,
+683,2024-04-05,00:00:00,41,Pretzels,Snacks,21.33,8,0,8,0.03,170.64,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Debit Card,13.0,Katherine Martinez
+684,2024-04-27,00:00:00,52,Fruit,Canned Goods,27.81,6,0,6,0.19,166.86,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Gift Card,,
+685,2024-03-15,00:00:00,43,Nuts,Snacks,41.89,10,0,10,0.16,418.9,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,58.0,Jodi Roach
+686,2024-05-21,00:00:00,62,Cleaning Supplies,Household,28.37,2,0,2,0.08,56.74,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Credit Card,48.0,Brandon Fleming
+687,2024-02-19,00:00:00,42,Popcorn,Snacks,17.28,10,0,10,0.16,172.8,1,Downtown,New York,East,20,Derek Wright,Stocker,Debit Card,43.0,Emma Reed
+688,2024-04-10,00:00:00,58,Paper Towels,Household,42.79,4,0,4,0.12,171.16,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Gift Card,,
+689,2024-04-19,00:00:00,47,Soup,Canned Goods,39.81,6,0,6,0.0,238.86,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Debit Card,229.0,Joshua Vance
+690,2024-04-16,00:00:00,12,Pastries,Bakery,5.98,8,0,8,0.16,47.84,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Mobile Payment,,
+691,2024-01-23,00:00:00,54,Ice Cream,Frozen Foods,34.39,3,0,3,0.09,103.17,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Gift Card,,
+692,2024-01-23,00:00:00,9,Muffins,Bakery,4.71,1,0,1,0.18,4.71,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Mobile Payment,237.0,Michelle Ho
+693,2024-04-07,00:00:00,18,Potatoes,Produce,38.49,5,0,5,0.01,192.45,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Debit Card,,
+694,2024-04-28,00:00:00,39,Wine,Beverages,12.69,4,1,3,0.03,38.07,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Debit Card,,
+695,2024-04-16,00:00:00,61,Soap,Household,36.33,3,0,3,0.14,108.99,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Credit Card,392.0,Rebecca Hicks
+696,2024-04-02,00:00:00,36,Tea,Beverages,10.39,10,0,10,0.09,103.9,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Debit Card,244.0,Curtis Taylor
+697,2024-05-27,00:00:00,16,Tomatoes,Produce,28.41,1,0,1,0.03,28.41,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Cash,237.0,Allison Spencer
+698,2024-01-14,00:00:00,18,Potatoes,Produce,33.83,5,0,5,0.13,169.15,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Debit Card,150.0,Robert Arnold
+699,2024-02-16,00:00:00,10,Cookies,Bakery,29.66,2,0,2,0.03,59.32,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Debit Card,,
+700,2024-01-25,00:00:00,39,Wine,Beverages,10.99,9,0,9,0.16,98.91,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Cash,145.0,Angelica Parker
+701,2024-03-28,00:00:00,48,Beans,Canned Goods,29.31,3,0,3,0.03,87.93,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Credit Card,,
+702,2024-01-20,00:00:00,15,Oranges,Produce,36.4,2,0,2,0.18,72.8,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Mobile Payment,354.0,Dr. Kelly Hammond DVM
+703,2024-05-13,00:00:00,47,Soup,Canned Goods,37.42,6,0,6,0.06,224.52,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Cash,439.0,William Day
+704,2024-02-02,00:00:00,19,Onions,Produce,42.05,4,0,4,0.02,168.2,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,397.0,Michael Cooper
+705,2024-02-20,00:00:00,62,Cleaning Supplies,Household,28.06,2,1,1,0.09,28.06,4,Southcenter,Houston,South,2,Megan Mcclain,Cashier,Debit Card,155.0,Penny Bowman
+706,2024-02-22,00:00:00,2,Cheese,Dairy,20.7,10,0,10,0.04,207.0,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Debit Card,75.0,Vincent Reynolds
+707,2024-03-31,00:00:00,36,Tea,Beverages,9.59,3,0,3,0.16,28.77,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Gift Card,292.0,Amy Martinez
+708,2024-01-04,00:00:00,9,Muffins,Bakery,5.51,9,0,9,0.04,49.59,1,Downtown,New York,East,19,Matthew Foster,Cashier,Debit Card,387.0,Christopher Morris
+709,2024-05-09,00:00:00,1,Milk,Dairy,9.45,8,0,8,0.12,75.6,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Mobile Payment,55.0,Hannah Everett
+710,2024-04-18,00:00:00,24,Lamb,Meat,32.56,4,0,4,0.08,130.24,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Debit Card,57.0,Sarah King
+711,2024-04-02,00:00:00,67,Razors,Personal Care,6.42,5,0,5,0.01,32.1,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Debit Card,198.0,Krista Martinez
+712,2024-03-20,00:00:00,37,Energy Drinks,Beverages,18.76,8,0,8,0.08,150.08,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Mobile Payment,36.0,Joseph Shaw
+713,2024-01-04,00:00:00,61,Soap,Household,38.86,8,0,8,0.08,310.88,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Gift Card,44.0,Todd Moore
+714,2024-04-12,00:00:00,16,Tomatoes,Produce,24.9,10,0,10,0.15,249.0,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Credit Card,500.0,Michelle Jacobs
+715,2024-04-13,00:00:00,26,Salmon,Seafood,25.0,2,0,2,0.08,50.0,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Mobile Payment,366.0,Kristy Bryan
+716,2024-05-01,00:00:00,35,Coffee,Beverages,35.15,10,0,10,0.2,351.5,4,Southcenter,Houston,South,12,David Garcia,Cashier,Gift Card,394.0,Angel May
+717,2024-03-05,00:00:00,59,Toilet Paper,Household,22.52,8,0,8,0.13,180.16,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Credit Card,378.0,Marilyn Wang
+718,2024-01-07,00:00:00,7,Bread,Bakery,41.19,3,0,3,0.14,123.57,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Credit Card,320.0,Mark Jimenez
+719,2024-05-06,00:00:00,13,Apples,Produce,4.23,8,0,8,0.13,33.84,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Mobile Payment,278.0,Donna Frye
+720,2024-01-05,00:00:00,44,Crackers,Snacks,21.3,1,0,1,0.18,21.3,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Cash,162.0,Dr. Michael Evans
+721,2024-01-10,00:00:00,49,Tuna,Canned Goods,17.14,1,0,1,0.13,17.14,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Debit Card,,
+722,2024-02-04,00:00:00,22,Pork,Meat,8.07,5,0,5,0.1,40.35,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Cash,252.0,Anthony Gonzales
+723,2024-02-10,00:00:00,61,Soap,Household,40.13,9,0,9,0.05,361.17,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Gift Card,,
+724,2024-01-16,00:00:00,46,Candy,Snacks,8.24,1,0,1,0.03,8.24,3,Northgate,Chicago,Midwest,11,Amber Perez,Assistant Manager,Debit Card,380.0,Mr. Lawrence Edwards
+725,2024-01-25,00:00:00,4,Butter,Dairy,35.51,7,0,7,0.07,248.57,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Debit Card,126.0,Morgan Valencia
+726,2024-01-22,00:00:00,32,Water,Beverages,39.64,2,0,2,0.02,79.28,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Credit Card,167.0,Bianca Wood
+727,2024-05-25,00:00:00,5,Cream,Dairy,33.45,9,0,9,0.05,301.05,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Mobile Payment,163.0,Emma Owens
+728,2024-03-23,00:00:00,49,Tuna,Canned Goods,17.73,10,0,10,0.1,177.3,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,258.0,David Davis
+729,2024-03-17,00:00:00,44,Crackers,Snacks,24.93,6,0,6,0.04,149.58,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Cash,,
+730,2024-01-13,00:00:00,28,Shrimp,Seafood,13.09,5,0,5,0.08,65.45,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,491.0,James Gilbert
+731,2024-03-27,00:00:00,12,Pastries,Bakery,5.98,5,0,5,0.16,29.9,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Mobile Payment,178.0,Sean Moore
+732,2024-03-17,00:00:00,10,Cookies,Bakery,28.75,7,0,7,0.06,201.25,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Mobile Payment,320.0,Kenneth Edwards
+733,2024-02-16,00:00:00,66,Lotion,Personal Care,15.19,1,0,1,0.1,15.19,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Credit Card,110.0,Kathleen Robertson
+734,2024-04-21,00:00:00,60,Detergent,Household,43.22,10,0,10,0.01,432.2,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,76.0,Mr. Alexander Landry MD
+735,2024-04-21,00:00:00,31,Mussels,Seafood,10.14,7,0,7,0.17,70.98,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,434.0,Cindy Gomez
+736,2024-02-11,00:00:00,53,Pizza,Frozen Foods,32.68,5,0,5,0.05,163.4,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Credit Card,99.0,Johnny Khan
+737,2024-04-28,00:00:00,4,Butter,Dairy,34.74,8,0,8,0.09,277.92,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,140.0,Julie Herrera
+738,2024-03-12,00:00:00,18,Potatoes,Produce,32.27,9,0,9,0.17,290.43,1,Downtown,New York,East,9,Valerie Gray,Cashier,Mobile Payment,,
+739,2024-03-17,00:00:00,8,Bagels,Bakery,5.53,2,0,2,0.08,11.06,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Debit Card,454.0,Jessica Khan
+740,2024-03-01,00:00:00,12,Pastries,Bakery,6.41,2,0,2,0.1,12.82,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Cash,425.0,Pamela Diaz
+741,2024-03-01,00:00:00,33,Soda,Beverages,11.86,10,0,10,0.16,118.6,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Debit Card,,
+742,2024-02-25,00:00:00,50,Corn,Canned Goods,25.85,3,0,3,0.04,77.55,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Debit Card,131.0,Kelly Lee
+743,2024-04-05,00:00:00,8,Bagels,Bakery,5.53,2,0,2,0.08,11.06,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Credit Card,,
+744,2024-04-04,00:00:00,19,Onions,Produce,42.48,5,5,0,0.01,0.0,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Cash,404.0,Angel Gordon
+745,2024-04-08,00:00:00,31,Mussels,Seafood,10.51,5,0,5,0.14,52.55,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Cash,122.0,Diana Hays
+746,2024-04-10,00:00:00,57,Desserts,Frozen Foods,38.67,5,0,5,0.19,193.35,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,441.0,Barbara Hester
+747,2024-04-14,00:00:00,21,Beef,Meat,31.51,1,0,1,0.02,31.51,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Mobile Payment,212.0,Robert Morgan
+748,2024-02-11,00:00:00,43,Nuts,Snacks,46.38,5,0,5,0.07,231.9,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Gift Card,,
+749,2024-01-14,00:00:00,42,Popcorn,Snacks,17.28,3,0,3,0.16,51.84,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Credit Card,103.0,Nicole Gonzalez
+750,2024-01-22,00:00:00,40,Chips,Snacks,24.67,2,0,2,0.1,49.34,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Credit Card,,
+751,2024-05-02,00:00:00,53,Pizza,Frozen Foods,29.58,3,0,3,0.14,88.74,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,,
+752,2024-04-04,00:00:00,26,Salmon,Seafood,25.0,3,0,3,0.08,75.0,1,Downtown,New York,East,14,Timothy Wong,Cashier,Gift Card,486.0,Kathryn Williams
+753,2024-02-28,00:00:00,3,Yogurt,Dairy,28.68,2,0,2,0.04,57.36,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Credit Card,317.0,Gary Wells
+754,2024-02-08,00:00:00,55,Vegetables,Frozen Foods,6.28,2,0,2,0.03,12.56,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Gift Card,368.0,Larry Robertson
+755,2024-01-31,00:00:00,56,Meals,Frozen Foods,8.4,4,0,4,0.04,33.6,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Debit Card,254.0,Louis Martin
+756,2024-02-22,00:00:00,49,Tuna,Canned Goods,16.55,10,0,10,0.16,165.5,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Credit Card,210.0,Nancy Evans MD
+757,2024-03-08,00:00:00,19,Onions,Produce,35.19,4,0,4,0.18,140.76,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Debit Card,332.0,Kim Erickson
+758,2024-04-30,00:00:00,59,Toilet Paper,Household,20.96,3,0,3,0.19,62.88,1,Downtown,New York,East,1,Allison Hill,Cashier,Mobile Payment,366.0,Robert Richardson
+759,2024-03-06,00:00:00,50,Corn,Canned Goods,26.66,2,0,2,0.01,53.32,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Debit Card,,
+760,2024-01-12,00:00:00,61,Soap,Household,37.17,1,0,1,0.12,37.17,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Debit Card,,
+761,2024-01-11,00:00:00,48,Beans,Canned Goods,29.31,10,0,10,0.03,293.1,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Mobile Payment,,
+762,2024-03-22,00:00:00,60,Detergent,Household,41.48,9,0,9,0.05,373.32,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Debit Card,66.0,Veronica Silva
+763,2024-04-20,00:00:00,64,Toothpaste,Personal Care,26.06,5,0,5,0.05,130.3,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Debit Card,224.0,Molly Watts
+764,2024-02-08,00:00:00,22,Pork,Meat,7.8,9,0,9,0.13,70.2,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,77.0,John Coffey
+765,2024-01-10,00:00:00,7,Bread,Bakery,41.19,8,0,8,0.14,329.52,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Mobile Payment,459.0,Paula Lane
+766,2024-04-01,00:00:00,64,Toothpaste,Personal Care,24.69,9,0,9,0.1,222.21,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Credit Card,48.0,Lauren Jackson
+767,2024-02-13,00:00:00,27,Tuna,Seafood,8.02,9,0,9,0.11,72.18,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Gift Card,498.0,Lisa Randall
+768,2024-02-16,00:00:00,1,Milk,Dairy,10.2,7,0,7,0.05,71.4,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Mobile Payment,455.0,Michael Johnson
+769,2024-02-01,00:00:00,43,Nuts,Snacks,40.39,7,0,7,0.19,282.73,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Cash,,
+770,2024-04-27,00:00:00,20,Chicken,Meat,15.9,8,0,8,0.19,127.2,1,Downtown,New York,East,3,Allen Robinson,Manager,Gift Card,169.0,Ashley Smith
+771,2024-03-24,00:00:00,6,Eggs,Dairy,12.13,10,0,10,0.17,121.3,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Debit Card,29.0,Christian Vaughn
+772,2024-04-07,00:00:00,10,Cookies,Bakery,29.36,2,0,2,0.04,58.72,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Mobile Payment,437.0,Reginald Knapp
+773,2024-04-13,00:00:00,27,Tuna,Seafood,7.3,5,0,5,0.19,36.5,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Credit Card,252.0,Nancy Brown
+774,2024-02-03,00:00:00,56,Meals,Frozen Foods,7.26,6,0,6,0.17,43.56,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Gift Card,229.0,Daniel Nguyen
+775,2024-05-24,00:00:00,50,Corn,Canned Goods,22.89,10,0,10,0.15,228.9,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Debit Card,223.0,Kelly Edwards
+776,2024-05-11,00:00:00,55,Vegetables,Frozen Foods,5.56,6,0,6,0.14,33.36,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Credit Card,,
+777,2024-04-21,00:00:00,11,Cake,Bakery,33.08,2,0,2,0.1,66.16,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Credit Card,,
+778,2024-04-19,00:00:00,39,Wine,Beverages,11.64,5,0,5,0.11,58.2,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Cash,262.0,Thomas Peterson
+779,2024-04-28,00:00:00,55,Vegetables,Frozen Foods,6.02,10,0,10,0.07,60.2,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Gift Card,258.0,Raymond Le
+780,2024-02-15,00:00:00,3,Yogurt,Dairy,29.57,3,0,3,0.01,88.71,1,Downtown,New York,East,15,Nicholas Martin,Sales Associate,Mobile Payment,,
+781,2024-04-26,00:00:00,39,Wine,Beverages,12.43,8,0,8,0.05,99.44,3,Northgate,Chicago,Midwest,19,Matthew Foster,Cashier,Credit Card,41.0,Melissa Bishop
+782,2024-05-16,00:00:00,34,Juice,Beverages,45.74,1,1,0,0.0,0.0,1,Downtown,New York,East,14,Timothy Wong,Cashier,Mobile Payment,208.0,David Grant
+783,2024-04-02,00:00:00,63,Shampoo,Personal Care,18.93,7,0,7,0.02,132.51,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Credit Card,58.0,William Evans
+784,2024-02-23,00:00:00,3,Yogurt,Dairy,25.99,8,0,8,0.13,207.92,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Mobile Payment,,
+785,2024-04-28,00:00:00,25,Sausages,Meat,30.85,3,0,3,0.0,92.55,1,Downtown,New York,East,10,Lisa Hensley,Stocker,Credit Card,,
+786,2024-01-06,00:00:00,57,Desserts,Frozen Foods,45.83,8,0,8,0.04,366.64,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Gift Card,,
+787,2024-01-03,00:00:00,51,Tomatoes,Canned Goods,37.13,2,0,2,0.14,74.26,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Mobile Payment,,
+788,2024-04-12,00:00:00,38,Beer,Beverages,6.88,8,0,8,0.14,55.04,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,32.0,Daniel Bush
+789,2024-03-21,00:00:00,3,Yogurt,Dairy,24.49,9,0,9,0.18,220.41,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Mobile Payment,,
+790,2024-03-29,00:00:00,15,Oranges,Produce,44.39,8,0,8,0.0,355.12,4,Southcenter,Houston,South,20,Derek Wright,Stocker,Debit Card,,
+791,2024-02-29,00:00:00,61,Soap,Household,34.64,9,0,9,0.18,311.76,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,,
+792,2024-04-09,00:00:00,60,Detergent,Household,37.98,7,0,7,0.13,265.86,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Debit Card,,
+793,2024-03-13,00:00:00,21,Beef,Meat,31.19,2,0,2,0.03,62.38,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Credit Card,252.0,Gregory Peck
+794,2024-03-18,00:00:00,13,Apples,Produce,4.81,4,0,4,0.01,19.24,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Cash,134.0,Denise Martinez
+795,2024-05-08,00:00:00,46,Candy,Snacks,7.9,1,0,1,0.07,7.9,2,Westside,Los Angeles,West,6,Melissa Peterson,Sales Associate,Cash,62.0,Jamie Baird
+796,2024-03-28,00:00:00,29,Cod,Seafood,10.0,6,0,6,0.15,60.0,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Gift Card,78.0,Tina Ballard
+797,2024-01-13,00:00:00,66,Lotion,Personal Care,13.67,8,0,8,0.19,109.36,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Cash,,
+798,2024-05-09,00:00:00,14,Bananas,Produce,40.81,2,0,2,0.02,81.62,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Credit Card,,
+799,2024-05-09,00:00:00,21,Beef,Meat,31.51,8,0,8,0.02,252.08,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,71.0,Dwayne Klein
+800,2024-04-16,00:00:00,16,Tomatoes,Produce,24.6,1,0,1,0.16,24.6,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Debit Card,88.0,Jeremy Scott
+801,2024-04-16,00:00:00,11,Cake,Bakery,34.92,6,0,6,0.05,209.52,3,Northgate,Chicago,Midwest,12,David Garcia,Cashier,Gift Card,117.0,Dale Ryan
+802,2024-04-14,00:00:00,18,Potatoes,Produce,34.99,8,0,8,0.1,279.92,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Debit Card,,
+803,2024-05-12,00:00:00,57,Desserts,Frozen Foods,44.88,2,0,2,0.06,89.76,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Credit Card,202.0,Melissa Taylor
+804,2024-01-15,00:00:00,5,Cream,Dairy,32.39,9,0,9,0.08,291.51,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Gift Card,,
+805,2024-03-12,00:00:00,41,Pretzels,Snacks,21.33,9,0,9,0.03,191.97,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Mobile Payment,106.0,Laurie Sanchez
+806,2024-02-20,00:00:00,57,Desserts,Frozen Foods,42.49,5,0,5,0.11,212.45,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Mobile Payment,,
+807,2024-03-13,00:00:00,17,Lettuce,Produce,2.89,4,0,4,0.11,11.56,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Gift Card,326.0,Kiara Little
+808,2024-05-18,00:00:00,21,Beef,Meat,26.68,10,0,10,0.17,266.8,1,Downtown,New York,East,1,Allison Hill,Cashier,Debit Card,,
+809,2024-04-05,00:00:00,65,Deodorant,Personal Care,42.79,5,0,5,0.07,213.95,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Cash,,
+810,2024-05-26,00:00:00,16,Tomatoes,Produce,23.43,1,0,1,0.2,23.43,4,Southcenter,Houston,South,10,Lisa Hensley,Stocker,Gift Card,458.0,Jason Love
+811,2024-03-13,00:00:00,30,Crab,Seafood,36.38,10,0,10,0.14,363.8,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Gift Card,,
+812,2024-05-29,00:00:00,14,Bananas,Produce,38.73,4,0,4,0.07,154.92,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Cash,218.0,Randy Smith
+813,2024-01-16,00:00:00,53,Pizza,Frozen Foods,30.96,7,0,7,0.1,216.72,1,Downtown,New York,East,3,Allen Robinson,Manager,Mobile Payment,347.0,Tanya Russell
+814,2024-05-12,00:00:00,52,Fruit,Canned Goods,30.21,7,0,7,0.12,211.47,5,Eastville,Miami,Southeast,18,Daniel Hahn,Stocker,Mobile Payment,,
+815,2024-02-06,00:00:00,63,Shampoo,Personal Care,16.62,9,0,9,0.14,149.58,4,Southcenter,Houston,South,6,Melissa Peterson,Sales Associate,Credit Card,,
+816,2024-02-24,00:00:00,66,Lotion,Personal Care,14.35,8,0,8,0.15,114.8,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Gift Card,488.0,Sherry Woods
+817,2024-01-29,00:00:00,16,Tomatoes,Produce,27.53,2,0,2,0.06,55.06,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Gift Card,191.0,Victor Morris
+818,2024-03-16,00:00:00,40,Chips,Snacks,26.59,8,3,5,0.03,132.95,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Gift Card,480.0,Susan Davis
+819,2024-02-16,00:00:00,40,Chips,Snacks,27.14,8,6,2,0.01,54.28,3,Northgate,Chicago,Midwest,7,Gabrielle Davis,Cashier,Cash,294.0,Kimberly Sharp
+820,2024-03-27,00:00:00,40,Chips,Snacks,23.57,7,0,7,0.14,164.99,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Gift Card,71.0,Susan Thompson
+821,2024-04-24,00:00:00,65,Deodorant,Personal Care,42.79,3,0,3,0.07,128.37,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Gift Card,210.0,Casey Gillespie
+822,2024-03-27,00:00:00,50,Corn,Canned Goods,22.89,9,8,1,0.15,22.89,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Cash,,
+823,2024-05-23,00:00:00,4,Butter,Dairy,37.42,2,0,2,0.02,74.84,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Gift Card,388.0,Jennifer Simpson DVM
+824,2024-02-18,00:00:00,7,Bread,Bakery,47.9,8,0,8,0.0,383.2,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Gift Card,10.0,Tammy Mcdowell
+825,2024-05-28,00:00:00,36,Tea,Beverages,10.16,8,0,8,0.11,81.28,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Debit Card,24.0,Keith Rodriguez
+826,2024-04-21,00:00:00,63,Shampoo,Personal Care,16.04,3,0,3,0.17,48.12,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Debit Card,47.0,Mrs. Virginia Daniels
+827,2024-02-13,00:00:00,15,Oranges,Produce,42.17,5,0,5,0.05,210.85,1,Downtown,New York,East,18,Daniel Hahn,Stocker,Cash,488.0,Todd Rosales MD
+828,2024-03-24,00:00:00,53,Pizza,Frozen Foods,32.34,3,1,2,0.06,64.68,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Cash,212.0,Brian Martin
+829,2024-01-31,00:00:00,42,Popcorn,Snacks,17.48,1,0,1,0.15,17.48,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Gift Card,261.0,David Lopez
+830,2024-03-09,00:00:00,65,Deodorant,Personal Care,40.95,1,0,1,0.11,40.95,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Cash,209.0,Rachel Bradley
+831,2024-05-21,00:00:00,30,Crab,Seafood,40.18,10,0,10,0.05,401.8,1,Downtown,New York,East,9,Valerie Gray,Cashier,Gift Card,65.0,Casey Chase
+832,2024-04-24,00:00:00,39,Wine,Beverages,11.77,2,0,2,0.1,23.54,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Credit Card,87.0,Samantha Robertson
+833,2024-05-22,00:00:00,32,Water,Beverages,32.76,8,8,0,0.19,0.0,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Gift Card,498.0,Michael Lopez
+834,2024-05-03,00:00:00,22,Pork,Meat,7.45,5,0,5,0.17,37.25,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Mobile Payment,,
+835,2024-03-13,00:00:00,28,Shrimp,Seafood,12.66,1,0,1,0.11,12.66,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Cash,203.0,Franklin Wright
+836,2024-03-12,00:00:00,16,Tomatoes,Produce,26.36,7,0,7,0.1,184.52,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Debit Card,,
+837,2024-03-10,00:00:00,44,Crackers,Snacks,24.41,4,0,4,0.06,97.64,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Credit Card,307.0,David Molina
+838,2024-01-01,00:00:00,43,Nuts,Snacks,40.89,10,0,10,0.18,408.9,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Credit Card,459.0,Elizabeth Sharp
+839,2024-01-21,00:00:00,63,Shampoo,Personal Care,15.84,2,0,2,0.18,31.68,4,Southcenter,Houston,South,18,Daniel Hahn,Stocker,Mobile Payment,181.0,Matthew Schwartz
+840,2024-04-09,00:00:00,49,Tuna,Canned Goods,16.55,3,0,3,0.16,49.65,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Cash,190.0,Bryan Parker
+841,2024-02-26,00:00:00,25,Sausages,Meat,26.53,1,0,1,0.14,26.53,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Debit Card,418.0,Jonathan Jacobson
+842,2024-05-06,00:00:00,39,Wine,Beverages,10.73,6,4,2,0.18,21.46,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Gift Card,101.0,Emily Wilson
+843,2024-05-25,00:00:00,51,Tomatoes,Canned Goods,38.43,9,0,9,0.11,345.87,1,Downtown,New York,East,9,Valerie Gray,Cashier,Gift Card,309.0,Elizabeth Mendez
+844,2024-02-02,00:00:00,23,Turkey,Meat,9.13,2,0,2,0.19,18.26,1,Downtown,New York,East,19,Matthew Foster,Cashier,Credit Card,,
+845,2024-05-16,00:00:00,36,Tea,Beverages,10.16,10,0,10,0.11,101.6,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Mobile Payment,219.0,Casey Hernandez
+846,2024-04-14,00:00:00,7,Bread,Bakery,43.11,5,0,5,0.1,215.55,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Mobile Payment,389.0,Lisa Perry
+847,2024-03-12,00:00:00,6,Eggs,Dairy,13.74,7,0,7,0.06,96.18,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,42.0,Kaitlin Medina
+848,2024-01-20,00:00:00,4,Butter,Dairy,35.51,4,0,4,0.07,142.04,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Cash,50.0,Colleen Wright
+849,2024-01-07,00:00:00,4,Butter,Dairy,30.93,10,0,10,0.19,309.3,4,Southcenter,Houston,South,14,Timothy Wong,Cashier,Debit Card,243.0,Shelley Miller
+850,2024-03-26,00:00:00,31,Mussels,Seafood,9.9,9,0,9,0.19,89.1,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Gift Card,392.0,Michael Miller
+851,2024-02-01,00:00:00,13,Apples,Produce,3.99,2,0,2,0.18,7.98,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Mobile Payment,435.0,Amy Kelley
+852,2024-04-23,00:00:00,9,Muffins,Bakery,4.99,1,0,1,0.13,4.99,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Cash,29.0,Laura Hernandez
+853,2024-04-12,00:00:00,7,Bread,Bakery,44.07,2,0,2,0.08,88.14,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Gift Card,,
+854,2024-04-28,00:00:00,2,Cheese,Dairy,18.97,7,0,7,0.12,132.79,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Debit Card,346.0,Joseph Wilson
+855,2024-03-25,00:00:00,4,Butter,Dairy,37.42,10,0,10,0.02,374.2,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Gift Card,,
+856,2024-05-10,00:00:00,25,Sausages,Meat,27.77,5,0,5,0.1,138.85,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Gift Card,125.0,Kevin Davis
+857,2024-02-02,00:00:00,18,Potatoes,Produce,34.99,5,0,5,0.1,174.95,1,Downtown,New York,East,2,Megan Mcclain,Cashier,Debit Card,454.0,Rhonda Chavez
+858,2024-03-20,00:00:00,19,Onions,Produce,39.91,10,0,10,0.07,399.1,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Cash,337.0,Joyce Brown
+859,2024-05-09,00:00:00,19,Onions,Produce,39.48,9,0,9,0.08,355.32,1,Downtown,New York,East,8,Lindsey Roman,Stocker,Credit Card,,
+860,2024-02-18,00:00:00,26,Salmon,Seafood,21.74,8,0,8,0.2,173.92,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Gift Card,437.0,Robert Cummings
+861,2024-04-17,00:00:00,43,Nuts,Snacks,45.38,6,0,6,0.09,272.28,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Cash,472.0,Robert Reese
+862,2024-04-29,00:00:00,1,Milk,Dairy,9.67,10,0,10,0.1,96.7,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Debit Card,,
+863,2024-02-17,00:00:00,49,Tuna,Canned Goods,19.5,1,0,1,0.01,19.5,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Cash,73.0,Amber Cooper
+864,2024-05-29,00:00:00,38,Beer,Beverages,7.68,6,1,5,0.04,38.4,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Debit Card,454.0,Zachary Michael
+865,2024-05-21,00:00:00,34,Juice,Beverages,45.74,4,0,4,0.0,182.96,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Debit Card,,
+866,2024-01-29,00:00:00,3,Yogurt,Dairy,28.08,6,0,6,0.06,168.48,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Credit Card,191.0,Timothy Johnson
+867,2024-04-21,00:00:00,22,Pork,Meat,7.36,2,0,2,0.18,14.72,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Credit Card,,
+868,2024-04-05,00:00:00,25,Sausages,Meat,24.68,6,0,6,0.2,148.08,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,,
+869,2024-02-08,00:00:00,25,Sausages,Meat,26.84,6,0,6,0.13,161.04,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Debit Card,,
+870,2024-02-23,00:00:00,66,Lotion,Personal Care,14.18,2,0,2,0.16,28.36,5,Eastville,Miami,Southeast,16,Margaret Hawkins DDS,Sales Associate,Gift Card,261.0,Randy Cannon
+871,2024-05-07,00:00:00,50,Corn,Canned Goods,25.31,9,0,9,0.06,227.79,5,Eastville,Miami,Southeast,12,David Garcia,Cashier,Debit Card,248.0,Maria Fisher
+872,2024-05-28,00:00:00,64,Toothpaste,Personal Care,23.04,7,0,7,0.16,161.28,4,Southcenter,Houston,South,9,Valerie Gray,Cashier,Cash,459.0,Janet Kane DVM
+873,2024-04-11,00:00:00,26,Salmon,Seafood,22.28,4,0,4,0.18,89.12,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Gift Card,432.0,Michael Stanley
+874,2024-01-22,00:00:00,48,Beans,Canned Goods,28.41,3,0,3,0.06,85.23,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Gift Card,299.0,Martha Bailey
+875,2024-03-27,00:00:00,6,Eggs,Dairy,13.3,7,0,7,0.09,93.1,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Debit Card,,
+876,2024-01-07,00:00:00,41,Pretzels,Snacks,20.89,3,0,3,0.05,62.67,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Cash,43.0,Joshua Rice
+877,2024-05-19,00:00:00,38,Beer,Beverages,6.48,2,0,2,0.19,12.96,5,Eastville,Miami,Southeast,17,Crystal Johnson,Stocker,Cash,185.0,Courtney Smith
+878,2024-03-26,00:00:00,5,Cream,Dairy,33.45,4,0,4,0.05,133.8,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Debit Card,310.0,Edwin Nunez
+879,2024-01-03,00:00:00,18,Potatoes,Produce,36.16,5,0,5,0.07,180.8,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Mobile Payment,,
+880,2024-02-08,00:00:00,2,Cheese,Dairy,18.54,7,0,7,0.14,129.78,4,Southcenter,Houston,South,17,Crystal Johnson,Stocker,Credit Card,265.0,Kim Morrow
+881,2024-01-22,00:00:00,60,Detergent,Household,39.73,6,0,6,0.09,238.38,4,Southcenter,Houston,South,11,Amber Perez,Assistant Manager,Mobile Payment,231.0,Gregory Hill
+882,2024-05-27,00:00:00,4,Butter,Dairy,32.45,3,0,3,0.15,97.35,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Mobile Payment,,
+883,2024-04-17,00:00:00,46,Candy,Snacks,7.81,7,0,7,0.08,54.67,3,Northgate,Chicago,Midwest,8,Lindsey Roman,Stocker,Gift Card,301.0,Molly Rodriguez
+884,2024-02-05,00:00:00,3,Yogurt,Dairy,23.9,3,0,3,0.2,71.7,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Gift Card,309.0,Jennifer Miranda
+885,2024-04-10,00:00:00,51,Tomatoes,Canned Goods,41.45,2,0,2,0.04,82.9,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Cash,493.0,Alexis Harris
+886,2024-02-13,00:00:00,58,Paper Towels,Household,46.68,2,0,2,0.04,93.36,3,Northgate,Chicago,Midwest,3,Allen Robinson,Manager,Gift Card,96.0,Andrew Harper
+887,2024-03-13,00:00:00,26,Salmon,Seafood,23.64,4,0,4,0.13,94.56,1,Downtown,New York,East,13,Holly Wood,Cashier,Cash,189.0,Amber Yang
+888,2024-03-24,00:00:00,67,Razors,Personal Care,5.18,7,0,7,0.2,36.26,1,Downtown,New York,East,6,Melissa Peterson,Sales Associate,Credit Card,245.0,David Robinson
+889,2024-02-03,00:00:00,9,Muffins,Bakery,4.82,4,0,4,0.16,19.28,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Mobile Payment,295.0,Amy Gordon
+890,2024-05-08,00:00:00,40,Chips,Snacks,27.41,8,0,8,0.0,219.28,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Credit Card,423.0,Robert Dennis
+891,2024-05-14,00:00:00,52,Fruit,Canned Goods,28.15,6,0,6,0.18,168.9,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Mobile Payment,21.0,Kyle Chambers
+892,2024-03-29,00:00:00,12,Pastries,Bakery,5.98,5,0,5,0.16,29.9,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Credit Card,92.0,Eric Thomas
+893,2024-02-16,00:00:00,56,Meals,Frozen Foods,7.52,10,0,10,0.14,75.2,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Cash,446.0,Connie Turner
+894,2024-03-15,00:00:00,21,Beef,Meat,27.65,2,0,2,0.14,55.3,3,Northgate,Chicago,Midwest,18,Daniel Hahn,Stocker,Credit Card,,
+895,2024-04-04,00:00:00,53,Pizza,Frozen Foods,30.96,2,0,2,0.1,61.92,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Debit Card,85.0,Travis Hobbs
+896,2024-01-12,00:00:00,33,Soda,Beverages,12.99,8,8,0,0.08,0.0,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Mobile Payment,,
+897,2024-03-05,00:00:00,51,Tomatoes,Canned Goods,41.88,2,0,2,0.03,83.76,1,Downtown,New York,East,1,Allison Hill,Cashier,Mobile Payment,35.0,Lori Simmons
+898,2024-04-22,00:00:00,11,Cake,Bakery,34.55,3,0,3,0.06,103.65,5,Eastville,Miami,Southeast,8,Lindsey Roman,Stocker,Credit Card,10.0,William David DDS
+899,2024-02-01,00:00:00,13,Apples,Produce,4.71,9,0,9,0.03,42.39,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Cash,79.0,Emma Butler
+900,2024-02-25,00:00:00,57,Desserts,Frozen Foods,42.49,1,0,1,0.11,42.49,3,Northgate,Chicago,Midwest,6,Melissa Peterson,Sales Associate,Mobile Payment,429.0,James Webster
+901,2024-03-19,00:00:00,67,Razors,Personal Care,6.48,8,0,8,0.0,51.84,1,Downtown,New York,East,13,Holly Wood,Cashier,Mobile Payment,,
+902,2024-02-21,00:00:00,32,Water,Beverages,32.36,2,1,1,0.2,32.36,3,Northgate,Chicago,Midwest,8,Lindsey Roman,Stocker,Debit Card,,
+903,2024-02-12,00:00:00,9,Muffins,Bakery,5.63,3,3,0,0.02,0.0,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Debit Card,321.0,Samuel Turner
+904,2024-05-18,00:00:00,25,Sausages,Meat,30.23,7,0,7,0.02,211.61,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Credit Card,166.0,Renee Melendez
+905,2024-03-21,00:00:00,23,Turkey,Meat,10.26,1,0,1,0.09,10.26,1,Downtown,New York,East,13,Holly Wood,Cashier,Cash,143.0,Tracy Grant
+906,2024-02-25,00:00:00,48,Beans,Canned Goods,26.59,7,0,7,0.12,186.13,1,Downtown,New York,East,3,Allen Robinson,Manager,Cash,,
+907,2024-03-24,00:00:00,22,Pork,Meat,7.27,7,0,7,0.19,50.89,3,Northgate,Chicago,Midwest,4,Cristian Santos,Sales Associate,Credit Card,326.0,David Harris
+908,2024-03-26,00:00:00,41,Pretzels,Snacks,19.35,1,0,1,0.12,19.35,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Mobile Payment,380.0,Tammy Boone
+909,2024-01-04,00:00:00,30,Crab,Seafood,39.76,4,1,3,0.06,119.28,5,Eastville,Miami,Southeast,19,Matthew Foster,Cashier,Mobile Payment,,
+910,2024-04-05,00:00:00,11,Cake,Bakery,35.66,8,0,8,0.03,285.28,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Credit Card,122.0,Nathaniel Lee
+911,2024-03-12,00:00:00,57,Desserts,Frozen Foods,40.58,6,0,6,0.15,243.48,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Gift Card,,
+912,2024-02-28,00:00:00,54,Ice Cream,Frozen Foods,36.28,6,0,6,0.04,217.68,3,Northgate,Chicago,Midwest,1,Allison Hill,Cashier,Cash,,
+913,2024-04-07,00:00:00,32,Water,Beverages,36.81,9,0,9,0.09,331.29,2,Westside,Los Angeles,West,20,Derek Wright,Stocker,Cash,252.0,Michael Morrison
+914,2024-02-06,00:00:00,9,Muffins,Bakery,5.57,4,0,4,0.03,22.28,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Gift Card,,
+915,2024-01-21,00:00:00,27,Tuna,Seafood,8.47,7,0,7,0.06,59.29,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Credit Card,91.0,Chelsea Gill
+916,2024-05-27,00:00:00,32,Water,Beverages,38.83,8,0,8,0.04,310.64,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Mobile Payment,498.0,Kristin Mendoza
+917,2024-02-12,00:00:00,47,Soup,Canned Goods,35.83,8,0,8,0.1,286.64,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Mobile Payment,,
+918,2024-04-19,00:00:00,62,Cleaning Supplies,Household,25.29,2,0,2,0.18,50.58,1,Downtown,New York,East,13,Holly Wood,Cashier,Gift Card,284.0,Felicia Krueger
+919,2024-04-28,00:00:00,23,Turkey,Meat,10.37,5,0,5,0.08,51.85,3,Northgate,Chicago,Midwest,13,Holly Wood,Cashier,Gift Card,171.0,Timothy Hayden
+920,2024-02-09,00:00:00,18,Potatoes,Produce,34.99,4,3,1,0.1,34.99,4,Southcenter,Houston,South,7,Gabrielle Davis,Cashier,Mobile Payment,,
+921,2024-03-19,00:00:00,48,Beans,Canned Goods,24.78,10,0,10,0.18,247.8,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Cash,290.0,Zachary Mendoza
+922,2024-03-06,00:00:00,21,Beef,Meat,28.93,6,0,6,0.1,173.58,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Debit Card,334.0,Larry Harris
+923,2024-03-03,00:00:00,50,Corn,Canned Goods,23.43,8,6,2,0.13,46.86,4,Southcenter,Houston,South,8,Lindsey Roman,Stocker,Cash,331.0,Kristen Rowe
+924,2024-04-26,00:00:00,19,Onions,Produce,37.76,3,0,3,0.12,113.28,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Credit Card,395.0,Joseph Howard
+925,2024-05-30,00:00:00,12,Pastries,Bakery,6.84,2,0,2,0.04,13.68,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Mobile Payment,219.0,Jose Crawford
+926,2024-05-16,00:00:00,33,Soda,Beverages,12.0,7,0,7,0.15,84.0,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Cash,294.0,William Harrison
+927,2024-02-23,00:00:00,45,Chocolate,Snacks,38.03,7,0,7,0.0,266.21,2,Westside,Los Angeles,West,9,Valerie Gray,Cashier,Credit Card,,
+928,2024-04-16,00:00:00,1,Milk,Dairy,10.1,9,0,9,0.06,90.9,1,Downtown,New York,East,3,Allen Robinson,Manager,Mobile Payment,192.0,Suzanne Wood
+929,2024-05-04,00:00:00,24,Lamb,Meat,34.68,3,0,3,0.02,104.04,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Gift Card,,
+930,2024-02-16,00:00:00,24,Lamb,Meat,29.02,4,0,4,0.18,116.08,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,468.0,Justin Walker
+931,2024-03-16,00:00:00,14,Bananas,Produce,39.14,2,0,2,0.06,78.28,2,Westside,Los Angeles,West,3,Allen Robinson,Manager,Debit Card,121.0,Dean Donovan
+932,2024-01-03,00:00:00,62,Cleaning Supplies,Household,24.98,1,0,1,0.19,24.98,4,Southcenter,Houston,South,4,Cristian Santos,Sales Associate,Gift Card,,
+933,2024-05-13,00:00:00,6,Eggs,Dairy,13.16,1,0,1,0.1,13.16,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Debit Card,,
+934,2024-04-19,00:00:00,61,Soap,Household,34.64,6,0,6,0.18,207.84,3,Northgate,Chicago,Midwest,20,Derek Wright,Stocker,Debit Card,,
+935,2024-01-15,00:00:00,47,Soup,Canned Goods,33.44,6,0,6,0.16,200.64,4,Southcenter,Houston,South,13,Holly Wood,Cashier,Cash,358.0,Jennifer Hernandez
+936,2024-02-01,00:00:00,52,Fruit,Canned Goods,29.52,9,0,9,0.14,265.68,2,Westside,Los Angeles,West,1,Allison Hill,Cashier,Credit Card,317.0,James Whitaker
+937,2024-02-18,00:00:00,61,Soap,Household,34.21,1,0,1,0.19,34.21,5,Eastville,Miami,Southeast,14,Timothy Wong,Cashier,Debit Card,185.0,Mr. Michael Scott PhD
+938,2024-02-29,00:00:00,6,Eggs,Dairy,12.43,10,0,10,0.15,124.3,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Cash,481.0,Maria Henry
+939,2024-03-16,00:00:00,61,Soap,Household,40.97,10,0,10,0.03,409.7,1,Downtown,New York,East,13,Holly Wood,Cashier,Gift Card,,
+940,2024-05-07,00:00:00,65,Deodorant,Personal Care,40.03,2,0,2,0.13,80.06,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Gift Card,,
+941,2024-01-30,00:00:00,60,Detergent,Household,41.48,8,0,8,0.05,331.84,2,Westside,Los Angeles,West,15,Nicholas Martin,Sales Associate,Credit Card,484.0,Robert Jackson
+942,2024-01-08,00:00:00,12,Pastries,Bakery,6.62,3,0,3,0.07,19.86,1,Downtown,New York,East,14,Timothy Wong,Cashier,Mobile Payment,,
+943,2024-02-01,00:00:00,29,Cod,Seafood,10.23,3,0,3,0.13,30.69,3,Northgate,Chicago,Midwest,16,Margaret Hawkins DDS,Sales Associate,Mobile Payment,355.0,Katherine Stark
+944,2024-01-17,00:00:00,43,Nuts,Snacks,42.89,6,0,6,0.14,257.34,2,Westside,Los Angeles,West,19,Matthew Foster,Cashier,Mobile Payment,402.0,Maria Brown
+945,2024-03-07,00:00:00,56,Meals,Frozen Foods,8.57,2,0,2,0.02,17.14,2,Westside,Los Angeles,West,8,Lindsey Roman,Stocker,Debit Card,,
+946,2024-04-04,00:00:00,25,Sausages,Meat,24.99,3,0,3,0.19,74.97,1,Downtown,New York,East,19,Matthew Foster,Cashier,Gift Card,,
+947,2024-05-17,00:00:00,40,Chips,Snacks,21.93,4,0,4,0.2,87.72,1,Downtown,New York,East,19,Matthew Foster,Cashier,Debit Card,,
+948,2024-02-26,00:00:00,17,Lettuce,Produce,2.89,2,0,2,0.11,5.78,5,Eastville,Miami,Southeast,20,Derek Wright,Stocker,Mobile Payment,418.0,Ryan Landry
+949,2024-04-26,00:00:00,38,Beer,Beverages,7.76,3,0,3,0.03,23.28,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Cash,159.0,Pamela Gutierrez
+950,2024-05-26,00:00:00,65,Deodorant,Personal Care,44.17,8,0,8,0.04,353.36,1,Downtown,New York,East,9,Valerie Gray,Cashier,Debit Card,,
+951,2024-02-09,00:00:00,49,Tuna,Canned Goods,15.96,4,0,4,0.19,63.84,1,Downtown,New York,East,11,Amber Perez,Assistant Manager,Credit Card,,
+952,2024-04-10,00:00:00,7,Bread,Bakery,41.67,5,0,5,0.13,208.35,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Credit Card,,
+953,2024-05-01,00:00:00,51,Tomatoes,Canned Goods,39.73,6,0,6,0.08,238.38,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Gift Card,,
+954,2024-04-10,00:00:00,37,Energy Drinks,Beverages,17.33,2,0,2,0.15,34.66,2,Westside,Los Angeles,West,18,Daniel Hahn,Stocker,Gift Card,,
+955,2024-02-11,00:00:00,7,Bread,Bakery,41.19,10,0,10,0.14,411.9,3,Northgate,Chicago,Midwest,15,Nicholas Martin,Sales Associate,Debit Card,,
+956,2024-01-03,00:00:00,27,Tuna,Seafood,7.93,6,0,6,0.12,47.58,2,Westside,Los Angeles,West,7,Gabrielle Davis,Cashier,Credit Card,219.0,Crystal Mann
+957,2024-04-01,00:00:00,22,Pork,Meat,8.88,8,0,8,0.01,71.04,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Gift Card,304.0,Jonathan Brooks
+958,2024-03-03,00:00:00,56,Meals,Frozen Foods,8.05,1,0,1,0.08,8.05,2,Westside,Los Angeles,West,13,Holly Wood,Cashier,Debit Card,489.0,Mary Jensen
+959,2024-04-28,00:00:00,23,Turkey,Meat,9.8,7,0,7,0.13,68.6,4,Southcenter,Houston,South,3,Allen Robinson,Manager,Debit Card,60.0,Mr. Aaron Arnold
+960,2024-05-10,00:00:00,11,Cake,Bakery,34.92,4,4,0,0.05,0.0,1,Downtown,New York,East,16,Margaret Hawkins DDS,Sales Associate,Cash,,
+961,2024-04-21,00:00:00,24,Lamb,Meat,34.68,5,0,5,0.02,173.4,4,Southcenter,Houston,South,16,Margaret Hawkins DDS,Sales Associate,Cash,,
+962,2024-04-10,00:00:00,24,Lamb,Meat,29.73,9,0,9,0.16,267.57,4,Southcenter,Houston,South,1,Allison Hill,Cashier,Gift Card,266.0,Joseph Hill
+963,2024-02-16,00:00:00,16,Tomatoes,Produce,29.29,10,0,10,0.0,292.9,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Mobile Payment,,
+964,2024-05-27,00:00:00,16,Tomatoes,Produce,28.7,4,0,4,0.02,114.8,1,Downtown,New York,East,5,Kevin Pacheco,Sales Associate,Debit Card,,
+965,2024-05-09,00:00:00,5,Cream,Dairy,31.34,5,0,5,0.11,156.7,1,Downtown,New York,East,4,Cristian Santos,Sales Associate,Mobile Payment,,
+966,2024-01-12,00:00:00,1,Milk,Dairy,10.1,9,0,9,0.06,90.9,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Gift Card,296.0,Alicia Li
+967,2024-03-31,00:00:00,63,Shampoo,Personal Care,18.55,10,0,10,0.04,185.5,3,Northgate,Chicago,Midwest,17,Crystal Johnson,Stocker,Cash,23.0,Renee Browning
+968,2024-02-06,00:00:00,31,Mussels,Seafood,11.73,5,0,5,0.04,58.65,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Credit Card,111.0,Brent Hernandez
+969,2024-04-18,00:00:00,46,Candy,Snacks,8.07,2,0,2,0.05,16.14,3,Northgate,Chicago,Midwest,5,Kevin Pacheco,Sales Associate,Credit Card,43.0,Joseph Ochoa
+970,2024-05-17,00:00:00,33,Soda,Beverages,12.0,4,0,4,0.15,48.0,4,Southcenter,Houston,South,5,Kevin Pacheco,Sales Associate,Credit Card,,
+971,2024-04-17,00:00:00,66,Lotion,Personal Care,14.18,3,0,3,0.16,42.54,5,Eastville,Miami,Southeast,6,Melissa Peterson,Sales Associate,Mobile Payment,310.0,James Watson
+972,2024-02-01,00:00:00,32,Water,Beverages,36.0,9,0,9,0.11,324.0,1,Downtown,New York,East,9,Valerie Gray,Cashier,Cash,46.0,Karl Branch
+973,2024-02-07,00:00:00,47,Soup,Canned Goods,39.01,4,0,4,0.02,156.04,3,Northgate,Chicago,Midwest,9,Valerie Gray,Cashier,Credit Card,54.0,Michael Abbott
+974,2024-03-19,00:00:00,16,Tomatoes,Produce,26.36,10,0,10,0.1,263.6,2,Westside,Los Angeles,West,17,Crystal Johnson,Stocker,Gift Card,293.0,Shannon Malone
+975,2024-01-26,00:00:00,37,Energy Drinks,Beverages,16.52,1,0,1,0.19,16.52,5,Eastville,Miami,Southeast,9,Valerie Gray,Cashier,Mobile Payment,413.0,James Tran
+976,2024-02-02,00:00:00,52,Fruit,Canned Goods,29.52,5,5,0,0.14,0.0,4,Southcenter,Houston,South,19,Matthew Foster,Cashier,Credit Card,291.0,Adam Jackson
+977,2024-03-04,00:00:00,35,Coffee,Beverages,39.99,10,0,10,0.09,399.9,1,Downtown,New York,East,12,David Garcia,Cashier,Mobile Payment,,
+978,2024-03-11,00:00:00,60,Detergent,Household,37.55,7,0,7,0.14,262.85,5,Eastville,Miami,Southeast,10,Lisa Hensley,Stocker,Credit Card,440.0,Mr. Richard Knight PhD
+979,2024-03-21,00:00:00,12,Pastries,Bakery,6.98,2,0,2,0.02,13.96,3,Northgate,Chicago,Midwest,14,Timothy Wong,Cashier,Credit Card,,
+980,2024-01-22,00:00:00,22,Pork,Meat,8.07,5,0,5,0.1,40.35,5,Eastville,Miami,Southeast,2,Megan Mcclain,Cashier,Cash,,
+981,2024-05-02,00:00:00,55,Vegetables,Frozen Foods,5.18,8,0,8,0.2,41.44,5,Eastville,Miami,Southeast,5,Kevin Pacheco,Sales Associate,Gift Card,208.0,Joseph Williams
+982,2024-01-02,00:00:00,2,Cheese,Dairy,18.33,7,0,7,0.15,128.31,5,Eastville,Miami,Southeast,7,Gabrielle Davis,Cashier,Credit Card,,
+983,2024-02-13,00:00:00,6,Eggs,Dairy,14.18,9,0,9,0.03,127.62,5,Eastville,Miami,Southeast,15,Nicholas Martin,Sales Associate,Debit Card,,
+984,2024-04-18,00:00:00,66,Lotion,Personal Care,15.7,8,0,8,0.07,125.6,3,Northgate,Chicago,Midwest,2,Megan Mcclain,Cashier,Cash,348.0,Sean Clay
+985,2024-03-15,00:00:00,32,Water,Beverages,38.43,5,0,5,0.05,192.15,5,Eastville,Miami,Southeast,4,Cristian Santos,Sales Associate,Cash,,
+986,2024-05-11,00:00:00,51,Tomatoes,Canned Goods,35.41,1,0,1,0.18,35.41,2,Westside,Los Angeles,West,10,Lisa Hensley,Stocker,Mobile Payment,4.0,Anthony Jones
+987,2024-03-31,00:00:00,59,Toilet Paper,Household,23.81,2,1,1,0.08,23.81,3,Northgate,Chicago,Midwest,10,Lisa Hensley,Stocker,Cash,252.0,Stephanie Elliott
+988,2024-05-11,00:00:00,26,Salmon,Seafood,22.28,3,0,3,0.18,66.84,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Cash,337.0,Timothy Edwards
+989,2024-04-11,00:00:00,33,Soda,Beverages,12.85,6,0,6,0.09,77.1,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Credit Card,138.0,Laurie Goodwin
+990,2024-02-11,00:00:00,14,Bananas,Produce,37.89,3,0,3,0.09,113.67,4,Southcenter,Houston,South,15,Nicholas Martin,Sales Associate,Debit Card,,
+991,2024-03-13,00:00:00,26,Salmon,Seafood,25.0,1,0,1,0.08,25.0,1,Downtown,New York,East,7,Gabrielle Davis,Cashier,Debit Card,,
+992,2024-03-09,00:00:00,21,Beef,Meat,28.61,2,0,2,0.11,57.22,2,Westside,Los Angeles,West,16,Margaret Hawkins DDS,Sales Associate,Credit Card,392.0,Jennifer Jones
+993,2024-02-03,00:00:00,52,Fruit,Canned Goods,28.84,2,0,2,0.16,57.68,5,Eastville,Miami,Southeast,13,Holly Wood,Cashier,Credit Card,257.0,David Davenport
+994,2024-03-28,00:00:00,2,Cheese,Dairy,18.33,7,0,7,0.15,128.31,2,Westside,Los Angeles,West,2,Megan Mcclain,Cashier,Mobile Payment,145.0,Steven Rivera
+995,2024-03-04,00:00:00,63,Shampoo,Personal Care,17.39,10,0,10,0.1,173.9,1,Downtown,New York,East,14,Timothy Wong,Cashier,Credit Card,59.0,Brenda Hinton
+996,2024-02-20,00:00:00,34,Juice,Beverages,38.42,8,0,8,0.16,307.36,2,Westside,Los Angeles,West,14,Timothy Wong,Cashier,Gift Card,97.0,Kathryn Mccann
+997,2024-02-03,00:00:00,20,Chicken,Meat,15.9,7,2,5,0.19,79.5,2,Westside,Los Angeles,West,4,Cristian Santos,Sales Associate,Mobile Payment,103.0,Jeffrey Roberson
+998,2024-04-14,00:00:00,12,Pastries,Bakery,6.19,9,0,9,0.13,55.71,1,Downtown,New York,East,13,Holly Wood,Cashier,Credit Card,219.0,Randy Friedman
+999,2024-04-19,00:00:00,62,Cleaning Supplies,Household,29.3,1,0,1,0.05,29.3,1,Downtown,New York,East,17,Crystal Johnson,Stocker,Debit Card,,
+1000,2024-01-13,00:00:00,54,Ice Cream,Frozen Foods,32.88,3,1,2,0.13,65.76,2,Westside,Los Angeles,West,11,Amber Perez,Assistant Manager,Debit Card,242.0,Raymond Johnson
