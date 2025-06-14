@@ -278,6 +278,21 @@
                 </div>
             </div>
 
+            <!-- History Section -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lịch sử truy vấn</h5>
+                        <button class="btn btn-sm btn-outline-danger" id="clearHistoryBtn">Xóa lịch sử</button>
+                    </div>
+                    <div class="card-body">
+                        <div id="queryHistory" class="list-group">
+                            <!-- Query history items will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Clarification Section (Hidden by default) -->
             <div class="col-md-12 mb-4 d-none" id="clarificationSection">
                 <div class="card">
@@ -436,13 +451,129 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Query history management
+        const HISTORY_KEY = 'query_history';
+        const MAX_HISTORY_ITEMS = 10;
+
+        function saveToHistory(query, sql, clarification = null, clarification_questions = null) {
+            let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+            // So sánh trùng lặp: cùng query và cùng clarification (dạng JSON.stringify)
+            const clarificationStr = clarification ? JSON.stringify(clarification) : '';
+            history = history.filter(item => {
+                const sameQuery = item.query === query;
+                const sameClarification = (clarificationStr === (item.clarification ? JSON.stringify(item.clarification) : ''));
+                return !(sameQuery && sameClarification);
+            });
+            // Thêm mới lên đầu
+            history.unshift({
+                query,
+                sql,
+                clarification,
+                clarification_questions,
+                timestamp: new Date().toISOString()
+            });
+            // Giới hạn số lượng
+            history = history.slice(0, MAX_HISTORY_ITEMS);
+            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+            updateHistoryDisplay();
+        }
+
+        function updateHistoryDisplay() {
+            const historyContainer = document.getElementById('queryHistory');
+            const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+            
+            historyContainer.innerHTML = history.map((item, index) => `
+                <div class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-1">${item.query}</h6>
+                        <small class="text-muted">${new Date(item.timestamp).toLocaleString()}</small>
+                    </div>
+                    <div class="mt-2">
+                        <pre class="mb-1"><code>${item.sql}</code></pre>
+                        ${item.clarification ? `<small class="text-muted">Làm rõ: ${JSON.stringify(item.clarification)}</small>` : ''}
+                    </div>
+                    <div class="mt-2">
+                        <button class="btn btn-sm btn-outline-primary use-query-btn" data-index="${index}">Sử dụng lại</button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Add event listeners to "Use" buttons
+            document.querySelectorAll('.use-query-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+                    const item = history[index];
+                    
+                    // Set the query input
+                    document.getElementById('queryInput').value = item.query;
+                    
+                    // Nếu có clarification, tự động gửi lên /api/clarify và hiển thị kết quả
+                    if (item.clarification) {
+                        clarificationResponses = item.clarification;
+                        // Gửi lên /api/clarify
+                        fetch('/api/clarify', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                original_query: item.query,
+                                clarification_responses: item.clarification
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Hiển thị luôn kết quả
+                            showResults(data);
+                        })
+                        .catch(error => {
+                            // Chỉ log ra console, không hiện alert
+                            console.error('Error processing clarification from history:', error);
+                        });
+                    } else {
+                        // Nếu không có clarification, gửi lên /api/query
+                        fetch('/api/query', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ query: item.query })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            showResults(data);
+                        })
+                        .catch(error => {
+                            console.error('Error processing query from history:', error);
+                            alert('Error processing query from history. See console for details.');
+                        });
+                    }
+                });
+            });
+        }
+
+        function clearHistory() {
+            if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử truy vấn?')) {
+                localStorage.removeItem(HISTORY_KEY);
+                updateHistoryDisplay();
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Khai báo biến để theo dõi trạng thái load dữ liệu
             let dataFile = false;
             let schemaFile = false;
             let schemaContent = null;
+            // Khai báo biến toàn cục cho toàn bộ script
             let originalQuery = '';
             let clarificationResponses = {};
+            
+            // Load and display history on page load
+            updateHistoryDisplay();
+
+            // Add event listener for clear history button
+            document.getElementById('clearHistoryBtn').addEventListener('click', clearHistory);
             
             // API status check
             fetch('/api/status')
@@ -631,8 +762,8 @@
                 });
             });
             
-            // Show clarification questions
-            function showClarificationQuestions(data) {
+            // Show clarification questions (global scope)
+            function showClarificationQuestions(data, preselected = null) {
                 const clarificationSection = document.getElementById('clarificationSection');
                 const questionsContainer = document.getElementById('clarificationQuestions');
                 
@@ -640,10 +771,16 @@
                 questionsContainer.innerHTML = '';
                 clarificationResponses = {};
                 
+                // Nếu có preselected (lựa chọn đã lưu), gán vào clarificationResponses
+                if (preselected) {
+                    clarificationResponses = { ...preselected };
+                }
+                
                 // Parse and display questions
                 const questions = data.clarification_questions.split('\n');
                 let currentQuestion = null;
                 let questionHtml = '';
+                let questionList = [];
                 
                 for (const line of questions) {
                     if (line.trim() === '') continue;
@@ -653,7 +790,7 @@
                         if (currentQuestion) {
                             // Add previous question
                             questionHtml += '</div>';
-                            questionsContainer.innerHTML += questionHtml;
+                            questionList.push({ html: questionHtml, question: currentQuestion });
                             questionHtml = '';
                         }
                         
@@ -667,9 +804,13 @@
                         // Option for current question
                         const option = line.trim().substring(1).trim();
                         const optionId = `option_${Math.random().toString(36).substring(2, 9)}`;
-                        
+                        // Kiểm tra nếu đã chọn trước đó thì thêm class btn-primary
+                        let btnClass = 'btn btn-outline-primary option-btn';
+                        if (preselected && preselected[currentQuestion] === option) {
+                            btnClass = 'btn btn-primary option-btn';
+                        }
                         questionHtml += `
-                            <button class="btn btn-outline-primary option-btn" 
+                            <button class="${btnClass}" 
                                     data-question="${currentQuestion}" 
                                     data-option="${option}" 
                                     id="${optionId}">
@@ -678,12 +819,13 @@
                         `;
                     }
                 }
-                
                 // Add last question
                 if (currentQuestion && questionHtml) {
                     questionHtml += '</div></div>';
-                    questionsContainer.innerHTML += questionHtml;
+                    questionList.push({ html: questionHtml, question: currentQuestion });
                 }
+                // Render all questions
+                questionsContainer.innerHTML = questionList.map(q => q.html).join('');
                 
                 // Add event listeners to option buttons
                 const optionButtons = document.querySelectorAll('.option-btn');
@@ -746,22 +888,24 @@
             
             // Show results
             function showResults(data) {
-                // Update SQL
-                document.getElementById('sqlResult').textContent = data.sql || '-- No SQL generated --';
+                // Save to history
+                saveToHistory(originalQuery, data.sql, Object.keys(clarificationResponses).length > 0 ? clarificationResponses : null);
                 
-                // Update explanation
-                document.getElementById('sqlExplanation').textContent = data.explanation || '-- No explanation available --';
+                // Update SQL result
+                document.getElementById('sqlResult').textContent = data.sql;
                 
-                // Update evaluation
-                updateEvaluation(data.evaluation);
+                // Update explanation if available
+                if (data.explanation) {
+                    document.getElementById('sqlExplanation').textContent = data.explanation;
+                }
+                
+                // Update evaluation scores if available
+                if (data.evaluation) {
+                    updateEvaluation(data.evaluation);
+                }
                 
                 // Show result section
                 document.getElementById('resultSection').classList.remove('d-none');
-                
-                // Activate SQL tab
-                const sqlTab = document.getElementById('sql-tab');
-                const tabTrigger = new bootstrap.Tab(sqlTab);
-                tabTrigger.show();
             }
             
             // Update evaluation
