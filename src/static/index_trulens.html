@@ -194,254 +194,263 @@
 
     <div class="container">
         <div class="row">
-            <!-- Data Upload Section -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Dữ liệu mẫu</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-label">Dữ liệu từ database</label>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button" id="loadDataBtn">Load Dữ liệu</button>
-                                </div>
-                                <div id="dataPreviewContainer" class="preview-container d-none">
-                                    <h6>Data Preview:</h6>
-                                    <div id="dataPreview"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Schema mẫu</label>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button" id="loadSchemaBtn">Load Schema</button>
-                                </div>
-                                <div id="schemaPreviewContainer" class="preview-container d-none">
-                                    <h6>Schema Preview:</h6>
-                                    <div id="schemaPreview"></div>
-                                </div>
-                            </div>
+            <div class="col-md-8">
+                <!-- Data Upload Section -->
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Dữ liệu mẫu</h5>
                         </div>
-                        <div class="alert alert-info mt-3" id="uploadStatus">
-                            Load dữ liệu và schema để bắt đầu.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- API Status Section -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">API Status</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">Gemini API:</span>
-                                    <span id="geminiStatus" class="badge bg-success">Available</span>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label">Dữ liệu từ database</label>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" type="button" id="loadDataBtn">Load Dữ liệu</button>
+                                    </div>
+                                    <div id="dataPreviewContainer" class="preview-container d-none">
+                                        <h6>Data Preview:</h6>
+                                        <div id="dataPreview"></div>
+                                    </div>
                                 </div>
-                                <small class="text-muted">Used for Text-to-SQL conversion</small>
+                                <div class="col-md-6">
+                                    <label class="form-label">Schema mẫu</label>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" type="button" id="loadSchemaBtn">Load Schema</button>
+                                    </div>
+                                    <div id="schemaPreviewContainer" class="preview-container d-none">
+                                        <h6>Schema Preview:</h6>
+                                        <div id="schemaPreview"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">TruLens:</span>
-                                    <span id="trulensStatus" class="badge bg-danger">Not Available</span>
-                                </div>
-                                <small class="text-muted" id="trulensMessage">OpenAI API key not set or TruLens not installed</small>
-                                <div class="alert alert-api mt-2 p-2 d-none" id="trulensAlert">
-                                    <small>
-                                        <strong>Tip:</strong> To enable TruLens metrics, set the OPENAI_API_KEY environment variable before starting the application.
-                                    </small>
-                                </div>
+                            <div class="alert alert-info mt-3" id="uploadStatus">
+                                Load dữ liệu và schema để bắt đầu.
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Query Section -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Câu Hỏi</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="queryInput" class="form-label">Nhập câu hỏi bằng ngôn ngữ tự nhiên</label>
-                            <textarea class="form-control" id="queryInput" rows="3" placeholder="Ví dụ: Hiển thị tổng doanh thu theo từng chi nhánh"></textarea>
+                <!-- API Status Section -->
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">API Status</h5>
                         </div>
-                        <button class="btn btn-primary" id="submitQueryBtn">Chuyển đổi thành SQL</button>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">Gemini API:</span>
+                                        <span id="geminiStatus" class="badge bg-success">Available</span>
+                                    </div>
+                                    <small class="text-muted">Used for Text-to-SQL conversion</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">TruLens:</span>
+                                        <span id="trulensStatus" class="badge bg-danger">Not Available</span>
+                                    </div>
+                                    <small class="text-muted" id="trulensMessage">OpenAI API key not set or TruLens not installed</small>
+                                    <div class="alert alert-api mt-2 p-2 d-none" id="trulensAlert">
+                                        <small>
+                                            <strong>Tip:</strong> To enable TruLens metrics, set the OPENAI_API_KEY environment variable before starting the application.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query Section -->
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Câu Hỏi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="queryInput" class="form-label">Nhập câu hỏi bằng ngôn ngữ tự nhiên</label>
+                                <textarea class="form-control" id="queryInput" rows="3" placeholder="Ví dụ: Hiển thị tổng doanh thu theo từng chi nhánh"></textarea>
+                            </div>
+                            <button class="btn btn-primary" id="submitQueryBtn">Chuyển đổi thành SQL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clarification Section (Hidden by default) -->
+                <div class="col-md-12 mb-4 d-none" id="clarificationSection">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Làm rõ câu hỏi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle me-2"></i>
+                                Câu hỏi của bạn có thể hiểu theo nhiều cách khác nhau. Vui lòng làm rõ:
+                            </div>
+                            <div id="clarificationQuestions">
+                                <!-- Clarification questions will be inserted here -->
+                            </div>
+                            <button class="btn btn-primary" id="submitClarificationBtn">Xác nhận và tiếp tục</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Section (Hidden by default) -->
+                <div class="col-md-12 mb-4 d-none" id="resultSection">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Kết Quả</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" id="resultTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="sql-tab" data-bs-toggle="tab" data-bs-target="#sql" type="button" role="tab" aria-controls="sql" aria-selected="true">SQL</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="explanation-tab" data-bs-toggle="tab" data-bs-target="#explanation" type="button" role="tab" aria-controls="explanation" aria-selected="false">Giải thích</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="evaluation-tab" data-bs-toggle="tab" data-bs-target="#evaluation" type="button" role="tab" aria-controls="evaluation" aria-selected="false">Đánh giá</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="query-result-tab" data-bs-toggle="tab" data-bs-target="#query-result" type="button" role="tab" aria-controls="query-result" aria-selected="false">Kết quả truy vấn</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="resultTabsContent">
+                                <div class="tab-pane fade show active" id="sql" role="tabpanel" aria-labelledby="sql-tab">
+                                    <div class="sql-result" id="sqlResult">-- SQL sẽ hiển thị ở đây --</div>
+                                    <button class="btn btn-primary" id="executeBtn">Thực thi SQL</button>
+                                    <button class="btn btn-outline-secondary" id="copySqlBtn">Sao chép SQL</button>
+                                </div>
+                                <div class="tab-pane fade" id="explanation" role="tabpanel" aria-labelledby="explanation-tab">
+                                    <div class="explanation" id="sqlExplanation">-- Giải thích sẽ hiển thị ở đây --</div>
+                                </div>
+                                <div class="tab-pane fade" id="evaluation" role="tabpanel" aria-labelledby="evaluation-tab">
+                                    <div id="evaluationResults">
+                                        <div class="alert alert-info mb-4">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <i class="bi bi-info-circle me-2"></i>
+                                                    <span id="evaluationSummary">Đánh giá SQL...</span>
+                                                </div>
+                                                <div class="ms-auto">
+                                                    <span id="evaluationBadge" class="badge bg-secondary">Đang đánh giá</span>
+                                                </div>
+                                            </div>
+                                            <div class="evaluation-framework" id="evaluationFramework">Framework: TruLens</div>
+                                        </div>
+                                        
+                                        <h6>Chỉ số đánh giá:</h6>
+                                        
+                                        <!-- Relevancy Score -->
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Độ liên quan (Relevancy)</span>
+                                                <span class="score-value" id="relevancyScore">0.0</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="threshold-marker" id="relevancyThreshold" style="left: 70%"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="relevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <small class="score-label">Đánh giá mức độ liên quan của SQL với câu hỏi</small>
+                                        </div>
+                                        
+                                        <!-- Hallucination Score -->
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Ảo giác (Hallucination)</span>
+                                                <span class="score-value" id="hallucinationScore">0.0</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="threshold-marker" id="hallucinationThreshold" style="left: 30%"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="hallucinationBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <small class="score-label">Đánh giá mức độ ảo giác trong SQL (thấp hơn là tốt hơn)</small>
+                                        </div>
+                                        
+                                        <!-- Contextual Relevancy Score -->
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Độ liên quan ngữ cảnh (Contextual Relevancy)</span>
+                                                <span class="score-value" id="contextualRelevancyScore">0.0</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="threshold-marker" id="contextualRelevancyThreshold" style="left: 70%"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="contextualRelevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <small class="score-label">Đánh giá mức độ liên quan của SQL với schema</small>
+                                        </div>
+                                        
+                                        <!-- Correctness Score -->
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Tính chính xác (Correctness)</span>
+                                                <span class="score-value" id="correctnessScore">0.0</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="threshold-marker" id="correctnessThreshold" style="left: 60%"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="correctnessBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <small class="score-label">Đánh giá tính chính xác của SQL</small>
+                                        </div>
+                                        
+                                        <!-- Syntax Score (New) -->
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between">
+                                                <span>Cú pháp SQL (Syntax)</span>
+                                                <span class="score-value" id="syntaxScore">0.0</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="threshold-marker" id="syntaxThreshold" style="left: 80%"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="syntaxBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <small class="score-label">Đánh giá tính đúng đắn về cú pháp của SQL</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="query-result" role="tabpanel" aria-labelledby="query-result-tab">
+                                    <div class="row">
+                                        <div class="col-md-8" id="queryResultMain">
+                                            <div id="queryResultContainer">
+                                                <div class="alert alert-info">
+                                                    Thực thi SQL để xem kết quả.
+                                                </div>
+                                                <div id="chartContainer" class="mt-4">
+                                                    <h6>Biểu đồ trực quan:</h6>
+                                                    <canvas id="resultChart"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- History Section -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
+            <div class="col-md-4">
+                <!-- History Section (now as a right sidebar box) -->
+                <div class="card sticky-top" style="top: 20px; max-height: 80vh; overflow-y: auto;">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Lịch sử truy vấn</h5>
                         <button class="btn btn-sm btn-outline-danger" id="clearHistoryBtn">Xóa lịch sử</button>
                     </div>
-                    <div class="card-body">
-                        <div id="queryHistory" class="list-group">
+                    <div class="card-body p-2">
+                        <div id="queryHistory" class="accordion">
                             <!-- Query history items will be inserted here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clarification Section (Hidden by default) -->
-            <div class="col-md-12 mb-4 d-none" id="clarificationSection">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Làm rõ câu hỏi</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="alert alert-warning">
-                            <i class="bi bi-exclamation-triangle me-2"></i>
-                            Câu hỏi của bạn có thể hiểu theo nhiều cách khác nhau. Vui lòng làm rõ:
-                        </div>
-                        <div id="clarificationQuestions">
-                            <!-- Clarification questions will be inserted here -->
-                        </div>
-                        <button class="btn btn-primary" id="submitClarificationBtn">Xác nhận và tiếp tục</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Result Section (Hidden by default) -->
-            <div class="col-md-12 mb-4 d-none" id="resultSection">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Kết Quả</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="nav nav-tabs" id="resultTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="sql-tab" data-bs-toggle="tab" data-bs-target="#sql" type="button" role="tab" aria-controls="sql" aria-selected="true">SQL</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="explanation-tab" data-bs-toggle="tab" data-bs-target="#explanation" type="button" role="tab" aria-controls="explanation" aria-selected="false">Giải thích</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="evaluation-tab" data-bs-toggle="tab" data-bs-target="#evaluation" type="button" role="tab" aria-controls="evaluation" aria-selected="false">Đánh giá</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="query-result-tab" data-bs-toggle="tab" data-bs-target="#query-result" type="button" role="tab" aria-controls="query-result" aria-selected="false">Kết quả truy vấn</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="resultTabsContent">
-                            <div class="tab-pane fade show active" id="sql" role="tabpanel" aria-labelledby="sql-tab">
-                                <div class="sql-result" id="sqlResult">-- SQL sẽ hiển thị ở đây --</div>
-                                <button class="btn btn-primary" id="executeBtn">Thực thi SQL</button>
-                                <button class="btn btn-outline-secondary" id="copySqlBtn">Sao chép SQL</button>
-                            </div>
-                            <div class="tab-pane fade" id="explanation" role="tabpanel" aria-labelledby="explanation-tab">
-                                <div class="explanation" id="sqlExplanation">-- Giải thích sẽ hiển thị ở đây --</div>
-                            </div>
-                            <div class="tab-pane fade" id="evaluation" role="tabpanel" aria-labelledby="evaluation-tab">
-                                <div id="evaluationResults">
-                                    <div class="alert alert-info mb-4">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <i class="bi bi-info-circle me-2"></i>
-                                                <span id="evaluationSummary">Đánh giá SQL...</span>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <span id="evaluationBadge" class="badge bg-secondary">Đang đánh giá</span>
-                                            </div>
-                                        </div>
-                                        <div class="evaluation-framework" id="evaluationFramework">Framework: TruLens</div>
-                                    </div>
-                                    
-                                    <h6>Chỉ số đánh giá:</h6>
-                                    
-                                    <!-- Relevancy Score -->
-                                    <div class="mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Độ liên quan (Relevancy)</span>
-                                            <span class="score-value" id="relevancyScore">0.0</span>
-                                        </div>
-                                        <div class="progress-container">
-                                            <div class="threshold-marker" id="relevancyThreshold" style="left: 70%"></div>
-                                            <div class="progress">
-                                                <div class="progress-bar" id="relevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <small class="score-label">Đánh giá mức độ liên quan của SQL với câu hỏi</small>
-                                    </div>
-                                    
-                                    <!-- Hallucination Score -->
-                                    <div class="mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Ảo giác (Hallucination)</span>
-                                            <span class="score-value" id="hallucinationScore">0.0</span>
-                                        </div>
-                                        <div class="progress-container">
-                                            <div class="threshold-marker" id="hallucinationThreshold" style="left: 30%"></div>
-                                            <div class="progress">
-                                                <div class="progress-bar" id="hallucinationBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <small class="score-label">Đánh giá mức độ ảo giác trong SQL (thấp hơn là tốt hơn)</small>
-                                    </div>
-                                    
-                                    <!-- Contextual Relevancy Score -->
-                                    <div class="mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Độ liên quan ngữ cảnh (Contextual Relevancy)</span>
-                                            <span class="score-value" id="contextualRelevancyScore">0.0</span>
-                                        </div>
-                                        <div class="progress-container">
-                                            <div class="threshold-marker" id="contextualRelevancyThreshold" style="left: 70%"></div>
-                                            <div class="progress">
-                                                <div class="progress-bar" id="contextualRelevancyBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <small class="score-label">Đánh giá mức độ liên quan của SQL với schema</small>
-                                    </div>
-                                    
-                                    <!-- Correctness Score -->
-                                    <div class="mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Tính chính xác (Correctness)</span>
-                                            <span class="score-value" id="correctnessScore">0.0</span>
-                                        </div>
-                                        <div class="progress-container">
-                                            <div class="threshold-marker" id="correctnessThreshold" style="left: 60%"></div>
-                                            <div class="progress">
-                                                <div class="progress-bar" id="correctnessBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <small class="score-label">Đánh giá tính chính xác của SQL</small>
-                                    </div>
-                                    
-                                    <!-- Syntax Score (New) -->
-                                    <div class="mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Cú pháp SQL (Syntax)</span>
-                                            <span class="score-value" id="syntaxScore">0.0</span>
-                                        </div>
-                                        <div class="progress-container">
-                                            <div class="threshold-marker" id="syntaxThreshold" style="left: 80%"></div>
-                                            <div class="progress">
-                                                <div class="progress-bar" id="syntaxBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                        <small class="score-label">Đánh giá tính đúng đắn về cú pháp của SQL</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="query-result" role="tabpanel" aria-labelledby="query-result-tab">
-                                <div id="queryResultContainer">
-                                    <div class="alert alert-info">
-                                        Thực thi SQL để xem kết quả.
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,6 +459,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Query history management
         const HISTORY_KEY = 'query_history';
@@ -483,25 +493,39 @@
             const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
             
             historyContainer.innerHTML = history.map((item, index) => `
-                <div class="list-group-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h6 class="mb-1">${item.query}</h6>
-                        <small class="text-muted">${new Date(item.timestamp).toLocaleString()}</small>
-                    </div>
-                    <div class="mt-2">
-                        <pre class="mb-1"><code>${item.sql}</code></pre>
-                        ${item.clarification ? `<small class="text-muted">Làm rõ: ${JSON.stringify(item.clarification)}</small>` : ''}
-                    </div>
-                    <div class="mt-2">
-                        <button class="btn btn-sm btn-outline-primary use-query-btn" data-index="${index}">Sử dụng lại</button>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-${index}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${index}" aria-expanded="false" aria-controls="collapse-${index}">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <h6 class="mb-1 history-query" style="cursor: pointer;">${item.query}</h6>
+                                <small class="text-muted">${new Date(item.timestamp).toLocaleString()}</small>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapse-${index}" class="accordion-collapse collapse" aria-labelledby="heading-${index}" data-bs-parent="#queryHistory">
+                        <div class="accordion-body">
+                            <div class="mt-2">
+                                <pre class="mb-1"><code>${item.sql}</code></pre>
+                                ${item.clarification ? `<small class="text-muted">Làm rõ: ${JSON.stringify(item.clarification)}</small>` : ''}
+                            </div>
+                            <div class="mt-2">
+                                <button class="btn btn-sm btn-outline-primary use-query-btn" data-index="${index}">Sử dụng lại</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `).join('');
 
-            // Add event listeners to "Use" buttons
-            document.querySelectorAll('.use-query-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const index = this.getAttribute('data-index');
+            // Add event listeners to "Use" buttons and history queries
+            document.querySelectorAll('.use-query-btn, .history-query').forEach(element => {
+                element.addEventListener('click', function(e) {
+                    // Prevent event bubbling for the use-query-btn
+                    if (this.classList.contains('use-query-btn')) {
+                        e.stopPropagation();
+                    }
+                    
+                    const index = this.getAttribute('data-index') || 
+                                this.closest('.accordion-item').querySelector('.use-query-btn').getAttribute('data-index');
                     const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
                     const item = history[index];
                     
@@ -906,6 +930,26 @@
                 
                 // Show result section
                 document.getElementById('resultSection').classList.remove('d-none');
+                
+                // Check if user preferred visualization type from clarification
+                if (clarificationResponses && Object.keys(clarificationResponses).length > 0) {
+                    const visualizationQuestion = "Bạn muốn xem kết quả dưới dạng nào?";
+                    const visualizationResponse = clarificationResponses[visualizationQuestion];
+                    
+                    if (visualizationResponse) {
+                        // Execute SQL and show results with preferred visualization
+                        document.getElementById('executeBtn').click();
+                        
+                        // Wait for results to be loaded
+                        setTimeout(() => {
+                            const view = visualizationResponse.includes("Biểu đồ") ? "chart" : "table";
+                            const button = document.querySelector(`#visualizationToggle button[data-view="${view}"]`);
+                            if (button) {
+                                button.click();
+                            }
+                        }, 500);
+                    }
+                }
             }
             
             // Update evaluation
@@ -1008,9 +1052,8 @@
                     const resultContainer = document.getElementById('queryResultContainer');
                     
                     if (data.success) {
-                        // Create table from results
-                        let tableHtml = '<table class="table table-striped table-hover">';
-                        
+                        // 1. Render bảng trước
+                        let tableHtml = '<div class="mb-4"><h6>Bảng dữ liệu:</h6><table class="table table-striped table-hover">';
                         // Table header
                         if (data.results.length > 0) {
                             tableHtml += '<thead><tr>';
@@ -1019,7 +1062,6 @@
                             }
                             tableHtml += '</tr></thead>';
                         }
-                        
                         // Table body
                         tableHtml += '<tbody>';
                         for (const row of data.results) {
@@ -1029,21 +1071,34 @@
                             }
                             tableHtml += '</tr>';
                         }
-                        tableHtml += '</tbody></table>';
-                        
+                        tableHtml += '</tbody></table></div>';
                         resultContainer.innerHTML = tableHtml;
-                        
+
+                        // 2. Chèn chartContainer vào DOM
+                        const chartContainerHtml = `
+                            <div id="chartContainer" class="mt-4">
+                                <h6>Biểu đồ trực quan:</h6>
+                                <canvas id="resultChart"></canvas>
+                            </div>
+                        `;
+                        resultContainer.insertAdjacentHTML('beforeend', chartContainerHtml);
+
+                        // 3. Đảm bảo DOM đã cập nhật, sau đó mới gọi createChart nếu canvas tồn tại
+                        setTimeout(() => {
+                            const canvas = document.getElementById('resultChart');
+                            if (canvas) {
+                                createChart(data.results);
+                            } else {
+                                console.error('Canvas for chart not found!');
+                            }
+                        }, 0);
+
                         // Switch to query result tab
                         const resultTab = document.getElementById('query-result-tab');
                         const tabTrigger = new bootstrap.Tab(resultTab);
                         tabTrigger.show();
                     } else {
-                        resultContainer.innerHTML = `
-                            <div class="alert alert-danger">
-                                <i class="bi bi-exclamation-triangle me-2"></i>
-                                Error: ${data.error}
-                            </div>
-                        `;
+                        resultContainer.innerHTML = `<div class="alert alert-danger">Error: ${data.error}</div>`;
                     }
                 })
                 .catch(error => {
@@ -1051,6 +1106,97 @@
                     alert('Error executing SQL. See console for details.');
                 });
             });
+            
+            // Create chart based on data
+            function createChart(data) {
+                const canvas = document.getElementById('resultChart');
+                if (!canvas) {
+                    console.error('Canvas for chart not found!');
+                    return;
+                }
+                const ctx = canvas.getContext('2d');
+                try {
+                    // Destroy existing chart if any
+                    if (window.resultChart && typeof window.resultChart.destroy === 'function') {
+                        window.resultChart.destroy();
+                    }
+                    
+                    // Determine chart type and data structure
+                    const columns = Object.keys(data[0]);
+                    let chartType = 'bar';
+                    let chartData = {
+                        labels: [],
+                        datasets: []
+                    };
+                    
+                    // If we have exactly 2 columns, use them as x and y
+                    if (columns.length === 2) {
+                        const xColumn = columns[0];
+                        const yColumn = columns[1];
+                        
+                        chartData.labels = data.map(row => row[xColumn]);
+                        chartData.datasets.push({
+                            label: yColumn,
+                            data: data.map(row => row[yColumn]),
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        });
+                        
+                        // Determine chart type based on data
+                        if (typeof data[0][yColumn] === 'number') {
+                            chartType = 'bar';
+                        } else {
+                            chartType = 'pie';
+                        }
+                    } else {
+                        // For more than 2 columns, create multiple datasets
+                        columns.forEach((column, index) => {
+                            if (typeof data[0][column] === 'number') {
+                                chartData.datasets.push({
+                                    label: column,
+                                    data: data.map(row => row[column]),
+                                    backgroundColor: `rgba(${index * 50}, ${162}, ${235}, 0.5)`,
+                                    borderColor: `rgba(${index * 50}, ${162}, ${235}, 1)`,
+                                    borderWidth: 1
+                                });
+                            }
+                        });
+                        
+                        // Use first column as labels
+                        chartData.labels = data.map(row => row[columns[0]]);
+                    }
+                    
+                    // Create the chart
+                    window.resultChart = new Chart(ctx, {
+                        type: chartType,
+                        data: chartData,
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Query Results Visualization'
+                                }
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error creating chart:', error);
+                    // Show error message in chart container
+                    const chartContainer = document.getElementById('chartContainer');
+                    if (chartContainer) {
+                        chartContainer.innerHTML = `
+                            <div class="alert alert-danger">
+                                Không thể tạo biểu đồ. Vui lòng xem kết quả dưới dạng bảng.
+                            </div>
+                        `;
+                    }
+                }
+            }
             
             // Copy SQL
             document.getElementById('copySqlBtn').addEventListener('click', function() {
